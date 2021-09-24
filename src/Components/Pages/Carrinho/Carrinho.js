@@ -36,7 +36,7 @@ export default function Carrinho() {
 
           <S.CuponsArea>
             <S.TitleCupons>
-            <i class="im im-tags"></i>Cupons de desconto:
+            <i className="im im-tags"></i>Cupons de desconto:
             </S.TitleCupons>
             <S.Cupons></S.Cupons>
             <S.CuponsButton>APLICAR</S.CuponsButton>
@@ -97,11 +97,11 @@ export default function Carrinho() {
             <S.ContFinal>
               <S.Continuar>CONTINUAR COMPRANDO</S.Continuar>
               <S.Finalizar>
-                <i class="im im-check-mark"></i>FINALIZAR COMPRA
+                <i className="im im-check-mark"></i>FINALIZAR COMPRA
               </S.Finalizar>
             </S.ContFinal>
             <S.Limpar>
-              <i class="im im-shopping-cart"></i>
+              <i className="im im-shopping-cart"></i>
               Esvaziar Lixeira
             </S.Limpar>
           </S.ButtonsArea>

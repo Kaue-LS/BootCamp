@@ -74,6 +74,9 @@ export const InfoIcon=styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: row;
+    @media(max-width:880px){
+        margin: 0 auto;
+    }
 `;
 export const Info =styled.p`
     font-size: 1.4rem;
@@ -108,7 +111,7 @@ export const QuantArea=styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0  2rem 0 0;
+    margin: 0  7rem 0 1rem;
     width: 4rem;
 `;
 export const Label=styled.label`
@@ -117,6 +120,7 @@ export const Label=styled.label`
 `;
 export const Quant=styled.select`
     width: 5rem;
+    margin: 7px 0;
     padding: 6px 10px;
     
 `;
@@ -133,7 +137,7 @@ export const Preço= styled.p`
     font-size: 2rem;
     font-weight: 900;
     color: #88ac02;
-    @media(max-width: 930px) {
+    @media(max-width: 920px) {
         font-size: 1.4rem;
     }
 `;
@@ -153,7 +157,7 @@ export const CepArea=styled.div`
     align-items: center;
     justify-content: center;
     flex-direction: row;
-    @media(max-width: 930px) {
+    @media(max-width: 680px) {
         flex-direction: column;
     }
     
@@ -168,11 +172,19 @@ export const TitleCep=styled.h3`
     img{
         margin: 0px 10px;
     }
+    @media(max-width: 920px) {
+        font-size: 1.5rem;
+    }
 `;
 export const Cep=styled.input`
     height: 1.8rem;
-    width: 10.5rem;
+    width: 11rem;
     margin: 0 10px;
+    @media(max-width: 920px) {
+        min-width:18rem ;
+        margin:10px 0px;
+    }
+    
 `;
 export const CepButton=styled.button`
      background-color: #8aab04;
@@ -188,18 +200,51 @@ export const CuponsArea=styled.div`
     background-color: white;
     margin: 0 30px;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius:10px;
     flex-direction:row;
-    padding: 10px 20px;
-    @media(max-width: 930px) {
+    padding: 15px 10px;
+    @media(max-width: 680px) {
         flex-direction: column;
     }
 `;
 export const TitleCupons=styled.h3`
     color:#8aab04;
+    font-size: 1.4rem;
+    margin: 0 auto 0 auto;
+    i{
+        margin: 0 20px;
+    }
+    @media(max-width: 920px) {
+        font-size: 1.5rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
 `;
 export const Cupons =styled.input`
+    width: 14rem;
+    margin: 0 auto 0 auto;
+    padding: 5px 0;
+    @media(max-width: 920px) {
+        width:18rem ;
+        margin:10px auto;
+    }
+    
 `;
 export const CuponsButton=styled.button`
+  background-color: #8aab04;
+    border:2px solid #8aab04;
+    border-radius: 5px;
+    color:white;
+    padding: 5px 5px;
+    font-size: 1rem;
+    margin: 0 10px;
+    @media(max-width: 930px) {
+        padding: 5px 20px;
+        margin: 0 auto 0 0;
+    }
 `;
 // Area do Resumo onde mostrar o total de todos os pneus selecionados
 export const ResuButtons=styled.div`
@@ -240,8 +285,8 @@ display: flex;
 flex-direction: row;
 width: 100%;
 margin: 0 auto;
-@media(max-width: 930px) {
-
+@media(max-width: 550px) {
+    margin:0 auto 0 auto;
     display: flex;
     flex-direction: column-reverse;
 }
@@ -336,6 +381,7 @@ export const SubPreçoTotal=styled.p`
 export const ButtonsArea= styled.div`
     display: flex;
     flex-direction: column;
+    margin: 0 auto;
     @media(max-width: 930px) {
         margin: 0 auto;
     }
@@ -343,20 +389,21 @@ export const ButtonsArea= styled.div`
 export const ContFinal=styled.div`
     display: flex;
     flex-direction: row;
-    margin: 40px auto 0 auto;
-    @media(max-width: 930px) {
+    margin: 40px auto;
+    @media(max-width: 430px) {
         flex-direction: column;
-        margin: 80px auto 0 auto;
+        margin: 50px auto;
     }
 `
 export const Continuar=styled.button`
     padding: 15px 20px;
     font-size: 1rem;
-    margin: 0 20px;
+    margin: 0 10px;
     font-weight: bolder;
     color:#323232;
-    @media(max-width: 930px) {
-        margin: 0 auto;
+    @media(max-width: 1030px) {
+        padding: 20px 10px;
+        margin: auto 20px 0 20px;
     }
 `;
 export const Finalizar=styled.button`
@@ -374,32 +421,33 @@ export const Finalizar=styled.button`
     i{
         margin: 0 10px;
     }
-    @media(max-width: 930px) {
-        margin: 10px 0;
+    @media(max-width: 430px) {
+        padding: 10px 10px;
+        margin: 10px 20px 0 20px;
         font-size: 1rem;
         flex-direction: column;
     }
     `;
     export const Limpar= styled.button`
-        width: 40%;
+        width: 80%;
         font-size: 1rem;
         font-weight: bolder;
         color:#323232;
-        margin: 20px auto;
+        margin: auto auto 0 auto;
         background:none;
         border:none;
-        padding: 10px 10px;
+        padding: 15px 10px;
         display: flex;
         align-items: center;
         justify-content: center;
         i{
-            margin: 0 auto;
+            margin: auto 20px;
         }
 
-        @media(max-width: 930px) {
-        margin: 10px auto;
+        @media(max-width: 530px) {
+        margin: 0px auto;
         color: white;
-        width:100%;
+        width:80%;
         border-radius: 10px;
         background-color: darkred;
         border:2px solid red;
