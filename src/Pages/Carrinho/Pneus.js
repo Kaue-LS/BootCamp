@@ -1,9 +1,14 @@
 import * as S from './styled'
+
 export default function Pneus(){
     return(
+      <>
         <S.Items>
         {/* Pneu escolhido */}
         <S.ItemArea>
+        <S.NumberItem>
+        <span>1</span>
+        </S.NumberItem>
           {/* Imagem */}
           <S.Pneu
             alt="pneu"
@@ -13,12 +18,12 @@ export default function Pneus(){
           {/* Descrição do penu */}
           <S.Description>
             <S.itemInfo>
-              <S.InfoIcon>
+              <S.InfoArea>
                 <S.Info>
                   Pneu Firestone Aro 16 Destination A/T 225/70R16 102/99S
                 </S.Info>
-                <i className="im im-trash-can"></i>
-              </S.InfoIcon>
+
+              </S.InfoArea>
               <S.CodeBrand>
                 <S.Brand
                   src="https://cdn.worldvectorlogo.com/logos/firestone-logo.svg"
@@ -32,14 +37,11 @@ export default function Pneus(){
             <S.QuantPreço>
               <S.QuantArea>
                 <S.Label>Quantidade</S.Label>
-                <S.Quant>
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
-                  <option>6</option>
-                </S.Quant>
+               <S.Quant>
+                 <S.IconPlusLess>-</S.IconPlusLess>
+                 <span>1</span>
+                 <S.IconPlusLess>+</S.IconPlusLess>
+               </S.Quant>
               </S.QuantArea>
               <S.PreçoArea>
                 <S.Label>Preço Total:</S.Label>
@@ -47,7 +49,13 @@ export default function Pneus(){
               </S.PreçoArea>
             </S.QuantPreço>
           </S.Description>
+          <S.IconTrash>
+          <i className="im im-trash-can"></i>
+          </S.IconTrash>
         </S.ItemArea>
         </S.Items>
+        
+          </>
+
     )
 }

@@ -1,6 +1,11 @@
 // import { useEffect, useState } from "react";
 import Pneus from "./Pneus";
+import Cep from '../../Components/img/cep.jpg'
+import Cupom from '../../Components/img/cupon.jpg'
+import CartICon from '../../Components/img/cart.jpg'
+// import { Anuncio } from "../../Components/Anuncios/Anuncio";
 import * as S from "./styled";
+import NavBar from "../../Components/NavBar/NavBar";
 export default function Carrinho() {
   // const [cep, setCep] = useState([]);
   // const numCep = Number;
@@ -19,46 +24,44 @@ export default function Carrinho() {
   // });
   return (
     <>
+    <NavBar></NavBar>
       {/* Carrinho de compra */}
       <S.Header>
         <S.CartIcon
-          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAcCAMAAACnDzTfAAAAAXNSR0IB2cksfwAAAFFQTFRFAAAA/////////////////////////////////////////////////////////////////////////////////////////////
-        ///////////CDfnXgAAABt0Uk5TABBPMJ//IL/woICQQD9vf6/P31Dv0MBgcOCwTTIjOgAAAKVJREFUeJzN0ssSgyAMBdAgBgxiaQukj///0GpFsSqse1eZOTMJEAAKEU1JZIsoT0Vp7OicwGAvSh0N2uIx2hNTw8VdNY7ZmByc0zfMSUb6jofMZo/wl6YqBl3FfMVAmX
-        2ovIfajkbLq5XDT5oQF7Fhf5K4/BUVoick+w123iCtDe00OHKqPQDzxh4gAqVHegK8skHEcfNpwnuqfTZBzMt9RM+80gfBVQwAVROYIwAAAABJRU5ErkJggg=="
+          src={CartICon}
           alt="Cart"
         />
         <h3>Meu Carrinho de compras</h3>
       </S.Header>
-      <S.ItemResu>
+
+
+
+      <S.Itens>
         {/* Parte onde os pneus vao aparecer, eles estao no arquivo Pneu */}
         <S.Items>
-          <Pneus></Pneus>
-
-          <S.CuponsArea>
-            <S.TitleCupons>
-            <i className="im im-tags"></i>Cupons de desconto:
-            </S.TitleCupons>
-            <S.Cupons></S.Cupons>
-            <S.CuponsButton>APLICAR</S.CuponsButton>
-          </S.CuponsArea>
+          <Pneus></Pneus>        
         </S.Items>
+      </S.Itens>
+
+      
         {/* Area dos cupons */}
-    
         {/* Area do resumo  e dos botoes*/}
+        
+        <S.CepCuponsResu>
+       
+          <S.CuponsCep>
+            <S.CupomArea>
+            <S.CuponsTitle><img src={Cupom} alt='cupom'/>Cupom de desconto</S.CuponsTitle>
+            <i class="im im-angle-up"></i>
+            </S.CupomArea>
+            <S.CepArea>
+            <S.CepTitle><img src={Cep} alt='cep'/>Informe seu CEP</S.CepTitle>
+            <i class="im im-angle-up"></i>
+            </S.CepArea>
+          </S.CuponsCep>
+
+
         <S.ResuButtons>
-          <S.CepArea>
-            <S.Title>
-              <S.TitleCep>
-                <img
-                  src="https://static.pneustore.com.br/_ui/responsive/common/images/icon-target.svg"
-                  alt="Cep"
-                />{" "}
-                Informe o seu CEP:
-              </S.TitleCep>
-            </S.Title>
-            <S.Cep></S.Cep>
-            <S.CepButton>CALCULAR ENTREGA</S.CepButton>
-          </S.CepArea>
           <S.resumoArea>
             <S.Resumo>
               <S.TitleIconArea>
@@ -102,11 +105,11 @@ export default function Carrinho() {
             </S.ContFinal>
             <S.Limpar>
               <i className="im im-shopping-cart"></i>
-              Esvaziar Lixeira
+              Esvaziar Carrinho
             </S.Limpar>
           </S.ButtonsArea>
-        </S.ResuButtons>
-      </S.ItemResu>
+          </S.ResuButtons>
+      </S.CepCuponsResu>
     </>
   );
 }

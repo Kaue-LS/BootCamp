@@ -1,5 +1,4 @@
-import Carrinho from './Components/Pages/Carrinho/Carrinho';
-
+import Carrinho from './Pages/Carrinho/Carrinho';
 function App() {
   return (
     <div className="App">

@@ -3,21 +3,27 @@ import styled from "styled-components";
 // Meu carrinho de compras
 export const Header = styled.div`
     padding: 10px 10px;
-    background-color: #333333;
+    background-color: #69dcfb;
     display: flex;
-    color: white;
+    color: #5e0796;
     align-items: center;
     justify-content: center;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 `;
 export const CartIcon= styled.img`
     margin: 0 10px;
+    width: 3.5rem;
+    color:#5e0796;
 `;
 
 // Div que vai organizar o div dos item e o div do resumo
-export const ItemResu=styled.div`
+export const Itens=styled.div`
     display: flex;
-    flex-direction: row;
+    border:10px solid #4f0381 ;
+    flex-direction:column;
+    margin: 10px auto;
+    border-radius: 10px;
+    width: 95vw;
     @media(max-width: 930px) {
         display: flex;
         flex-direction: column;
@@ -28,18 +34,19 @@ export const ItemResu=styled.div`
 export const ItemArea= styled.div`
     display: flex;
     background-color: white;
-    margin: 1rem 2rem;
-    width:45vw ;
-    padding: 20px 20px;
+    margin: 1rem auto;
+    width:90vw ;
+    box-shadow: 0px 0px 10px gray;
     flex-direction:row;
     justify-content: center;
     align-items: center;
     border-radius: 10px;
-    @media(max-width: 880px) {
+    @media(max-width: 1070px) {
         margin: 1rem 1rem;
     flex-direction: column;
     align-items: center;
     width: auto;
+    max-width: 90vw;
   }
    
   
@@ -48,16 +55,30 @@ export const Items=styled.div`
     display: flex;
     flex-direction: column;
 `;
+
+export const NumberItem=styled.div`
+    padding: 3.8rem 2rem;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius:10px;
+    color: #4f0381;
+    background-color: #69dcfb;
+    border-right:2px solid #4f0381;
+    span{
+        font-size: 3rem;
+    }
+`;
+
 // Imagem do pneu
 export const Pneu= styled.img`
     width: 14rem;
-    max-width: 9rem;
-    margin: 0 auto;
+    max-width: 8.5rem;
+    margin: 0 4rem;
+    padding: 1.6rem 0rem;
     
 `;
 // Area onde esta a descrição, ao lado da foto do pneu
 export const Description =styled.div`
-    margin: 10px 20px;
+    margin: 10px 5rem;
     display: flex;
     flex-direction: column;
     @media(max-width: 930px) {
@@ -69,23 +90,23 @@ export const Description =styled.div`
 export const itemInfo=styled.div`
 `;
 // Info sobre o pneu e o icone de lixeira
-export const InfoIcon=styled.div`
+export const InfoArea=styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row;
+    margin: 0 20px;
     @media(max-width:880px){
         margin: 0 auto;
     }
 `;
 export const Info =styled.p`
-    font-size: 1.4rem;
+    font-size: 1.6rem;
 
 `;
 export const CodeBrand=styled.div`
     display: flex;
  
-    margin: 20px auto;
+    margin: 10px auto;
     
 `;
 export const Brand= styled.img`
@@ -118,11 +139,26 @@ export const Label=styled.label`
     font-size: 1.3rem;
     font-weight: bold;
 `;
-export const Quant=styled.select`
-    width: 5rem;
-    margin: 7px 0;
-    padding: 6px 10px;
+export const Quant=styled.div`
+   display: flex;
+   flex-direction: row;
+   border: 1px solid black;
+   justify-content: center;
+   align-items: center;
+   width: 8rem;
+   border-radius: 20px;
+   span{
+       padding: 5px 10px;
+       border-left: 1px solid black;
+       border-right:1px solid black;
+   }
     
+`;
+export const IconPlusLess=styled.button`
+    margin: auto auto;
+    border:1px solid black;
+    padding: 5px 15px;
+    border-radius:9999px;
 `;
 // Preço
 export const PreçoArea=styled.div`
@@ -134,136 +170,104 @@ export const PreçoArea=styled.div`
 
 `;
 export const Preço= styled.p`
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 900;
     color: #88ac02;
     @media(max-width: 920px) {
-        font-size: 1.4rem;
+        font-size: 1.6rem;
     }
 `;
-
+export const IconTrash=styled.div`
+    border-left: 2px solid #4f0381 ;
+    margin: 0 auto;
+    background-color:#555ebd ;
+    padding: 5.1rem 1.8rem;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transition:300ms;
+    :hover{
+        border-left: 2px solid #4f0381 ;
+        color: #4f0381 ;
+        background-color: #69dcfb;
+    }
+`;
 
 // -------------------------------------------------------------------------------
 
-// Colocando Os botoes de cupons e Cep
-
-// Cep
-export const CepArea=styled.div`
-    background-color: white;
-    border-radius: 10px;
-    padding: 10px 0px;
-    display: flex;
-    margin: 10px 0;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    @media(max-width: 680px) {
-        flex-direction: column;
-    }
-    
+export const CepCuponsResu=styled.div`
+display: flex;
+background-color: gray;
+box-shadow: -10px 10px 10px black;
+flex-direction: row;
 `;
-export const TitleCep=styled.h3`
+
+export const CuponsCep= styled.div`
+    background-color: white;
+    width: 30rem;
+    height: 10rem;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 20px 20px;
+
+`;
+
+export const CupomArea=styled.div`
     display: flex;
     flex-direction: row;
-    margin: 0px auto;
-    justify-content: center;
+
+    i{
+        margin: 0 6rem;
+    }
+`;
+export const CuponsTitle=styled.p`
+    display: flex;
+    width: 20rem;
+    flex-direction: row;
     align-items: center;
     font-size: 1.5rem;
     img{
-        margin: 0px 10px;
-    }
-    @media(max-width: 920px) {
-        font-size: 1.5rem;
+        margin: 0 10px;
+        width: 4rem;
     }
 `;
-export const Cep=styled.input`
-    height: 1.8rem;
-    width: 11rem;
-    margin: 0 10px;
-    @media(max-width: 920px) {
-        min-width:18rem ;
-        margin:10px 0px;
-    }
-    
-`;
-export const CepButton=styled.button`
-     background-color: #8aab04;
-    border:2px solid #8aab04;
-    border-radius: 5px;
-    color:white;
-    padding: 5px 5px;
-    font-size: 1rem;
-    margin: 0 10px;
-`;
-// Cupons de desconto
-export const CuponsArea=styled.div`
-    background-color: white;
-    margin: 0 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius:10px;
-    flex-direction:row;
-    padding: 15px 10px;
-    @media(max-width: 680px) {
-        flex-direction: column;
-    }
-`;
-export const TitleCupons=styled.h3`
-    color:#8aab04;
-    font-size: 1.4rem;
-    margin: 0 auto 0 auto;
+
+export const CepArea=styled.div`
+ display: flex;
+    flex-direction: row;
+
     i{
-        margin: 0 20px;
+        margin: 0 6rem;
     }
-    @media(max-width: 920px) {
-        font-size: 1.5rem;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-    }
-`;
-export const Cupons =styled.input`
-    width: 14rem;
-    margin: 0 auto 0 auto;
-    padding: 5px 0;
-    @media(max-width: 920px) {
-        width:18rem ;
-        margin:10px auto;
-    }
-    
-`;
-export const CuponsButton=styled.button`
-  background-color: #8aab04;
-    border:2px solid #8aab04;
-    border-radius: 5px;
-    color:white;
-    padding: 5px 5px;
-    font-size: 1rem;
-    margin: 0 10px;
-    @media(max-width: 930px) {
-        padding: 5px 20px;
-        margin: 0 auto 0 0;
+`
+export const CepTitle=styled.p`
+  display: flex;
+    width: 20rem;
+    flex-direction: row;
+    align-items: center;
+    font-size: 1.5rem;
+    img{
+        margin: 0 10px;
+        width: 2rem;
     }
 `;
+
+
 // Area do Resumo onde mostrar o total de todos os pneus selecionados
 export const ResuButtons=styled.div`
-    position: fixed;
     display: flex;
-    flex-direction:column;
-    margin: 17px 53vw;
-    @media(max-width: 930px) {
-        width:90vw;
-        margin: 0 auto;
-        position: initial;
-    }
-`;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 0 0rem;
+`
+
 export const resumoArea= styled.div`
     background-color: white;
     display: flex;
     flex-direction:column;
-    width: 45vw;
-    height: 40vh;
+    width: 30vw;
     padding: 20px 0 0 0px;
     border-radius: 10px;
     @media(max-width: 930px) {
@@ -381,7 +385,7 @@ export const SubPreçoTotal=styled.p`
 export const ButtonsArea= styled.div`
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
+    margin:0px auto;
     @media(max-width: 930px) {
         margin: 0 auto;
     }
@@ -389,7 +393,7 @@ export const ButtonsArea= styled.div`
 export const ContFinal=styled.div`
     display: flex;
     flex-direction: row;
-    margin: 40px auto;
+    margin: 40px auto 10px auto;
     @media(max-width: 430px) {
         flex-direction: column;
         margin: 50px auto;
@@ -399,6 +403,7 @@ export const Continuar=styled.button`
     padding: 15px 20px;
     font-size: 1rem;
     margin: 0 10px;
+    cursor: pointer;
     font-weight: bolder;
     color:#323232;
     @media(max-width: 1030px) {
@@ -410,6 +415,7 @@ export const Finalizar=styled.button`
     padding: 15px 10px;
     font-size: 1rem;
     display: flex;
+    cursor:pointer;
     background-color: #8aab04;
     border:2px solid #8aab04;
     border-radius: 5px;
@@ -433,10 +439,11 @@ export const Finalizar=styled.button`
         font-size: 1rem;
         font-weight: bolder;
         color:#323232;
-        margin: auto auto 0 auto;
+        margin: 0 auto 0 auto;
         background:none;
         border:none;
-        padding: 15px 10px;
+        cursor:pointer;
+        padding: 10px 10px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -445,7 +452,7 @@ export const Finalizar=styled.button`
         }
 
         @media(max-width: 530px) {
-        margin: 0px auto;
+        margin: 10px auto;
         color: white;
         width:80%;
         border-radius: 10px;
