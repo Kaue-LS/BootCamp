@@ -1,4 +1,4 @@
-// import { useEffect, useState } from "react";
+import {  useState } from "react";
 import Pneus from "./Pneus";
 import Cep from '../../Components/img/cep.jpg'
 import Cupom from '../../Components/img/cupon.jpg'
@@ -22,6 +22,17 @@ export default function Carrinho() {
   // useEffect(() => {
   //   buscaCep();
   // });
+  const [ShowCupom, setShowCupom]=useState(false);
+  const [ShowCep, setShowCep]=useState(false);
+
+      const MostrarCupom=(props)=>{
+        setShowCupom(props)
+      }
+  
+      const MostrarCep=()=>{
+        setShowCep(true)
+      }
+    console.log(ShowCupom)
   return (
     <>
     <NavBar></NavBar>
@@ -50,14 +61,47 @@ export default function Carrinho() {
         <S.CepCuponsResu>
        
           <S.CuponsCep>
-            <S.CupomArea>
-            <S.CuponsTitle><img src={Cupom} alt='cupom'/>Cupom de desconto</S.CuponsTitle>
-            <i class="im im-angle-up"></i>
+          
+            { ShowCupom?(
+              <S.CupomArea >
+              <S.CuponsTitle><img src={Cupom} alt='cupom'/>Cupom de desconto</S.CuponsTitle>
+              <i className="im im-angle-down" onClick={()=>MostrarCupom(false)} ></i>
+
+            <S.ShowCupom>
+              <S.CupomBar placeholder='INSIRA O CUPOM DE DESCONTO'></S.CupomBar><S.CupomButton>APLICAR</S.CupomButton>
+            </S.ShowCupom>
             </S.CupomArea>
-            <S.CepArea>
+            ):(
+              <S.CupomArea onClick={()=>MostrarCupom(true)} >
+
+              <S.CuponsTitle><img src={Cupom} alt='cupom'/>Cupom de desconto</S.CuponsTitle>
+              <i className="im im-angle-up"></i>
+              </S.CupomArea>
+            )
+            }
+
+
+            
+
+            {
+              ShowCep?(
+                <S.CepArea  >
             <S.CepTitle><img src={Cep} alt='cep'/>Informe seu CEP</S.CepTitle>
-            <i class="im im-angle-up"></i>
+            <i className="im im-angle-down"onClick={()=>MostrarCep(false)}></i>
+            <S.ShowCep>
+              <S.CepBar/>
+              <S.CepButton>CALCULAR ENTREGA</S.CepButton>
+            </S.ShowCep>
             </S.CepArea>
+              ):(
+                <S.CepArea onClick={()=>MostrarCep(true)}>
+                <S.CepTitle><img src={Cep} alt='cep'/>Informe seu CEP</S.CepTitle>
+                <i className="im im-angle-up"></i>
+                </S.CepArea>
+              )
+            }
+           
+
           </S.CuponsCep>
 
 

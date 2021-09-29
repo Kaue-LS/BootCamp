@@ -7,10 +7,17 @@ export const NavBar=styled.div`
     align-items: center;
     height: 5rem;
     background-color:#4e018f;
+    @media(max-width:1200px){
+        justify-content: center;
+        align-items: center;
+    }
     `
 export const Logo= styled.img`
     width: 12rem;
     margin: auto 10px auto 10.4rem;
+    @media(max-width:1200px){
+        margin:0 auto;
+    }
 `
 export const SearchBarLoupe=styled.div`
     display: flex;
@@ -27,6 +34,9 @@ export const SearchBarLoupe=styled.div`
         border-bottom-right-radius:5px;
         color: white;
         background-color:red;
+    }
+    @media(max-width:1200px){
+        display: none;
     }
 `;
 export const SearchBar=styled.input`
@@ -46,6 +56,9 @@ margin: 15px 0 auto 0;
     i{
         font-size: 3rem;
         height:2rem;
+    }
+    @media(max-width:1200px){
+        display: none;
     }
 `;
 export const UserName=styled.p`

@@ -3,7 +3,6 @@ import * as S from './styled'
 export default function Pneus(){
     return(
       <>
-        <S.Items>
         {/* Pneu escolhido */}
         <S.ItemArea>
         <S.NumberItem>
@@ -37,10 +36,10 @@ export default function Pneus(){
             <S.QuantPreço>
               <S.QuantArea>
                 <S.Label>Quantidade</S.Label>
-               <S.Quant>
-                 <S.IconPlusLess>-</S.IconPlusLess>
+                <S.Quant>
+                 <S.IconLess>-</S.IconLess>
                  <span>1</span>
-                 <S.IconPlusLess>+</S.IconPlusLess>
+                 <S.IconPlus>+</S.IconPlus>
                </S.Quant>
               </S.QuantArea>
               <S.PreçoArea>
@@ -53,7 +52,9 @@ export default function Pneus(){
           <i className="im im-trash-can"></i>
           </S.IconTrash>
         </S.ItemArea>
-        </S.Items>
+             {/* Pneu escolhido */}
+       
+        
         
           </>
 
