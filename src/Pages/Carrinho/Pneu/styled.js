@@ -5,7 +5,7 @@ export const ItemArea= styled.div`
     background-color: white;
     margin: 1rem auto;
     width:90vw ;
-    box-shadow: 0px 0px 10px gray;
+    box-shadow: 0px 0px 20px gray;
     flex-direction:row;
     justify-content: center;
     align-items: center;
@@ -15,6 +15,7 @@ export const ItemArea= styled.div`
   }
   @media(max-width: 800px) {
    box-shadow: none;
+   max-width:auto ;
   }
    
   
@@ -223,29 +224,18 @@ export const IconTrash=styled.div`
     }
    
 
-    @media(max-width:500px){
-        border-left: 0px;
-        border-top-right-radius: 0px;
-        border-top: 2px solid  #4f0381;
-        border-bottom-right-radius: 10px;
-        border-bottom-left-radius: 10px;
-        padding-left:3vmax ;
-        padding-right: 3vmax;        
-        padding-left:40vmin ;
-        padding-right: 40vmin;        
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-    }
     @media(max-width:800px){
-        border-left: 0px;
-        border-top-right-radius: 0px;
-        border-top: 2px solid  #4f0381;
+        border-right: 0px;
+        border-top: 2px solid #4f0381 ;
+        border-left:none;
         border-bottom-right-radius: 10px;
         border-bottom-left-radius: 10px;
-        padding-left:5vmax ;
-        padding-right: 5vmax;        
-        padding-left:44vmin ;
-        padding-right: 44vmin;        
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    padding-left:2vmax ;
+        padding-right: 2vmax;        
+        padding-left:42.5vmin ;
+        padding-right: 42.5vmin;        
         padding-top: 1rem;
         padding-bottom: 1rem;
     }

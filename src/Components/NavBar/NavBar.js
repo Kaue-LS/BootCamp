@@ -28,13 +28,13 @@ export default function NavBar() {
       </S.Avatar>
       {showOption ? (
         <S.User>
-          <S.UserEnterAtive>
+          <S.UserEnterAtive onClick={() => Mostrar(false)}>
             <S.UserName>Olá! </S.UserName>
             <S.Entrar>
               Entrar{" "}
               <i
                 className="im im-angle-down"
-                onClick={() => Mostrar(false)}
+                
               ></i>
             </S.Entrar>
             <S.Buttons>Login</S.Buttons>
@@ -44,11 +44,11 @@ export default function NavBar() {
         </S.User>
       ) : (
         <S.User>
-          <S.UserEnter>
+          <S.UserEnter  onClick={() => Mostrar(true)}>
             <S.UserName>Olá! </S.UserName>
             <S.Entrar>
               Entrar{" "}
-              <i className="im im-angle-up" onClick={() => Mostrar(true)}></i>
+              <i className="im im-angle-up"></i>
             </S.Entrar>
           </S.UserEnter>
         </S.User>
@@ -68,21 +68,25 @@ export default function NavBar() {
    
     </S.NavBar>
        {/* Responsivo */}
-       
+    
         
         {
             showSearch?(
                 <S.ShowSearch>
                 <S.SearchBarLoupeResponsive>
+                <S.SearchLoupeArea>
                 <S.SearchBarResponsive type="text" />
                 <i class="im im-magnifier"></i>
+                </S.SearchLoupeArea>
               </S.SearchBarLoupeResponsive>
                 </S.ShowSearch>
             ):(
                 <S.HiddenSearch>
                 <S.SearchBarLoupeResponsive>
+                <S.SearchLoupeArea>
                 <S.SearchBarResponsive type="text" />
                 <i class="im im-magnifier"></i>
+                </S.SearchLoupeArea>
               </S.SearchBarLoupeResponsive>
                 </S.HiddenSearch>
 

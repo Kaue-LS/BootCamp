@@ -10,10 +10,7 @@ html,body{
     font-family: 'Fira Sans', sans-serif;
 
     font-family: 'Oswald', sans-serif;
-        background-color: #f7f7f7;
+        background-color: #FEE959;
 }
 
-@media (max-width:800px) {
-    body{
-    }
-}
+

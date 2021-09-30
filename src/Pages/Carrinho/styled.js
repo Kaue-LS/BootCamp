@@ -19,13 +19,18 @@ export const CartIcon= styled.img`
 // Div que vai organizar o div dos item e o div do resumo
 export const Itens=styled.div`
     display: flex;
-    border:10px solid #4f0381 ;
+    background-color: #F7F7F7;
+    border-top:10px solid #4f0381 ;
+    border-left:10px solid #4f0381 ;
+    border-right:10px solid #4f0381 ;
     flex-direction:column;
-    margin: 10px auto;
-    border-radius: 10px;
+    margin: 10px auto 0 auto;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     width: 95vw;
     @media(max-width: 800px) {
         border: none;
+        background:none;
     }
 `;
 
@@ -40,6 +45,9 @@ export const Itens=styled.div`
 
 export const CepCuponsResu=styled.div`
 display: flex;
+background-color: #f7f7f7 ;
+border-top:10px solid #4f0381 ;
+border-bottom: 10px solid  #4f0381 ;
 padding: 10px 10px;
 flex-direction: row;
 

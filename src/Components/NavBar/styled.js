@@ -1,5 +1,11 @@
 import styled from "styled-components";
 
+export const NavBarSearch=styled.div`
+display: flex;
+flex-direction: column;
+width: auto;
+`;
+
 export const NavBar=styled.div`
     display: flex;
     flex-direction: row;
@@ -182,51 +188,79 @@ export const Back=styled.button`
 export const ShowSearch=styled.div`
     display: none;
  @media(max-width:1030px){
-    background-color: violet;
-     padding: 10px 0px;
+    background-color: purple;
+     padding: 10px 10px;
      font-size: 4rem;
-    position: absolute;
-    margin: 0 25vw -10vh 25vw;
-        display: flex;
-    z-index:1;
-    transition: cubic-bezier(0.47, 0, 0.745, 0.715);
+     display: block;
+     height: 4rem;
+    animation:Show forwards 300ms ease-in-out;
+    @keyframes Show{
+            0%{
+                opacity: 0;
+                margin: -4rem auto auto auto;
+            }
+            100%{
+                opacity: 1;
+                display: none;
+                margin: 0 auto;  
+            }
 
+        }
        
     }`
 export const HiddenSearch=styled.div`
    display: none;
  @media(max-width:1030px){
-     background-color: violet;
+    background-color: purple;
      padding: 10px 0px;
-     z-index: -1;
-     font-size: 4rem;
-    position: absolute;
-    margin: -60px 25vw 0vh 25vw;
-        display: flex;
+     height: 4rem;
+     background-color: purple;
+                margin: 0 auto;
+          font-size: 4rem;
+          animation: Hidden reverse 400ms ease-in-out;
+          @keyframes Show{
+            0%{
+                opacity: 0;
+                transition: 500ms;
+                margin: -4rem auto auto auto;
+            }
+            100%{
+                opacity: 1;
+                display: none;
+                margin: 0 auto;  
+            }
 
+        }
  }
 `
 export const SearchBarLoupeResponsive=styled.div`
 @media(max-width:1030px){
     position: absolute;
 display: flex;
-    
     padding: 0 0 ;
     cursor: pointer;
 
     flex-direction: row;
+  
     border-collapse: collapse;
 
-    i{
+  
+}`
+export const SearchLoupeArea=styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 25vw;
+  i{
         font-size: 1.5rem;
-        padding: 8px 15px;
-        margin: 0 30px 0 0px;
+        padding:8px 15px;
         border-top-right-radius: 5px;
         border-bottom-right-radius:5px;
         color: white;
         background-color:red;
-    }
-}`
+    }`
 export const SearchBarResponsive=styled.input`
     width: 45vw;
+    height: 2.6rem;
 `
+
