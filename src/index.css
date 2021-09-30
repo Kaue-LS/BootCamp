@@ -10,11 +10,10 @@ html,body{
     font-family: 'Fira Sans', sans-serif;
 
     font-family: 'Oswald', sans-serif;
-        background-color: #e7e4e4;
+        background-color: #f7f7f7;
 }
 
 @media (max-width:800px) {
     body{
-        background-color: white;
     }
 }

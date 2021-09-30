@@ -1,6 +1,18 @@
 import * as S from './styled'
-
+import { useState } from 'react'
 export default function Pneus(){
+  const [Quant,setQuant] =useState(1)
+
+    const Plus=(props)=>{
+      if(Quant<6){
+      setQuant(Quant+props)
+      }
+    }
+    const Less=(props)=>{
+      if(Quant>1){
+      setQuant(Quant-props)
+      }
+    }
     return(
       <>
         {/* Pneu escolhido */}
@@ -37,9 +49,9 @@ export default function Pneus(){
               <S.QuantArea>
                 <S.Label>Quantidade</S.Label>
                 <S.Quant>
-                 <S.IconLess>-</S.IconLess>
-                 <span>1</span>
-                 <S.IconPlus>+</S.IconPlus>
+                 <S.IconLess onClick={()=>Less(1)}>-</S.IconLess>
+                 <span>{Quant}</span>
+                 <S.IconPlus onClick={()=>Plus(1)}>+</S.IconPlus>
                </S.Quant>
               </S.QuantArea>
               <S.PreçoArea>

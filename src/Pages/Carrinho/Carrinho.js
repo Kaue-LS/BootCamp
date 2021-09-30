@@ -1,11 +1,10 @@
-import {  useState } from "react";
-import Pneus from "./Pneus";
-import Cep from '../../Components/img/cep.jpg'
-import Cupom from '../../Components/img/cupon.jpg'
+// import {  useState } from "react";
+import Pneus from "./Pneu/Pneus";
 import CartICon from '../../Components/img/cart.jpg'
-// import { Anuncio } from "../../Components/Anuncios/Anuncio";
+import { Anuncio } from "../../Components/Anuncios/Anuncio";
 import * as S from "./styled";
 import NavBar from "../../Components/NavBar/NavBar";
+import CepCupom from "./CupomCep/CepCupom";
 export default function Carrinho() {
   // const [cep, setCep] = useState([]);
   // const numCep = Number;
@@ -22,17 +21,7 @@ export default function Carrinho() {
   // useEffect(() => {
   //   buscaCep();
   // });
-  const [ShowCupom, setShowCupom]=useState(false);
-  const [ShowCep, setShowCep]=useState(false);
-
-      const MostrarCupom=(props)=>{
-        setShowCupom(props)
-      }
   
-      const MostrarCep=()=>{
-        setShowCep(true)
-      }
-    console.log(ShowCupom)
   return (
     <>
     <NavBar></NavBar>
@@ -49,9 +38,7 @@ export default function Carrinho() {
 
       <S.Itens>
         {/* Parte onde os pneus vao aparecer, eles estao no arquivo Pneu */}
-        <S.Items>
           <Pneus></Pneus>        
-        </S.Items>
       </S.Itens>
 
       
@@ -60,50 +47,10 @@ export default function Carrinho() {
         
         <S.CepCuponsResu>
        
-          <S.CuponsCep>
-          
-            { ShowCupom?(
-              <S.CupomArea >
-              <S.CuponsTitle><img src={Cupom} alt='cupom'/>Cupom de desconto</S.CuponsTitle>
-              <i className="im im-angle-down" onClick={()=>MostrarCupom(false)} ></i>
-
-            <S.ShowCupom>
-              <S.CupomBar placeholder='INSIRA O CUPOM DE DESCONTO'></S.CupomBar><S.CupomButton>APLICAR</S.CupomButton>
-            </S.ShowCupom>
-            </S.CupomArea>
-            ):(
-              <S.CupomArea onClick={()=>MostrarCupom(true)} >
-
-              <S.CuponsTitle><img src={Cupom} alt='cupom'/>Cupom de desconto</S.CuponsTitle>
-              <i className="im im-angle-up"></i>
-              </S.CupomArea>
-            )
-            }
-
-
-            
-
-            {
-              ShowCep?(
-                <S.CepArea  >
-            <S.CepTitle><img src={Cep} alt='cep'/>Informe seu CEP</S.CepTitle>
-            <i className="im im-angle-down"onClick={()=>MostrarCep(false)}></i>
-            <S.ShowCep>
-              <S.CepBar/>
-              <S.CepButton>CALCULAR ENTREGA</S.CepButton>
-            </S.ShowCep>
-            </S.CepArea>
-              ):(
-                <S.CepArea onClick={()=>MostrarCep(true)}>
-                <S.CepTitle><img src={Cep} alt='cep'/>Informe seu CEP</S.CepTitle>
-                <i className="im im-angle-up"></i>
-                </S.CepArea>
-              )
-            }
-           
-
-          </S.CuponsCep>
-
+      <S.CepCupomAnuncio>
+      <CepCupom/>
+      <Anuncio/>
+      </S.CepCupomAnuncio>
 
         <S.ResuButtons>
           <S.resumoArea>

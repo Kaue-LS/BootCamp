@@ -2,10 +2,26 @@ import styled from "styled-components";
 
 export const AnuncioArea=styled.div`
     background-image: url('https://www.pneustore.com.br/medias/sys_master/images/images/hc7/h43/8918866493470/bg-lp-psmovel-desktop.png');
-    width: 60%;
-    margin: 0px auto 0 auto;
+    width: 80%;
+    margin: 3rem 2rem;
     background-size: 100%;
     background-repeat: no-repeat;
+    transition:300ms;
+    @media(min-width:1030px){
+    :hover{
+    width: 90%;
+    transition: 300ms;
+        img{
+
+            transition: 500ms;
+            width: 35%;
+        }
+    }
+}
+    
+    @media(max-width:930px){
+        width: 80vw;
+    }
 `;
 export const Anuncio=styled.div`
    display: flex;
