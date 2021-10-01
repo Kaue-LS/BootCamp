@@ -163,7 +163,7 @@ color: white;
     i{
         animation: Around ease-in-out forwards 200ms;
         height: auto;
-        margin: 0 10px;
+        margin: 0 20px;
         font-size: 1rem;
         cursor: pointer;
        

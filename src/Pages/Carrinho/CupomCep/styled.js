@@ -46,7 +46,9 @@ export const CuponsTitle=styled.p`
     width: 20rem;
     flex-direction: row;
     align-items: center;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: gray;
     img{
         margin: 0 10px;
         width: 4rem;
@@ -162,8 +164,11 @@ padding: 0px 16px;
 export const CepTitle=styled.p`
   display: flex;
     width: 20rem;
+    align-items: center;
     flex-direction: row;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+    color: gray;
+    font-weight: 600;
     img{
         margin: 0 10px;
         width: 2rem;

@@ -26,7 +26,7 @@ export const Items=styled.div`
 `;
 
 export const NumberItem=styled.div`
-    padding: 6.7rem 2rem;
+    padding: 7rem 2rem;
     border-top-left-radius: 10px;
     border-bottom-left-radius:10px;
     color: #4f0381;
@@ -211,7 +211,7 @@ export const IconTrash=styled.div`
     border-left: 2px solid #4f0381 ;
     margin: 0 auto 0 auto;
     background-color:#555ebd ;
-    padding: 8rem 1.8rem;
+    padding: 7.95rem 1.8rem;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     transition:300ms;
