@@ -9,7 +9,7 @@ import styled from "styled-components";
 
  export const ContainerTop = styled.div`
      display: flex;
-     background-color: #3A3A3A;
+     background-color: #252031;
      height: 15rem;
  `;
 
@@ -17,29 +17,44 @@ import styled from "styled-components";
  display: flex;
  `;
 
- export const ContainerTitleMenu = styled.p`
+ export const ContainerTitleMenu = styled.div`
  color:#ffffff;
  padding: 3rem 4rem;
+ h3{
+     font-weight: 100;
+ }
+ 
  `;
 
  export const ContainerList = styled.h3`
  `;
 
- export const ContainerListItems = styled.h4`
- color: grey;
+ export const ContainerListItems = styled.div`
+
  padding: 1rem 0rem;
+ p{
+     color: #ffffff80;
+     font-weight: 100;
+     line-height: 40px;
+ }
  `;
 
  export const ContainerMed = styled.h4`
      display: flex;
-     background-color: #3A3A3A;
+     background-color: #252031;
      color:#ffffff;
  `;
 
- export const ContainerTitleMenu2 = styled.p`
+ export const ContainerTitleMenu2 = styled.div`
     margin: 2rem 0;
      padding-left: 8rem;
      padding-bottom:10rem;
+     h3{
+     font-weight: 100;
+ }
+ p{
+     font-weight: 400;
+ }
 `;
 
  export const ContainerMedImg = styled.img`

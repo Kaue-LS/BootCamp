@@ -20,9 +20,9 @@ export const CartIcon= styled.img`
 export const Itens=styled.div`
     display: flex;
     background-color: #F7F7F7;
-    border-top:10px solid #4f0381 ;
-    border-left:10px solid #4f0381 ;
-    border-right:10px solid #4f0381 ;
+    border-top:5px solid #4f0381 ;
+    border-left:5px solid #4f0381 ;
+    border-right:5px solid #4f0381 ;
     flex-direction:column;
     margin: 10px auto 0 auto;
     border-top-left-radius: 10px;
@@ -195,7 +195,7 @@ export const PreçoTotal= styled.h4`
    font-size: 1.8rem;
    text-align: right;
     font-weight: 100;
-    color: #88ac02;
+    color:  #4f0381;
     @media(max-width: 930px) {
         font-size: 1.8rem;
     }

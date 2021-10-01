@@ -88,6 +88,7 @@ export const InfoArea=styled.div`
     justify-content: center;
     align-items: center;
     margin: 0 20px;
+    border-bottom: 2px solid darkgray;
     @media(max-width:880px){
         margin: 0 auto;
     }
@@ -106,7 +107,7 @@ export const Info =styled.p`
 export const CodeBrand=styled.div`
     display: flex;
  
-    margin: 10px auto;
+    margin: 20px 5vw;
     @media(max-width:1200px){
         margin: 30px auto;
     }
@@ -198,9 +199,9 @@ export const PreçoArea=styled.div`
 
 `;
 export const Preço= styled.p`
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: 900;
-    color: #88ac02;
+    color:  #4f0381;
     @media(max-width:980px){
         font-size: 1.5rem;
     }

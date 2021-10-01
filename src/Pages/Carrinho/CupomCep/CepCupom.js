@@ -32,7 +32,7 @@ console.log(Ceptext)
         { ShowCupom?(
           <S.CupomArea >
           <S.CuponsTitle><img src={Cupom} alt='cupom'/>Cupom de desconto</S.CuponsTitle>
-          <i className="im im-angle-down" onClick={()=>MostrarCupom(false)} ></i>
+          <S.IconActive className="im im-angle-down" onClick={()=>MostrarCupom(false)} ></S.IconActive>
 
         <S.ShowCupom>
           <S.CupomBar value={Cupomtext} onChange={props=>setCupom(props.target.value)} placeholder='INSIRA O CUPOM DE DESCONTO'></S.CupomBar><S.CupomButton>APLICAR</S.CupomButton>
@@ -53,8 +53,9 @@ console.log(Ceptext)
         {
           ShowCep?(
             <S.CepArea  >
+
         <S.CepTitle><img src={Cep} alt='cep'/>Informe seu CEP</S.CepTitle>
-        <i className="im im-angle-down"onClick={()=>MostrarCep(false)}></i>
+        <S.IconActive  className="im im-angle-down"onClick={()=>MostrarCep(false)}></S.IconActive>
         <S.ShowCep>
           <S.CepBar value={Ceptext} onChange={props=>setCep(props.target.value)} type='text' name="numbers"  />
           <S.CepButton>CALCULAR ENTREGA</S.CepButton>

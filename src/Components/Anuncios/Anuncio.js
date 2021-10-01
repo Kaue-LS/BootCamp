@@ -1,11 +1,7 @@
-import * as S from './styled'
-export function Anuncio(){
-    return(
-        <S.AnuncioArea>
-        <S.Anuncio>
-        <S.Logo src='https://www.pneustore.com.br/medias/sys_master/images/images/he9/h9e/8918910533662/logo-psmovel.png'/>
-        <S.Van src='https://www.pneustore.com.br/medias/sys_master/images/images/h7b/hfd/8918867017758/van-psmovel.png'/>
-        </S.Anuncio>
-        </S.AnuncioArea>
-    )
-}
+{/**
+https://static.pneustore.com.br/medias/sys_master/images/images/hef/ha7/9043275841566/Desk-Van.png
+https://static.pneustore.com.br/medias/sys_master/images/images/hd6/hfe/9043188613150/BANNER-DESK-10-OFF-PIRELLI.png
+https://static.pneustore.com.br/medias/sys_master/images/images/hf8/h95/9041663918110/BANNER-DESK.png
+https://static.pneustore.com.br/medias/sys_master/images/images/h03/h01/9028898291742/MicrosoftTeams-image-6-.png
+https://static.pneustore.com.br/medias/sys_master/images/images/hc0/h51/9028317773854/DESCONTO-CARRINHO-CONTINENTAL.jpg
+*/}

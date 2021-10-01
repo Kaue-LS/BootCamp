@@ -10,37 +10,37 @@ export default function Footer() {
                         <S.ContainerTitleMenu>
                             <h3>INSTITUCIONAL</h3>
                             <S.ContainerListItems>
-                                <h4>Garantia</h4>
-                                <h4>Política de Privacidade</h4>
-                                <h4>Regras do site e promoções</h4>
-                                <h4>Trabalhe Conosco</h4>
-                                <h4>Marcas</h4>
+                                <li>Garantia</li>
+                                <li>Política de Privacidade</li>
+                                <li>Regras do site e promoções</li>
+                                <li>Trabalhe Conosco</li>
+                                <li>Marcas</li>
                             </S.ContainerListItems>
                         </S.ContainerTitleMenu>
                         <S.ContainerTitleMenu>
                             <h3>AJUDA</h3>
                             <S.ContainerListItems>
-                                <h4>Perguntas frequentes</h4>
-                                <h4>Entrega</h4>
-                                <h4>Troca e Desistência</h4>
-                                <h4>Meus pedidos</h4>
-                                <h4>Informações Técnicas do Pneus</h4>
+                                <li>Perguntas frequentes</li>
+                                <li>Entrega</li>
+                                <li>Troca e Desistência</li>
+                                <li>Meus pedidos</li>
+                                <li>Informações Técnicas do Pneus</li>
                             </S.ContainerListItems>
                         </S.ContainerTitleMenu>
                         <S.ContainerTitleMenu>
                             <h3>SERVIÇO</h3>
                             <S.ContainerListItems>
-                                <h4>Entregas e Montagem Móvel</h4>
-                                <h4>Seja um parceiro de serviços</h4>
+                                <li>Entregas e Montagem Móvel</li>
+                                <li>Seja um parceiro de serviços</li>
                             </S.ContainerListItems>
                         </S.ContainerTitleMenu>
                         <S.ContainerTitleMenu>
                             <h3>CENTRAL DE RELACIONAMENTO</h3>
                             <S.ContainerListItems>
-                                <h4>0800-602-2013</h4>
-                                <h4>(Ligações de telefone fixo - Chamada Gratuita)</h4>
-                                <h4>(47) 3046-2559</h4>
-                                <h4>(Ligações de qualquer origem - Cobrança de Acordo com Operadora)</h4>
+                                <li>0800-602-2013</li>
+                                <li>(Ligações de telefone fixo - Chamada Gratuita)</li>
+                                <li>(47) 3046-2559</li>
+                                <li>(Ligações de qualquer origem - Cobrança de Acordo com Operadora)</li>
                             </S.ContainerListItems>
                         </S.ContainerTitleMenu>
                     </S.ContainerMenu>
@@ -58,6 +58,9 @@ export default function Footer() {
                         <h3>REDES SOCIAIS</h3>
                     </S.ContainerTitleMenu2>
                 </S.ContainerMed>
+
+
+                {/* Footer Responsivo */}
             </S.Footer>
         </div>
     )

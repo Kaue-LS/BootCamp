@@ -12,15 +12,32 @@ export default function NavBar() {
       setShowSearch(props)
   }
 
+  const VerificarSearch=(props)=>{
+    if(props.length>0){
+      document.getElementById('lupa').style=`
+      transition:200ms linear;
+      color: #ffffff;
+      background-color:#68CDFA;`
+
+    }
+    else{
+      document.getElementById('lupa').style=`color: #ffffff50;
+      background-color:#68CDFA80;
+      transition:200ms linear;
+      `
+
+    }
+  }
+
   return (
     <>
     <S.NavBar>
         {/* Reponsivo */}
-        <S.Back><i class="im im-arrow-left"></i></S.Back>
+        <S.Back><i className="im im-arrow-left"></i></S.Back>
       <S.Logo src="https://static.pneustore.com.br/medias/sys_master/root/hd3/hed/9042777407518/LOGO-PNEUSTORE-NEGATIVO.png" />
       <S.SearchBarLoupe>
-        <S.SearchBar type="text" />
-        <i class="im im-magnifier"></i>
+        <S.SearchBar onChange={(props)=>VerificarSearch(props.target.value)} type="text" placeholder='Pesquise por Marca e Medida (exemplo 205/55R16)' />
+        <i id='lupa' className="im im-magnifier"></i>
       </S.SearchBarLoupe>
       <S.Avatar>
         <S.Head />
@@ -31,11 +48,11 @@ export default function NavBar() {
           <S.UserEnterAtive onClick={() => Mostrar(false)}>
             <S.UserName>Olá! </S.UserName>
             <S.Entrar>
-              Entrar{" "}
-              <i
+              Entrar
+              <S.IconActive
                 className="im im-angle-down"
                 
-              ></i>
+              ></S.IconActive>
             </S.Entrar>
             <S.Buttons>Login</S.Buttons>
             <S.Buttons>Meus pedidos</S.Buttons>
@@ -47,7 +64,7 @@ export default function NavBar() {
           <S.UserEnter  onClick={() => Mostrar(true)}>
             <S.UserName>Olá! </S.UserName>
             <S.Entrar>
-              Entrar{" "}
+              Entrar
               <i className="im im-angle-up"></i>
             </S.Entrar>
           </S.UserEnter>
@@ -59,9 +76,9 @@ export default function NavBar() {
         {" "}
         {
             showSearch?(
-                <i class="im im-magnifier" onClick={()=>ShowSearch(false)}></i>
+                <i className="im im-magnifier" onClick={()=>ShowSearch(false)}></i>
             ):(
-                <i class="im im-magnifier" onClick={()=>ShowSearch(true)}></i>
+                <i className="im im-magnifier" onClick={()=>ShowSearch(true)}></i>
             )
         }
       </S.Search>
@@ -75,8 +92,8 @@ export default function NavBar() {
                 <S.ShowSearch>
                 <S.SearchBarLoupeResponsive>
                 <S.SearchLoupeArea>
-                <S.SearchBarResponsive type="text" />
-                <i class="im im-magnifier"></i>
+                <S.SearchBarResponsive type="text"  onChange={(props)=>VerificarSearch(props.target.value)}/>
+                <i className="im im-magnifier" id='lupa' ></i>
                 </S.SearchLoupeArea>
               </S.SearchBarLoupeResponsive>
                 </S.ShowSearch>
@@ -84,8 +101,8 @@ export default function NavBar() {
                 <S.HiddenSearch>
                 <S.SearchBarLoupeResponsive>
                 <S.SearchLoupeArea>
-                <S.SearchBarResponsive type="text" />
-                <i class="im im-magnifier"></i>
+                <S.SearchBarResponsive type="text"  onChange={(props)=>VerificarSearch(props.target.value)}/>
+                <i className="im im-magnifier" id='lupa' ></i>
                 </S.SearchLoupeArea>
               </S.SearchBarLoupeResponsive>
                 </S.HiddenSearch>

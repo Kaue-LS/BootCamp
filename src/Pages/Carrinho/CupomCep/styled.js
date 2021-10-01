@@ -25,6 +25,8 @@ export const CupomArea=styled.div`
     margin: 10px auto 0 auto;
 
     i{
+        animation: Around ease-in-out forwards 200ms;
+
         margin: 0 3rem;
         @media(max-width: 530px) {
         margin: 0 auto;
@@ -53,11 +55,25 @@ export const CuponsTitle=styled.p`
 `;
 
 export const ShowCupom=styled.div`
-    margin: 10px auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    animation: Show 300ms forwards ease-in-out;
+    @keyframes Show{
+0%{
+    opacity: 0;
+ margin: 20px auto 0 0;
+    
+    
+   
+}100%{
+    opacity: 1;
+ margin: 8px auto ;
+ 
+  
+}
+}
     @media(max-width: 530px) {
         display: flex;
         flex-direction: column;
@@ -96,7 +112,23 @@ export const CupomButton=styled.button`
 
 
 
+export const IconActive=styled.i`
+    
+        margin: 0 2rem;
+    
+        height: auto;
+        animation: Around  forwards 200ms ease-in-out;
 
+        @keyframes Around{
+            0%{
+                transform: rotate(180deg);
+            }
+            100%{
+                transform: rotate(0deg);
+            }
+        }
+    
+`;
 
 export const CepArea=styled.div`
  display: flex;
@@ -111,7 +143,13 @@ export const CepArea=styled.div`
     margin: 10px auto;
 padding: 0px 16px;
     i{
+        animation: Around ease-in-out forwards 200ms;
+  
         margin: 0 2rem;
+    
+        height: auto;
+
+       
         @media(max-width: 530px) {
         margin: 0 auto;
     }
@@ -132,13 +170,26 @@ export const CepTitle=styled.p`
     }
 `;
 export const ShowCep=styled.div`
- margin: 8px auto;
-    display: flex;
+animation: Show forwards 300ms ease-in-out;
+display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+@keyframes Show{
+0%{
+    opacity: 0;
+ margin: 20px auto 0 0;
     
-    a{
+    
+   
+}100%{
+    opacity: 1;
+ margin: 8px auto ;
+ 
+  
+}
+}
+a{
         color:black;
     }
     @media(max-width: 530px) {

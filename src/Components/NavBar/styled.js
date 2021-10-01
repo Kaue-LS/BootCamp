@@ -24,42 +24,52 @@ export const Logo= styled.img`
     width: 12rem;
     z-index: 1;
 
-    margin: auto 10px auto 10vw;
+    margin: auto 10px auto 9vw;
     @media(max-width:1030px){
         margin:0 auto;
     }
 `
 export const SearchBarLoupe=styled.div`
-    display: flex;
+    z-index: 100;
     width: auto;
+    display: flex;
     padding: 0 0 ;
+   
     cursor: pointer;
-
     flex-direction: row;
     border-collapse: collapse;
-    margin: 0 0px 0 20px;
+    margin: auto 30px auto 20px;
 
     i{
-        font-size: 1.5rem;
-        padding: 8px 15px;
-        margin: 0 30px 0 0px;
+        height: 39px;
+        width: 52px;
+        text-align: center;
+        padding:9px 0;
+        font-size: 20px;
+        font-weight: 900;
         border-top-right-radius: 5px;
         border-bottom-right-radius:5px;
-        color: white;
-        background-color:red;
+        color: #ffffff80;
+        background-color:#68CDFA80;
     }
     @media(max-width:1030px){
         display: none;
     }
 `;
 export const SearchBar=styled.input`
-    height: 2.5rem;
+    height: 39px;
     min-width: 43vw;
     width: 30vw;
+    height: 39px;
+    padding: 8px 16px;
     border:1px solid gray;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
-    margin: auto 0px auto auto;
+    :focus{
+        box-shadow: none;
+        border: 0 none;
+        outline:0.5px solid ;
+    }
 `
 
 export const User= styled.div`
@@ -122,16 +132,41 @@ export const UserEnterAtive=styled.div`
     flex-wrap: wrap;
     text-align: center;
     justify-content: end;
+    height: auto;
     align-items: flex-start;
+    i{
+        height: auto;
+
+       
+    
+    }
+`;
+export const IconActive=styled.i`
+    
+        margin: 0 2rem;
+    
+        height: auto;
+        animation: Around  forwards 200ms ease-in-out;
+
+        @keyframes Around{
+            0%{
+                transform: rotate(180deg);
+            }
+            100%{
+                transform: rotate(0deg);
+            }
+        }
+    
 `;
 export const Entrar=styled.p`
 color: white;
     i{
+        animation: Around ease-in-out forwards 200ms;
+        height: auto;
         margin: 0 10px;
         font-size: 1rem;
         cursor: pointer;
-
-
+       
 
     }
 
@@ -145,9 +180,22 @@ border: none;
 padding: 10px 0px;
 color: #4e018f;
     cursor: pointer;
-
+ margin: -50px 0 0 0;
 font-size: 1rem;
 width: 8rem;
+animation:Show forwards 300ms ease-in-out;
+@keyframes  Show{
+ 0%{
+     opacity: 0;
+    margin: -50px 0px 0 0;
+ }
+ 100%{
+     opacity: 1;
+     margin: 0 0 0 0;
+ }
+ }
+ 
+
 `;
 
 
@@ -188,7 +236,7 @@ export const Back=styled.button`
 export const ShowSearch=styled.div`
     display: none;
  @media(max-width:1030px){
-    background-color: purple;
+    background-color: #4e018f70;
      padding: 10px 10px;
      font-size: 4rem;
      display: block;
@@ -211,10 +259,9 @@ export const ShowSearch=styled.div`
 export const HiddenSearch=styled.div`
    display: none;
  @media(max-width:1030px){
-    background-color: purple;
      padding: 10px 0px;
      height: 4rem;
-     background-color: purple;
+     background-color: #4e018f70;
                 margin: 0 auto;
           font-size: 4rem;
           animation: Hidden reverse 400ms ease-in-out;
@@ -252,15 +299,30 @@ export const SearchLoupeArea=styled.div`
     align-items: center;
     margin: 0 25vw;
   i{
-        font-size: 1.5rem;
-        padding:8px 15px;
+        height: 39px;
+        width: 52px;
+        text-align: center;
+        padding:9px 0;
+        font-size: 20px;
+        font-weight: 900;
         border-top-right-radius: 5px;
         border-bottom-right-radius:5px;
-        color: white;
-        background-color:red;
-    }`
+        color: #ffffff;
+        background-color:#68CDFA;
+  }
+  
+    `;
 export const SearchBarResponsive=styled.input`
     width: 45vw;
-    height: 2.6rem;
+    height: 39px;
+    padding: 8px 16px;
+    border:1px solid gray;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    :focus{
+        box-shadow: none;
+        border: 0 none;
+        outline:0.5px solid ;
+    }
 `
 

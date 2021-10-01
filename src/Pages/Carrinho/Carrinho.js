@@ -1,7 +1,6 @@
 // import {  useState } from "react";
 import Pneus from "./Pneu/Pneus";
 import CartICon from '../../Components/img/cart.jpg'
-import { Anuncio } from "../../Components/Anuncios/Anuncio";
 import * as S from "./styled";
 import NavBar from "../../Components/NavBar/NavBar";
 import CepCupom from "./CupomCep/CepCupom";
@@ -49,7 +48,6 @@ export default function Carrinho() {
        
       <S.CepCupomAnuncio>
       <CepCupom/>
-      <Anuncio/>
       </S.CepCupomAnuncio>
 
         <S.ResuButtons>
