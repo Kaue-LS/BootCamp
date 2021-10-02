@@ -1,17 +1,27 @@
 import * as S from './styled'
 import { useState } from 'react'
 export default function Pneus(){
-  const [Quant,setQuant] =useState(1)
-
+  const [quant,setQuant] =useState(1)
+  const [preço,setPreço] =useState(0)
+  
     const Plus=(props)=>{
-      if(Quant<6){
-      setQuant(Quant+props)
+      if(quant<6){
+      setQuant(quant+props)
+      setPreço()
+
       }
     }
     const Less=(props)=>{
-      if(Quant>1){
-      setQuant(Quant-props)
+      if(quant>1){
+      setQuant(quant-props)
+      setPreço()
+
       }
+    }
+
+
+    const VerificarPreço=(props)=>{
+
     }
     return(
       <>
@@ -50,13 +60,13 @@ export default function Pneus(){
                 <S.Label>Quantidade</S.Label>
                 <S.Quant>
                  <S.IconLess onClick={()=>Less(1)}>-</S.IconLess>
-                 <span>{Quant}</span>
+                 <span>{quant}</span>
                  <S.IconPlus onClick={()=>Plus(1)}>+</S.IconPlus>
                </S.Quant>
               </S.QuantArea>
               <S.PreçoArea>
                 <S.Label>Preço Total:</S.Label>
-                <S.Preço>R$ 1.123,90</S.Preço>
+                <S.Preço onChange={(props)=>VerificarPreço(props.target.value)} >{preço.toFixed(2)}</S.Preço>
               </S.PreçoArea>
             </S.QuantPreço>
           </S.Description>

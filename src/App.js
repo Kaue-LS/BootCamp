@@ -1,12 +1,19 @@
 import Carrinho from './Pages/Carrinho/Carrinho';
 import Footer from './Components/Footer/Footer';
+import Login from './Pages/Login/Login'
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <Carrinho></Carrinho>
-      <Footer></Footer>
-    </div>
+    <BrowserRouter>
+    <Switch>
+    <Route path="/" exact component={Carrinho}></Route>
+    <Route path="/login"  component={Login}></Route>
+
+    </Switch>
+    <Footer></Footer>
+
+    </BrowserRouter>
   );
 }
 

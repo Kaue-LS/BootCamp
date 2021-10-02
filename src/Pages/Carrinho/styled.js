@@ -160,7 +160,7 @@ export const Title2=styled.h3`
 `;
 export const Subtotal=styled.p`
     margin: 5px 0 0 auto ;
-    font-weight: 100;
+    font-weight: 600;
 `;
 // ----------
 // Terceira linha do resumo
@@ -194,7 +194,7 @@ export const TotalsubTotal= styled.div`
 export const PreçoTotal= styled.h4`
    font-size: 1.8rem;
    text-align: right;
-    font-weight: 100;
+    font-weight: 700;
     color:  #4f0381;
     @media(max-width: 930px) {
         font-size: 1.8rem;

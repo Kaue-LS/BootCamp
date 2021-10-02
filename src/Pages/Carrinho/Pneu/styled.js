@@ -33,6 +33,7 @@ export const NumberItem=styled.div`
     background-color: #69dcfb;
     border-right:2px solid #4f0381;
     span{
+        font-weight: 600;
         font-size: 3rem;
     }
    
@@ -158,6 +159,7 @@ export const Quant=styled.div`
    background-color: gray;
    border-radius: 20px;
    span{
+       font-size: 1.3rem;
     color: white;
        padding: 0px 5px;
    }

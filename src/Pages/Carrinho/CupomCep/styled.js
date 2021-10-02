@@ -194,7 +194,8 @@ display: flex;
   
 }
 }
-a{
+a{      
+    margin: 10px 0;
         color:black;
     }
     @media(max-width: 530px) {

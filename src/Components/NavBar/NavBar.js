@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import * as S from "./styled";
 export default function NavBar() {
   const [showOption, setShowOption] = useState(false);
@@ -54,9 +55,15 @@ export default function NavBar() {
                 
               ></S.IconActive>
             </S.Entrar>
+            <div style={{backgroundColor:'#ffffff',display:'flex',flexDirection:'column'}}>
+              <Link to='/login'>
             <S.Buttons>Login</S.Buttons>
+            </Link>
+            <Link to='/'>
             <S.Buttons>Meus pedidos</S.Buttons>
+            </Link>
             <S.Buttons>Endereço</S.Buttons>
+            </div>
           </S.UserEnterAtive>
         </S.User>
       ) : (
