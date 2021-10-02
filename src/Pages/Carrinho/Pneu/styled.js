@@ -4,18 +4,17 @@ export const ItemArea= styled.div`
     display: flex;
     background-color: white;
     margin: 1rem auto;
-    width:90vw ;
+    width:50vw ;
     box-shadow: 0px 0px 20px gray;
     flex-direction:row;
     justify-content: center;
     align-items: center;
     border-radius: 10px;
-    @media(max-width: 800px) {
-   flex-direction: column;
-  }
   @media(max-width: 800px) {
    box-shadow: none;
+   flex-direction: column;
    max-width:auto ;
+   width: auto;
   }
    
   
@@ -26,7 +25,7 @@ export const Items=styled.div`
 `;
 
 export const NumberItem=styled.div`
-    padding: 7rem 2rem;
+    padding: 7.5rem 0rem;
     border-top-left-radius: 10px;
     border-bottom-left-radius:10px;
     color: #4f0381;
@@ -47,10 +46,11 @@ export const NumberItem=styled.div`
     border-bottom-left-radius: 0px;
     padding-left:2vmax ;
         padding-right: 2vmax;        
-        padding-left:43.5vmin ;
-        padding-right: 43.5vmin;        
+        padding-left:22.2vmin ;
+        padding-right: 23.2vmin;        
         padding-top: 1rem;
         padding-bottom: 1rem;
+        background: none;
     }
 `;
 
@@ -64,20 +64,10 @@ export const Pneu= styled.img`
 `;
 // Area onde esta a descrição, ao lado da foto do pneu
 export const Description =styled.div`
-    margin: 10px 10rem;
+    margin: 10px auto;
     display: flex;
     padding: 0 5.5px;
     flex-direction: column;
-    @media(max-width: 930px) {
-        margin: 10px 0px;
-        padding: 0 30px;
-    }
-    @media(max-width:1200px){
-     margin:10px 5rem ;
-    }
-    @media(max-width:1000px){
-     margin:10px 2rem ;
-    }
   
 `
 // Pneu com marca e id
@@ -90,9 +80,7 @@ export const InfoArea=styled.div`
     align-items: center;
     margin: 0 20px;
     border-bottom: 2px solid darkgray;
-    @media(max-width:880px){
-        margin: 0 auto;
-    }
+  
     @media(max-width:1120px){
         margin: 0 auto;
         }
@@ -100,26 +88,33 @@ export const InfoArea=styled.div`
 export const Info =styled.p`
     font-size: 1.6rem;
     
-    @media(max-width:980px){
-        font-size: 1.4rem;
+    @media(max-width:1230px){
+        font-size: 1.2rem;
+        text-align: center;
     }
 
 `;
 export const CodeBrand=styled.div`
     display: flex;
  
-    margin: 20px 5vw;
+    margin: 20px auto;
     @media(max-width:1200px){
-        margin: 30px auto;
+        margin: 10px auto;
+    }
+    @media(max-width:800px){
+        flex-direction: column;
     }
     
 `;
 export const Brand= styled.img`
     width: 8rem;
-    margin:0 20px;
+    margin:0 auto;
+    @media(max-width:800px){
+        margin: 10px auto;
+    }
 `
 export const Code=styled.p`
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     margin:0 auto;
     color: gray;
 `
@@ -130,8 +125,12 @@ export const QuantPreço=styled.div`
 display: flex;
 flex-direction: row;
 margin: 0 40px;
-@media(max-width:980px){
+@media(max-width:800px){
+        flex-direction: column;
         margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+
     }
 `;
 // Quantidade
@@ -141,11 +140,17 @@ export const QuantArea=styled.div`
     justify-content: center;
     align-items: center;
     margin: 0  7rem 0 1rem;
-    width: 4rem;
+    width: 0;
+    @media(max-width:800px){
+        margin: 0 auto;
+    }
 `;
 export const Label=styled.label`
     font-size: 1.3rem;
     font-weight: bold;
+    @media(max-width:1000px){
+        font-size: 1.2rem;
+    }
    
 `;
 export const Quant=styled.div`
@@ -163,7 +168,12 @@ export const Quant=styled.div`
     color: white;
        padding: 0px 5px;
    }
-   
+   @media(max-width:1000px){
+       width: 7rem;
+       span{
+       font-size: 1.3rem;
+    }
+   }
     
 `;
 export const IconLess=styled.button`
@@ -204,8 +214,8 @@ export const Preço= styled.p`
     font-size: 2rem;
     font-weight: 900;
     color:  #4f0381;
-    @media(max-width:980px){
-        font-size: 1.5rem;
+    @media(max-width:1000px){
+        font-size: 1.3rem;
     }
    
 `;
@@ -213,7 +223,7 @@ export const IconTrash=styled.div`
     border-left: 2px solid #4f0381 ;
     margin: 0 auto 0 auto;
     background-color:#555ebd ;
-    padding: 7.95rem 1.8rem;
+    padding: 8.45rem 0rem;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     transition:300ms;
@@ -222,9 +232,7 @@ export const IconTrash=styled.div`
         background-color: #69dcfb;
     }
     
-    @media(max-width:1200px){
-        padding-top: 9rem 1.8rem;
-    }
+   
    
 
     @media(max-width:800px){
@@ -237,10 +245,12 @@ export const IconTrash=styled.div`
     border-top-right-radius: 0px;
     padding-left:2vmax ;
         padding-right: 2vmax;        
-        padding-left:42.5vmin ;
-        padding-right: 42.5vmin;        
+        padding-left:23.5vmin ;
+        padding-right: 23.5vmin;        
         padding-top: 1rem;
         padding-bottom: 1rem;
+        background: none;
+
     }
 `;
 
