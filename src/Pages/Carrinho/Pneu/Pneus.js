@@ -2,19 +2,19 @@ import * as S from './styled'
 import { useState } from 'react'
 export default function Pneus(){
   const [quant,setQuant] =useState(1)
-  const [preço,setPreço] =useState(0)
+  const [preço,setPreço] =useState(450.00)
   
     const Plus=(props)=>{
       if(quant<6){
       setQuant(quant+props)
-      setPreço()
+      setPreço(preço+450.00)
 
       }
     }
     const Less=(props)=>{
       if(quant>1){
       setQuant(quant-props)
-      setPreço()
+      setPreço(preço-450.00)
 
       }
     }
