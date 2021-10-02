@@ -140,6 +140,12 @@ export const IconBag=styled.img`
     margin: 0 0 0 auto;
     @media(max-width: 1200px) {
         display: none;
+    } 
+     @media(max-width: 930px) {
+         display: block;
+    }
+    @media(max-width: 560px) {
+         display: none;
     }
 `;
 // ----------------
@@ -197,11 +203,13 @@ export const PreçoTotal= styled.h4`
     font-weight: 700;
     color:  #4f0381;
     @media(max-width: 930px) {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
     @media(max-width:1100px){
         margin: 0 0 0 auto;
         text-align: center;
+        font-size: 1.6rem;
+
     }
     
 `;
@@ -217,8 +225,8 @@ export const SubPreçoTotal=styled.p`
         width: auto;
     }
     @media(max-width:930px){
-        margin: 0 0 0 auto;
-        font-size: 1.3rem;
+        margin: 10px 0 0 auto;
+        font-size: 1.1rem;
         width: auto;
     }
 `;
@@ -240,8 +248,10 @@ export const ContFinal=styled.div`
     flex-direction: row;
     margin: 40px auto 10px auto;
     @media(max-width: 430px) {
-        flex-direction: column;
+        flex-direction: column-reverse;
         margin: 50px auto;
+        justify-content: center;
+        align-items: center;
     }
 `
 export const Continuar=styled.button`
@@ -274,7 +284,7 @@ export const Finalizar=styled.button`
     }
     @media(max-width: 430px) {
         padding: 10px 10px;
-        margin: 10px 20px 0 20px;
+        margin: 0px 20px 20px 20px;
         font-size: 1rem;
         flex-direction: column;
     }
@@ -297,7 +307,7 @@ export const Finalizar=styled.button`
         }
 
         @media(max-width: 530px) {
-        margin: 10px auto;
+        margin: 0px auto;
         color: white;
         width:80%;
         border-radius: 10px;

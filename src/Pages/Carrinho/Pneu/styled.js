@@ -25,7 +25,7 @@ export const Items=styled.div`
 `;
 
 export const NumberItem=styled.div`
-    padding: 7.5rem 0rem;
+    padding: 7.5rem 1rem;
     border-top-left-radius: 10px;
     border-bottom-left-radius:10px;
     color: #4f0381;
@@ -83,25 +83,27 @@ export const InfoArea=styled.div`
   
     @media(max-width:1120px){
         margin: 0 auto;
+        width: 80%;
         }
 `;
 export const Info =styled.p`
     font-size: 1.6rem;
     
     @media(max-width:1230px){
+        width: auto;
         font-size: 1.2rem;
-        text-align: center;
     }
 
 `;
 export const CodeBrand=styled.div`
     display: flex;
- 
+    justify-content: center;
+    align-items: center;
     margin: 20px auto;
     @media(max-width:1200px){
         margin: 10px auto;
     }
-    @media(max-width:800px){
+    @media(max-width:400px){
         flex-direction: column;
     }
     
@@ -125,7 +127,8 @@ export const QuantPreço=styled.div`
 display: flex;
 flex-direction: row;
 margin: 0 40px;
-@media(max-width:800px){
+align-items: center;
+@media(max-width:400px){
         flex-direction: column;
         margin: 0 auto;
         justify-content: center;
@@ -223,7 +226,7 @@ export const IconTrash=styled.div`
     border-left: 2px solid #4f0381 ;
     margin: 0 auto 0 auto;
     background-color:#555ebd ;
-    padding: 8.45rem 0rem;
+    padding: 8.45rem 1rem;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     transition:300ms;
