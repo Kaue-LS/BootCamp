@@ -3,9 +3,12 @@ import styled from "styled-components";
 export const LoginCadastro=styled.div`
     background-color: white;
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
-    padding:0px 350px
+    padding:10px 20px;
 `;
+
 export const Title=styled.h2`
     font-size: 33px;
     line-height: 36.3px;
@@ -55,7 +58,7 @@ export const FormGroup=styled.div`
 // ------------------------------------
 
 export const Login=styled.div`
-  background-color: #DDDDDD;
+  background-color: #ffffff;
     border: 1px solid gray;
     border-radius: 5px;
     min-width: 60vmin;
@@ -215,11 +218,15 @@ span{
         color:#E53E3E;
     }
     label{
+        display: flex;
+        flex-wrap: wrap;
         font-family: Verdana;
         color:#444444;
         margin: 0px 40px 0 0;
     }
     div{
+        display: flex;
+        flex-wrap: wrap;
         margin: 10px 0px;
     }
     input{

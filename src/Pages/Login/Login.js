@@ -1,28 +1,30 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import NavBar from '../../Components/NavBar/NavBar'
 import  NavButton  from '../../Components/NavButton/NavButton'
 import * as S from './styled'
 export default function Login(){
     const [login,setLogin]=useState(false)
-    const [cadastrar,setcadastrar]= useState(true)
-    const Login=()=>{
-        if(login===false){
+    const [cadastrar,setCadastrar]= useState(true)
+    const [proximo,setProximo]=useState(false)
+    const Login=(props)=>{
+        if(props===false){
+        setLogin(false)
         document.getElementById('login').style=`
-        z-index:0;
             position:relative;
             margin-left:-300px;
             opacity:0.5;
         `;
-
         }
         else{
-            setcadastrar(false)
+            setLogin(true)
+            setCadastrar(false)
         }
     }
-    const Cadastrar=()=>{
-        if(cadastrar===false){
+    console.log(login)
+    const Cadastrar=(props)=>{
+        if(props===false){
+            setCadastrar(false)
             document.getElementById('cadastrar').style=`
-            z-index:0;
             position:relative;
             margin-right:-300px;
             opacity:0.5;
@@ -30,14 +32,16 @@ export default function Login(){
             `;
         }
         else{
+            setCadastrar(true)
             setLogin(false)
         }
     }
 
-    useEffect(()=>{
-        Login()
-        Cadastrar()
-    });
+    const VerificarCadastro=(props)=>{
+        setProximo(props)
+    }
+
+   
     return(
         <>
     <NavBar></NavBar>
@@ -60,7 +64,7 @@ export default function Login(){
               </S.FormGroup>
               </S.LoginActive>
         ):(
-            <S.Login id='login' onClick={()=>setLogin(true)}>
+            <S.Login id='login' onClick={()=>Login(true)}>
             <S.Title>Já sou cliente</S.Title>
             <S.SubTitle>Você já tem uma Conta? Faça o Login para acessar as configurações da sua conta.</S.SubTitle>
             </S.Login>
@@ -78,6 +82,44 @@ export default function Login(){
         {cadastrar?(
         <S.CadastrarActive>
             <S.Title>Crie uma conta</S.Title>
+            
+            {
+                proximo?(
+                    <S.FormGroup>
+                    
+                    <div>
+                    <label>Data de nascimento <span>*</span></label>
+                    <S.Input type='text' required/>
+                    </div>
+                    <div>
+                    <label>Seu telefone '('Celular de preferência')' <span>*</span></label>
+                    <S.Input type='text' required/>
+                    </div>
+                    <div>
+                    <label>Outro telefone '('Opcional')'</label>
+                    <S.Input type='text'/>
+                    </div>
+                    <div>
+                    <label>Endereço de Email <span>*</span></label>
+                    <S.Input type='text' required/>
+                    </div>
+                    <div>
+                    <label>Senha <span>*</span></label>
+                    <S.Input type='text' required/>
+                    </div>
+                    <div>
+                    <label>Confirmar senha<span>*</span></label>
+                    <S.Input type='text' required/>
+                    </div>
+                    <div>
+                    <S.Radio type='radio' name='pessoas' required/><label>Eu confirmo que li e concordo com os <a>Termos & Condições</a></label>
+                    </div>
+                    <div>
+                    <button onClick={()=>VerificarCadastro(false)}>Voltar</button>
+                    <button >Finalizar Cadastro</button>
+                    </div>
+                    </S.FormGroup>
+                ):(
             <S.FormGroup>
             <label>Eu sou:</label>
             <div>
@@ -103,11 +145,14 @@ export default function Login(){
             <S.Radio type='radio'name='sexo' required/><label>Masculino</label>
             <S.Radio type='radio' name='sexo' required/><label>Feminino</label>
             </div>
-            <button>Continuar</button>
+            <button onClick={()=>VerificarCadastro(true)}>Continuar</button>
             </S.FormGroup>
+                )
+            }
+           
         </S.CadastrarActive>
         ):(
-            <S.Cadastrar id='cadastrar' onClick={()=>setcadastrar(true)}>
+            <S.Cadastrar id='cadastrar' onClick={()=>Cadastrar(true)}>
             <S.Title>Crie uma conta</S.Title>
             </S.Cadastrar>
         )
