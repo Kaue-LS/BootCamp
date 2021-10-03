@@ -3,15 +3,19 @@ import styled from "styled-components";
 export const NavBarSearch=styled.div`
 display: flex;
 flex-direction: column;
-width: auto;
+position: relative;
 `;
 
 export const NavBar=styled.div`
     display: flex;
+    padding: 0;
+    width: 100%;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
     height: 5rem;
+    position: relative;
+
     z-index: 1;
     margin: 0 auto;
     background-color:#4e018f;
@@ -27,6 +31,7 @@ export const Logo= styled.img`
     margin: auto 10px auto 9vw;
     @media(max-width:1030px){
         margin:0 auto;
+        padding:0;
     }
 `
 export const SearchBarLoupe=styled.div`

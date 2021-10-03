@@ -3,6 +3,7 @@ import styled from "styled-components";
 
  export const Footer = styled.div`
   background-color: #252031;
+  width: calc( (100%-86px) / 8 );
   font-family: Verdana, Geneva, Tahoma, sans-serif,sans-serif;
     @media(max-width:1030px){
         display: none;

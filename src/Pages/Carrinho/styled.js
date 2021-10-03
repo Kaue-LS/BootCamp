@@ -6,6 +6,7 @@ export const Header = styled.div`
     background-color: #69dcfb;
     display: flex;
     color: #5e0796;
+    position: relative;
     align-items: center;
     justify-content: center;
     font-size: 1.5rem;
@@ -54,6 +55,7 @@ flex-direction: row;
 @media(max-width:930px){
     flex-direction: column;
     align-items: center;
+    padding:0;
     justify-content: center;
 }
 `;
@@ -67,6 +69,7 @@ export const CepCupomAnuncio=styled.div`
     @media(max-width:930px){
         margin: 0 0;
         justify-content: center;
+        width:45%;
         align-items: center;
     }
 `;

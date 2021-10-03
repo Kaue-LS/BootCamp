@@ -9,6 +9,9 @@ export const CuponsCep= styled.div`
     flex-direction: column;
     align-items: flex-start;
     margin: 0px 20px;
+    @media(max-width:500px){
+        width: auto;
+    }
 
 `;
 
@@ -117,7 +120,7 @@ export const CupomButton=styled.button`
 export const IconActive=styled.i`
     
         margin: 0 2rem;
-    
+        padding:0 20px;
         height: auto;
         animation: Around  forwards 200ms ease-in-out;
 

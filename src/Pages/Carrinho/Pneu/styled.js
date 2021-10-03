@@ -44,10 +44,7 @@ export const NumberItem=styled.div`
         border-top-right-radius: 10px;
         border-top-left-radius: 10px;
     border-bottom-left-radius: 0px;
-    padding-left:2vmax ;
-        padding-right: 2vmax;        
-        padding-left:22.2vmin ;
-        padding-right: 23.2vmin;        
+          
         padding-top: 1rem;
         padding-bottom: 1rem;
         background: none;
@@ -246,10 +243,7 @@ export const IconTrash=styled.div`
         border-bottom-left-radius: 10px;
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
-    padding-left:2vmax ;
-        padding-right: 2vmax;        
-        padding-left:23.5vmin ;
-        padding-right: 23.5vmin;        
+   
         padding-top: 1rem;
         padding-bottom: 1rem;
         background: none;
