@@ -5,23 +5,9 @@ import * as S from "./styled";
 import NavBar from "../../Components/NavBar/NavBar";
 import CepCupom from "./CupomCep/CepCupom";
 import { Link } from "react-router-dom";
+import {AnuncioP} from "../../Components/Anuncios/Anuncio";
 export default function Carrinho() {
-  // const [cep, setCep] = useState([]);
-  // const numCep = Number;
-  // const buscaCep = () => {
-  //   fetch(`http://viacep.com.br/ws/03542040/json/ `)
-  //     .then((res) => res.json())
-  //     .then((rescep) => {
-  //       setCep(rescep);
-  //     })
-  //     .catch((error) => {
-  //       console.log(error);
-  //     });
-  // };
-  // useEffect(() => {
-  //   buscaCep();
-  // });
-  
+ 
   return (
     <>
    
@@ -50,6 +36,7 @@ export default function Carrinho() {
        
       <S.CepCupomAnuncio>
       <CepCupom/>
+      <AnuncioP/>
       </S.CepCupomAnuncio>
 
         <S.ResuButtons>

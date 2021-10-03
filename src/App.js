@@ -1,4 +1,4 @@
-import Carrinho from './Pages/Carrinho/Carrinho';
+import Carrinho from './Pages/Cart/Carrinho';
 import Footer from './Components/Footer/Footer';
 import Login from './Pages/Login/Login'
 import { BrowserRouter, Route, Switch } from "react-router-dom";

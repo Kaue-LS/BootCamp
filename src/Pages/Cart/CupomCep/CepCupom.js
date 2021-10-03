@@ -6,6 +6,23 @@ export default function CepCupom (){
   const [Cupomtext,setCupom]= useState('')
   const [Ceptext,setCep]=useState('') 
   
+
+   // const [cep, setCep] = useState([]);
+  // const numCep = Number;
+  // const buscaCep = () => {
+  //   fetch(`http://viacep.com.br/ws/03542040/json/ `)
+  //     .then((res) => res.json())
+  //     .then((rescep) => {
+  //       setCep(rescep);
+  //     })
+  //     .catch((error) => {
+  //       console.log(error);
+  //     });
+  // };
+  // useEffect(() => {
+  //   buscaCep();
+  // });
+  
  
   // const SetCep=(props)=>{
   //   let cep=/[0-9]/

@@ -112,7 +112,7 @@ export default function Login(){
                     <S.Input type='text' required/>
                     </div>
                     <div>
-                    <S.Radio type='radio' name='pessoas' required/><label>Eu confirmo que li e concordo com os <a>Termos & Condições</a></label>
+                    <S.Radio type='radio' name='pessoas' required/><label>Eu confirmo que li e concordo com os <span>Termos & Condições</span></label>
                     </div>
                     <div>
                     <button onClick={()=>VerificarCadastro(false)}>Voltar</button>
