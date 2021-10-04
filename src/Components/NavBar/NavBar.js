@@ -55,7 +55,7 @@ export default function NavBar() {
                 
               ></S.IconActive>
             </S.Entrar>
-            <div style={{backgroundColor:'#ffffff',display:'flex',flexDirection:'column'}}>
+            <div style={{backgroundColor:'#ffffff',border:'2px solid  #4e018f',display:'flex',flexDirection:'column', height:140}}>
               <Link to='/login'>
             <S.Buttons>Login</S.Buttons>
             </Link>

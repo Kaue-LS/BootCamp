@@ -7,7 +7,7 @@ export function AnuncioP(){
    
     
     return(
-        <S.AnuncioArea>
+        <S.AnuncioAreaP>
         <Carousel 
           showIndicators={true} 
           infiniteLoop 
@@ -31,12 +31,12 @@ export function AnuncioP(){
             <img src= "https://static.pneustore.com.br/medias/sys_master/images/images/hc0/h51/9028317773854/DESCONTO-CARRINHO-CONTINENTAL.jpg" alt=''/>
             </div>
         </Carousel>
-    </S.AnuncioArea>
+    </S.AnuncioAreaP>
     )
 }
 export function AnuncioM(){
     return(
-        <S.AnuncioArea>
+        <S.AnuncioAreaM>
         <Carousel infiniteLoop autoPlay showThumbs={false} showArrows interval={5000} showStatus={false}>
             <div>
                 <img src= "https://static.pneustore.com.br/medias/sys_master/images/images/hef/ha7/9043275841566/Desk-Van.png" alt=''/>
@@ -54,6 +54,6 @@ export function AnuncioM(){
             <img src= "https://static.pneustore.com.br/medias/sys_master/images/images/hc0/h51/9028317773854/DESCONTO-CARRINHO-CONTINENTAL.jpg" alt=''/>
             </div>
         </Carousel>
-    </S.AnuncioArea>
+    </S.AnuncioAreaM>
     )
 }

@@ -182,12 +182,13 @@ export const UserName=styled.p`
 export const Buttons=styled.button`
 background-color: white;
 border: none;
-padding: 10px 0px;
+padding: 10px 10px;
 color: #4e018f;
     cursor: pointer;
  margin: -50px 0 0 0;
 font-size: 1rem;
 width: 8rem;
+transition:400ms;
 animation:Show forwards 300ms ease-in-out;
 @keyframes  Show{
  0%{
@@ -196,11 +197,13 @@ animation:Show forwards 300ms ease-in-out;
  }
  100%{
      opacity: 1;
-     margin: 0 0 0 0;
+     margin: 5px 0 0 0;
  }
  }
  
-
+ :hover{
+     background-color: #DDD;
+ }
 `;
 
 

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const AnuncioArea=styled.div`
+export const AnuncioAreaP=styled.div`
     width: 80%;
     margin: 2rem 2rem;
  
@@ -15,5 +15,15 @@ export const AnuncioArea=styled.div`
         width: 40%;
         margin: 0 auto;
     }
+  
+`;
+export const AnuncioAreaM=styled.div`
+    width: 80%;
+    margin: 0 auto;
+    transition:300ms;
+ 
+
+    
+  
   
 `;
