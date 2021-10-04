@@ -122,7 +122,7 @@ export default function Login(){
                 ):(
             <S.FormGroup>
             <label>Eu sou:</label>
-            <div>
+            <div className='radio'>
             <S.Radio type='radio' name='pessoas' required/><label>Pessoa Fisica</label>
             <S.Radio type='radio' name='pessoas' required/><label>Pessoa Juridica</label>
             </div>
@@ -141,7 +141,7 @@ export default function Login(){
             </div>
             </div>
             <label>Sexo</label>
-            <div>
+            <div className='radio'>
             <S.Radio type='radio'name='sexo' required/><label>Masculino</label>
             <S.Radio type='radio' name='sexo' required/><label>Feminino</label>
             </div>

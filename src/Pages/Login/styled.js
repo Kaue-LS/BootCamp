@@ -29,6 +29,10 @@ export const FormGroup=styled.div`
     margin: 10px 30px;
     display: flex;
     flex-direction: column;
+
+    .radio{
+        flex-direction: row;
+    }
     label{
         font-size:13px;
   font-weight: 600;
@@ -61,8 +65,7 @@ export const Login=styled.div`
   background-color: #ffffff;
     border: 1px solid gray;
     border-radius: 5px;
-    min-width: 60vmin;
-    max-width: 20vmax;
+    width: 602px;
     height: 200px;
     display: flex;
     flex-direction: column;
@@ -226,7 +229,7 @@ span{
     }
     div{
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
         margin: 10px 0px;
     }
     input{
