@@ -60,7 +60,7 @@ export default function Login(){
                   <label>Senha</label>
                   <S.Input type='password'/>
                   <p>Esqueci minha senha</p>
-              <S.Entrar>entrar</S.Entrar>
+              <S.Button>entrar</S.Button>
               </S.FormGroup>
               </S.LoginActive>
         ):(
@@ -82,6 +82,7 @@ export default function Login(){
         {cadastrar?(
         <S.CadastrarActive>
             <S.Title>Crie uma conta</S.Title>
+            <S.SubTitle>Seja cliente da PneuStore.</S.SubTitle>
             
             {
                 proximo?(
@@ -92,11 +93,11 @@ export default function Login(){
                     <S.Input type='text' required/>
                     </div>
                     <div>
-                    <label>Seu telefone '('Celular de preferência')' <span>*</span></label>
+                    <label>Seu telefone (Celular de preferência) <span>*</span></label>
                     <S.Input type='text' required/>
                     </div>
                     <div>
-                    <label>Outro telefone '('Opcional')'</label>
+                    <label>Outro telefone (Opcional)</label>
                     <S.Input type='text'/>
                     </div>
                     <div>
@@ -111,12 +112,12 @@ export default function Login(){
                     <label>Confirmar senha<span>*</span></label>
                     <S.Input type='text' required/>
                     </div>
-                    <div>
+                    <div style={{display:'flex',flexDirection: 'row'}}>
                     <S.Radio type='radio' name='pessoas' required/><label>Eu confirmo que li e concordo com os <span>Termos & Condições</span></label>
                     </div>
                     <div>
-                    <button onClick={()=>VerificarCadastro(false)}>Voltar</button>
-                    <button >Finalizar Cadastro</button>
+                    <S.Button onClick={()=>VerificarCadastro(false)}>Voltar</S.Button>
+                    <S.Button >Finalizar Cadastro</S.Button>
                     </div>
                     </S.FormGroup>
                 ):(
@@ -145,7 +146,7 @@ export default function Login(){
             <S.Radio type='radio'name='sexo' required/><label>Masculino</label>
             <S.Radio type='radio' name='sexo' required/><label>Feminino</label>
             </div>
-            <button onClick={()=>VerificarCadastro(true)}>Continuar</button>
+            <S.Button onClick={()=>VerificarCadastro(true)}>Continuar</S.Button>
             </S.FormGroup>
                 )
             }
@@ -154,6 +155,7 @@ export default function Login(){
         ):(
             <S.Cadastrar id='cadastrar' onClick={()=>Cadastrar(true)}>
             <S.Title>Crie uma conta</S.Title>
+            <S.SubTitle>Seja cliente da PneuStore.</S.SubTitle>
             </S.Cadastrar>
         )
 }

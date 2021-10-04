@@ -12,8 +12,8 @@ export const AnuncioAreaP=styled.div`
         width: 80vw;
     }
     @media(max-width:430px){
-        width: 40%;
-        margin: 0 auto;
+        width: 90vw;
+        margin: 0 0;
     }
   
 `;

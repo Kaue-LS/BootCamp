@@ -28,6 +28,10 @@ export const SubTitle=styled.h4`
     margin: 20px auto;
     width: 90%;
 
+    @media(max-width:500px){
+        margin: 5px auto;
+    }
+
 `;
 
 export const FormGroup=styled.div`
@@ -40,6 +44,7 @@ export const FormGroup=styled.div`
     }
     label{
         font-size:13px;
+        
   font-weight: 600;
   line-height: 19.5px;
   color: #463F4D;
@@ -59,7 +64,6 @@ export const FormGroup=styled.div`
 
       }
   }
-  
 
   }
 `
@@ -154,7 +158,7 @@ animation: ShowInput forwards ease-in-out 600ms;
     }
 
 `
-export const Entrar=styled.button`
+export const Button=styled.button`
     background-color: #4E008E;
     padding:10px 15px;
     vertical-align:middle;
@@ -199,7 +203,7 @@ export const Cadastrar=styled.div`
   background-color: white;
     border: 1px solid gray;
     width: 602px;
-    height: 100px;
+    height: 140px;
     display: flex;
     flex-direction: column;
     padding: 10px 30px;
@@ -216,6 +220,7 @@ export const CadastrarActive=styled.div`
  background-color: white;
     border: 1px solid gray;
     width: auto;
+    width: 602px;
     display: flex;
     flex-direction: column;
     padding: 10px 30px;
@@ -255,6 +260,7 @@ margin: 0 auto;
 font-size: 16px;
 font-weight: 600;
 line-height: 22px;
+margin:10px 0;
     }
 `
 export const Radio=styled.input`

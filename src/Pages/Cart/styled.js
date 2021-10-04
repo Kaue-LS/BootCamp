@@ -21,9 +21,6 @@ export const CartIcon= styled.img`
 export const Itens=styled.div`
     display: flex;
     background-color: #F7F7F7;
-    border-top:5px solid #4f0381 ;
-    border-left:5px solid #4f0381 ;
-    border-right:5px solid #4f0381 ;
     flex-direction:column;
     margin: 10px auto 0 auto;
     border-top-left-radius: 10px;
@@ -69,7 +66,7 @@ export const CepCupomAnuncio=styled.div`
     @media(max-width:930px){
         margin: 0 0;
         justify-content: center;
-        width:45%;
+        width:45vw;
         align-items: center;
     }
 `;

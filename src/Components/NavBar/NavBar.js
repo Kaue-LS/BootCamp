@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import * as S from "./styled";
+
 export default function NavBar() {
   const [showOption, setShowOption] = useState(false);
     const [showSearch,setShowSearch]= useState(false)
