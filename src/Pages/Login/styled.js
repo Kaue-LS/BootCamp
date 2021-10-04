@@ -13,7 +13,12 @@ export const Title=styled.h2`
     font-size: 33px;
     line-height: 36.3px;
     color: #4E008E;
+    width: auto;
+    text-align: center;
     margin: 20px auto;
+    @media(max-width:500px){
+        font-size:1.5rem;
+    }
 `;
 export const SubTitle=styled.h4`
     font-size: 16px;
@@ -210,7 +215,7 @@ export const Cadastrar=styled.div`
 export const CadastrarActive=styled.div`
  background-color: white;
     border: 1px solid gray;
-    width: 602px;
+    width: auto;
     display: flex;
     flex-direction: column;
     padding: 10px 30px;

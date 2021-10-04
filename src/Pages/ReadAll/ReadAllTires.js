@@ -1,5 +1,6 @@
-// export default function ReadAllTires(){
-//     return(
-
-//     )
-// }
+export default function ReadAllTires(){
+    return(
+        <>
+        </>
+    )
+}
