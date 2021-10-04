@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import NavBar from '../../Components/NavBar/NavBar'
-import { AnuncioM } from '../../Components/Anuncios/Anuncio'
 import  NavButton  from '../../Components/NavButton/NavButton'
 import * as S from './styled'
 export default function Login(){
@@ -10,7 +9,11 @@ export default function Login(){
     const Login=(props)=>{
         if(props===false){
         setLogin(false)
-           
+        document.getElementById('login').style=`
+            position:relative;
+            margin-left:-300px;
+            opacity:0.5;
+        `;
         }
         else{
             setLogin(true)
@@ -21,7 +24,12 @@ export default function Login(){
     const Cadastrar=(props)=>{
         if(props===false){
             setCadastrar(false)
+            document.getElementById('cadastrar').style=`
+            position:relative;
+            margin-right:-300px;
+            opacity:0.5;
             
+            `;
         }
         else{
             setCadastrar(true)
@@ -39,7 +47,7 @@ export default function Login(){
     <NavBar></NavBar>
     <NavButton></NavButton>
     <S.LoginCadastro>
-    <div>
+        
         {   login?(
              
             <S.LoginActive>
@@ -56,27 +64,21 @@ export default function Login(){
               </S.FormGroup>
               </S.LoginActive>
         ):(
-            <>
             <S.Login id='login' onClick={()=>Login(true)}>
             <S.Title>Já sou cliente</S.Title>
             <S.SubTitle>Você já tem uma Conta? Faça o Login para acessar as configurações da sua conta.</S.SubTitle>
             </S.Login>
-            <div className='anuncio'>
-            <AnuncioM/>
-            </div>
-            </>
-            
         )
           
         }
 
-</div>
+
 
 
 
         {/* ============================= */}
 
-<div>
+
         {cadastrar?(
         <S.CadastrarActive>
             <S.Title>Crie uma conta</S.Title>
@@ -150,21 +152,13 @@ export default function Login(){
            
         </S.CadastrarActive>
         ):(
-            <>
             <S.Cadastrar id='cadastrar' onClick={()=>Cadastrar(true)}>
             <S.Title>Crie uma conta</S.Title>
             </S.Cadastrar>
-            <div className='anuncio'>
-            <AnuncioM/>
-            </div>
-            </>
         )
 }
-</div>
     </S.LoginCadastro>
-    
     </>
-    
 
     )
 }

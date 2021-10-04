@@ -4,16 +4,9 @@ export const LoginCadastro=styled.div`
     background-color: white;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     padding:10px 20px;
-    @media(max-width:1200px){
-        flex-direction: column;
-    }
-    .anuncio{
-        @media(max-width:1200px){
-            display: none;
-        }
-    }
 `;
 
 export const Title=styled.h2`
@@ -68,12 +61,13 @@ export const Login=styled.div`
   background-color: #ffffff;
     border: 1px solid gray;
     border-radius: 5px;
-    width: 602px;
+    min-width: 60vmin;
+    max-width: 20vmax;
     height: 200px;
     display: flex;
     flex-direction: column;
     padding: 10px 0;
-    margin: 30px auto;
+    margin: 30px 0;
     p{
        color: #4E008E;
        margin: 10px 30px;
@@ -92,11 +86,11 @@ z-index: 1;
   background-color: #ffffff;
     border: 1px solid gray;
     border-radius: 5px;
-    width: 45vw;
+    width: 602px;
     display: flex;
     flex-direction: column;
     padding: 10px 0;
-    margin: 30px auto;
+    margin: 30px 0;
     p{
        color: #4E008E;
        margin: 10px 30px;
@@ -202,7 +196,7 @@ export const Cadastrar=styled.div`
     flex-direction: column;
     padding: 10px 30px;
     border-radius: 10px;
-    margin: 30px auto;
+    margin: 30px 20px;
     transition: 300ms linear;
     :hover{
         background-color: #DDD;
@@ -218,7 +212,7 @@ export const CadastrarActive=styled.div`
     flex-direction: column;
     padding: 10px 30px;
     border-radius: 10px;
-    margin: 0 auto;
+    margin: 30px 20px;
     transition: 300ms linear;
 span{
         color:#E53E3E;
