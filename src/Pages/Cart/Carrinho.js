@@ -2,7 +2,7 @@
 import Pneus from "./Pneu/Pneus";
 import CartICon from '../../Components/img/cart.jpg'
 import * as S from "./styled";
-import NavBar from "../../Components/NavBar/NavBar";
+import {NavBarSecundaria} from "../../Components/NavBar/NavBar";
 import CepCupom from "./CupomCep/CepCupom";
 import { Link } from "react-router-dom";
 import {AnuncioP} from "../../Components/Anuncios/Anuncio";
@@ -11,7 +11,7 @@ export default function Carrinho() {
   return (
     <>
    
-    <NavBar></NavBar>
+    <NavBarSecundaria/>
       {/* Carrinho de compra */}
       <S.Header>
         <S.CartIcon
@@ -77,7 +77,7 @@ export default function Carrinho() {
           <S.ButtonsArea>
             <S.ContFinal>
               <S.Continuar>CONTINUAR COMPRANDO</S.Continuar>
-              <Link to='/login' style={{textDecoration:'none'}} >
+              <Link to='/checkout' style={{textDecoration:'none'}} >
               <S.Finalizar>
                 <i className="im im-check-mark"></i>FINALIZAR COMPRA
               </S.Finalizar>

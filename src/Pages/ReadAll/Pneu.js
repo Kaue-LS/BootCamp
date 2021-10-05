@@ -1,5 +1,5 @@
 import * as S from './styled'
-import { Rating } from "@material-ui/core";
+import { Rating } from '@mui/material';
 import { Link } from 'react-router-dom';
 
 export default function Pneu(){

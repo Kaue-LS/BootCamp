@@ -24,6 +24,62 @@ export const NavBar=styled.div`
         align-items: center;
     }
     `
+export const NavBarTerciaria=styled.div`
+img{
+    display: none;
+}
+    @media(max-width:1020px){
+
+    display: flex;
+    padding: 0;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+
+    z-index: 1;
+    i{
+    }
+    img{
+        display: block;
+     margin:0 auto 0 22vw;
+    }
+    background-color:#4e018f;
+    @media(max-width:1020px){
+        justify-content: center;
+        align-items: center;
+    }
+}
+`;
+export const NavBarPagamento=styled.div`
+    background-color: #252031;
+    display: flex;
+    flex-direction: row;
+    height: 5rem;
+    align-items: center;
+    img{
+        width: 140px;
+        @media(max-width:1030px){
+            display: none;
+        }
+    }
+
+    div{
+        margin: 0 22vw;
+        justify-content: center;
+        align-items:center;
+        color:white;
+        display: flex;
+        flex-direction: row;
+        @media(max-width:1030px){
+            margin: 0 auto;
+        }
+        h2{
+            padding: 0 10px;
+        }
+    }
+`;
 export const Logo= styled.img`
     width: 12rem;
     z-index: 1;

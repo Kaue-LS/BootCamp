@@ -2,6 +2,8 @@ import { useState } from 'react'
 import {NavBarPrincipal} from '../../Components/NavBar/NavBar'
 import  NavButton  from '../../Components/NavButton/NavButton'
 import * as S from './styled'
+import { Link } from 'react-router-dom'
+import CustomizedSteppers from '../../Components/Stepper/Stepper'
 export default function Login(){
     const [login,setLogin]=useState(false)
     const [cadastrar,setCadastrar]= useState(true)
@@ -22,6 +24,8 @@ export default function Login(){
     }
     console.log(login)
     const Cadastrar=(props)=>{
+        
+
         if(props===false){
             setCadastrar(false)
             document.getElementById('cadastrar').style=`
@@ -46,6 +50,7 @@ export default function Login(){
         <>
     <NavBarPrincipal/>
     <NavButton></NavButton>
+<CustomizedSteppers props={0}/>
     <S.LoginCadastro>
         
         {   login?(
@@ -60,7 +65,9 @@ export default function Login(){
                   <label>Senha</label>
                   <S.Input type='password'/>
                   <p>Esqueci minha senha</p>
+            <Link to='/address'>
               <S.Button>entrar</S.Button>
+              </Link>
               </S.FormGroup>
               </S.LoginActive>
         ):(
@@ -117,7 +124,11 @@ export default function Login(){
                     </div>
                     <div>
                     <S.Button onClick={()=>VerificarCadastro(false)}>Voltar</S.Button>
+                    </div>
+                    <div>
+                    <Link to='/address'>
                     <S.Button >Finalizar Cadastro</S.Button>
+                    </Link>
                     </div>
                     </S.FormGroup>
                 ):(

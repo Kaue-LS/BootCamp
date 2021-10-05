@@ -1,12 +1,12 @@
 import ProductOptions from "./ProductOptions";
 import * as S from "./styled";
-import Navbar from "../../Components/NavBar/NavBar";
+import {NavBarPrincipal} from "../../Components/NavBar/NavBar";
 import NavButton from "../../Components/NavButton/NavButton";
 import Pneu from "./Pneu";
 export default function ReadAllTires() {
   return (
     <>
-      <Navbar></Navbar>
+      <NavBarPrincipal/>
       <NavButton></NavButton>
       <S.ReadAllTires>
         {/* Botoes lateral da pagina */}
