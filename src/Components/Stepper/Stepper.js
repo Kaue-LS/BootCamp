@@ -1,4 +1,5 @@
 import * as React from "react";
+import * as S from './styled';
 import PropTypes from "prop-types";
 import { styled } from "@mui/material/styles";
 import Stack from "@mui/material/Stack";
@@ -13,7 +14,7 @@ import StepConnector, {
 const QontoConnector = styled(StepConnector)(({ theme }) => ({
   [`&.${stepConnectorClasses.alternativeLabel}`]: {
     top: 10,
-    margin: '19px 0px 0 0',
+    margin: '19px 0 0 0',
     left: "calc(-50% + 16px)",
     right: "calc(50% + 16px)"
   },
@@ -31,14 +32,14 @@ const QontoConnector = styled(StepConnector)(({ theme }) => ({
   [`& .${stepConnectorClasses.line}`]: {
     borderColor:
       theme.palette.mode === "dark" ? theme.palette.grey[800] : "#DDDDDD",
-    borderTopWidth: 3,
+    borderTopWidth: 5,
     borderRadius: 1
   }
 }));
 
 const QontoStepIconRoot = styled("div")(({ theme, ownerState }) => ({
   color: theme.palette.mode === "dark" ? theme.palette.grey[700] : "#DDDDDD",
-  display: "flex",
+  
   margin: '19px 0px 0 0',
   height: 22,
   alignItems: "center",
@@ -49,6 +50,7 @@ const QontoStepIconRoot = styled("div")(({ theme, ownerState }) => ({
   "& .QontoStepIcon-completedIcon": {
     color: "#FFFFFF",
     zIndex: 1,
+    
     fontSize: 24,
     padding:'2px 2px',
   },
@@ -100,15 +102,17 @@ const steps = [
 
 export default function CustomizedSteppers(props) {
   return (
-    <Stack sx={{ width: "100%" }} spacing={4}>
-      <Stepper alternativeLabel activeStep={props.props} connector={<QontoConnector />}>
+    <S.StepperArea>
+    <Stack sx={{ width: '100%' }}  spacing={4}>
+      <Stepper  alternativeLabel activeStep={props.props} connector={<QontoConnector />}>
         {steps.map((label) => (
-          <Step key={label}>
-            <StepLabel StepIconComponent={QontoStepIcon}>{label}</StepLabel>
+          <Step  key={label}>
+            <StepLabel  StepIconComponent={QontoStepIcon}>{label}</StepLabel>
           </Step>
         ))}
       </Stepper>
     
     </Stack>
+    </S.StepperArea>
   );
 }
