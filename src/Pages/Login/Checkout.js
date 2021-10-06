@@ -4,7 +4,6 @@ import  NavButton  from '../../Components/NavButton/NavButton'
 import * as S from './styled'
 import { Link } from 'react-router-dom'
 import CustomizedSteppers from '../../Components/Stepper/Stepper'
-import InputMask from 'react-input-mask'
 
 export default function Login(){
     const [login,setLogin]=useState(false)
@@ -99,15 +98,15 @@ export default function Login(){
                     
                     <div>
                     <label>Data de nascimento <span>*</span></label>
-                    <InputMask  className='inputmask' mask='99/99/9999' required/>
+                    <S.Input  className='inputmask' mask='99/99/9999' required/>
                     </div>
                     <div>
                     <label>Seu telefone (Celular de preferência) <span>*</span></label>
-                    <InputMask mask='(99) 99999-9999' className='inputmask' type='text' required/>
+                    <S.Input mask='(99) 99999-9999' className='inputmask' type='text' required/>
                     </div>
                     <div>
                     <label>Outro telefone (Opcional)</label>
-                    <InputMask mask='(99) 99999-9999' className='inputmask' type='text' />
+                    <S.Input type='text' />
                     </div>
                     <div>
                     <label>Endereço de Email <span>*</span></label>
@@ -153,7 +152,7 @@ export default function Login(){
             <div>
             <label>CPF<span>*</span></label>
             <div>
-            <InputMask  className='inputmask' mask='999.999.999-aa' required/>
+            <S.Input type='text' required/>
             </div>
             </div>
             <label>Sexo</label>

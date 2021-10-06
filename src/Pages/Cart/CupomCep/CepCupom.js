@@ -2,7 +2,7 @@ import { useState } from "react";
 import * as S from './styled'
 import Cep from '../../../Components/img/cep.jpg'
 import Cupom from '../../../Components/img/cupon.jpg'
-import InputMask from 'react-input-mask'
+
 export default function CepCupom (){
   const [Cupomtext,setCupom]= useState('')
   const [Ceptext,setCep]=useState('') 
@@ -75,7 +75,7 @@ console.log(Ceptext)
         <S.CepTitle><img src={Cep} alt='cep'/>Informe seu CEP</S.CepTitle>
         <S.IconActive  className="im im-angle-down"onClick={()=>MostrarCep(false)}></S.IconActive>
         <S.ShowCep>
-          <InputMask className='inputmask' mask='99999-999' value={Ceptext} onChange={props=>setCep(props.target.value)} type='text' name="numbers"  />
+          <S.CepBar value={Ceptext} onChange={props=>setCep(props.target.value)} type='text' name="numbers"  />
           <S.CepButton>CALCULAR ENTREGA</S.CepButton>
           <a rel="noreferrer" href='https://buscacepinter.correios.com.br/app/endereco/index.php' target='_blank'>Não sei o meu CEP</a>
         </S.ShowCep>

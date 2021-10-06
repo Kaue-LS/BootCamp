@@ -3,7 +3,7 @@ import * as S from './styled'
 import Box from '../../Components/img/Box.jpg'
 import CustomizedSteppers from "../../Components/Stepper/Stepper"
 import { useState } from "react"
-import InputMask from 'react-input-mask'
+
 
 export default function Address(){
     const [showAdd,setShowAdd]=useState(false)
@@ -81,7 +81,7 @@ export default function Address(){
                   </div>
                   <div>
                   <S.Label>Cep <span>*</span></S.Label>
-                  <InputMask className='inputmask' mask='99999-999'/>
+                  <S.Input className='inputmask' mask='99999-999'/>
                   </div>
                   <div>
                   <S.Label>Estado <span>*</span></S.Label>
