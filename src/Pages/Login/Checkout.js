@@ -4,6 +4,8 @@ import  NavButton  from '../../Components/NavButton/NavButton'
 import * as S from './styled'
 import { Link } from 'react-router-dom'
 import CustomizedSteppers from '../../Components/Stepper/Stepper'
+import InputMask from 'react-input-mask'
+
 export default function Login(){
     const [login,setLogin]=useState(false)
     const [cadastrar,setCadastrar]= useState(true)
@@ -97,7 +99,7 @@ export default function Login(){
                     
                     <div>
                     <label>Data de nascimento <span>*</span></label>
-                    <S.Input type='text' required/>
+                    <InputMask  className='inputmask' mask='99/99/9999' required/>
                     </div>
                     <div>
                     <label>Seu telefone (Celular de preferência) <span>*</span></label>
@@ -151,7 +153,7 @@ export default function Login(){
             <div>
             <label>CPF<span>*</span></label>
             <div>
-            <S.Input type='text' required/>
+            <InputMask  className='inputmask' mask='999.999.999-aa' required/>
             </div>
             </div>
             <label>Sexo</label>

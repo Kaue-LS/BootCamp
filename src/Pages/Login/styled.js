@@ -22,7 +22,7 @@ export const Title=styled.h2`
 `;
 export const SubTitle=styled.h4`
     font-size: 16px;
-    font-weight: 100;
+    font-weight: 700;
     line-height: 22.4px;
     color: #333333;
     margin: 20px auto;
@@ -38,7 +38,21 @@ export const FormGroup=styled.div`
     margin: 10px 30px;
     display: flex;
     flex-direction: column;
+    .inputmask{
+        width: 80%;
+padding: 10px 10px;
+border-radius: 5px;
+border:1px solid #BBBBBB;
+animation: ShowInput forwards ease-in-out 600ms;
 
+    }
+    input{
+        :focus{
+            box-shadow: none;
+            outline: none;
+            border:1px solid #555555;
+        }
+    }
     .radio{
         flex-direction: row;
     }

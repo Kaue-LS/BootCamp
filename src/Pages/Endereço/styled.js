@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 
-
 export const Endereço=styled.div`
   background-color: #F1F1F1;
   display: flex;
@@ -209,7 +208,6 @@ export const Input =styled.input`
         box-shadow: none;
     }
 `;
-
 export const Checked=styled.input`
     height:30px;      
     width:30px;
@@ -254,5 +252,13 @@ export const FormBlock=styled.div`
     div{
         display: flex;
         flex-direction: column;
+    }
+    .inputmask{
+        width: auto;
+    padding: 8px 16px;
+    cursor: text;
+    border-radius: 5px;
+    border:1px solid #555555;
+    margin: 5px 0px 10px 0px;
     }
 `;

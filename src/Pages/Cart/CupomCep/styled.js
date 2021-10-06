@@ -183,6 +183,21 @@ display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+
+    .inputmask{
+        width: 12rem;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 5px 5px;
+    border-radius:10px;
+    border:1px solid gray;
+
+    :focus{
+        box-shadow: none;
+        border: 0 none;
+        outline: 1px solid gray;
+    }
+    }
 @keyframes Show{
 0%{
     opacity: 0;
