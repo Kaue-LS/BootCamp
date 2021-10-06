@@ -84,6 +84,7 @@ export function NavBarPrincipal() {
           </S.UserEnter>
         </S.User>
       )}
+      <div className='iconcart'>
       <Link to='/cart'>
 <IconButton  aria-label="cart">
       <Badge badgeContent={4} color="primary">
@@ -91,6 +92,7 @@ export function NavBarPrincipal() {
       </Badge>
     </IconButton>
     </Link>
+    </div>
 
 <S.Search>
         {" "}

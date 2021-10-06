@@ -23,6 +23,13 @@ export const NavBar=styled.div`
         justify-content: center;
         align-items: center;
     }
+
+
+    .iconcart{
+        @media(max-width:1020px){
+            display: none;
+        }
+    }
     `
 export const NavBarTerciaria=styled.div`
 img{

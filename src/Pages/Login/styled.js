@@ -38,6 +38,9 @@ export const FormGroup=styled.div`
     margin: 10px 30px;
     display: flex;
     flex-direction: column;
+
+
+
     .inputmask{
         width: 80%;
 padding: 10px 10px;

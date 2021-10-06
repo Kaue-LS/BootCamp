@@ -103,11 +103,11 @@ export default function Login(){
                     </div>
                     <div>
                     <label>Seu telefone (Celular de preferência) <span>*</span></label>
-                    <S.Input type='text' required/>
+                    <InputMask mask='(99) 99999-9999' className='inputmask' type='text' required/>
                     </div>
                     <div>
                     <label>Outro telefone (Opcional)</label>
-                    <S.Input type='text'/>
+                    <InputMask mask='(99) 99999-9999' className='inputmask' type='text' />
                     </div>
                     <div>
                     <label>Endereço de Email <span>*</span></label>
@@ -124,12 +124,12 @@ export default function Login(){
                     <div style={{display:'flex',flexDirection: 'row', alignItems:'center'}}>
                     <S.Radio type='radio' name='pessoas' required/><label>Eu confirmo que li e concordo com os <span>Termos & Condições</span></label>
                     </div>
-                    
-                    <Link style={{margin:'10px 0 20px 0px'}} to='/address'>
+                    <div >
+                    <Link style={{display:'flex',flexDirection:"column",justifyContent:"center"}}  to='/address'>
                     <S.Button >Finalizar Cadastro</S.Button>
                     </Link>
-                    <S.Button style={{width:'100px '}} onClick={()=>VerificarCadastro(false)}>Voltar</S.Button>
-                    
+                    <S.Button  onClick={()=>VerificarCadastro(false)}>Voltar</S.Button>
+                    </div>
                   
                    
                 
