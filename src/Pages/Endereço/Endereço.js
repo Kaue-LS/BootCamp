@@ -5,6 +5,7 @@ import CustomizedSteppers from "../../Components/Stepper/Stepper"
 import { useState } from "react"
 import { maskCEP } from "../../Components/Mask/Mask"
 import ListaEndereço from "./ListaEnder"
+import { Link } from "react-router-dom"
 export default function Address(){
     const [showAdd,setShowAdd]=useState(false)
     const [next,setNext]=useState(false)
@@ -65,7 +66,9 @@ export default function Address(){
          <S.Input/>
          </div>
          <div style={{display:'flex',flexDirection:'row-reverse'}}>
+         <Link to='/delivery'>    
          <button>Adicionar</button>
+         </Link>
          <button onClick={()=>setNext(false)}>Voltar</button>
          </div>
          </S.FormBlock>
@@ -74,7 +77,7 @@ export default function Address(){
                   <S.Form>
                   <S.Header>
         <i onClick={()=>setShowAdd(false)} class="im im-x-mark-circle-o"></i>
-        <h3>Preenche o formulario:</h3>
+        <h3>Preenche os dados:</h3>
         </S.Header>
         <S.FormBlock>
                   <div>
