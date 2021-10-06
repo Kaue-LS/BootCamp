@@ -8,8 +8,8 @@ import InputMask from 'react-input-mask'
 export default function Address(){
     const [showAdd,setShowAdd]=useState(false)
     const [next,setNext]=useState(false)
-    const [nomeEnd,setNomeEnd]=useState('')
-    const [cep,setCep] =useState("")
+    // const [nomeEnd,setNomeEnd]=useState('')
+    // const [cep,setCep] =useState("")
 
     return(
         <>
