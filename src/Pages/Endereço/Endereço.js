@@ -8,7 +8,7 @@ import ListaEndereço from "./ListaEnder"
 export default function Address(){
     const [showAdd,setShowAdd]=useState(false)
     const [next,setNext]=useState(false)
-    const [lista,setLita]= useState(0)
+    const [lista]= useState(0)
     // ====================
     // const [nomeEnd,setNomeEnd]=useState('')
     const [cep,setCep] =useState("")
