@@ -104,7 +104,7 @@ export const EndereçoEntrega=styled.div`
     }
 
     button{
-        margin: 16px 0 0 0;
+        margin: 16px 0 16px 0;
         border: 1px solid #A7A7A7;
         text-transform: uppercase;
         padding: 10px 15px 0 15px;
@@ -134,13 +134,38 @@ export const EndereçoEntrega=styled.div`
 // ========================
 
 export const AdicionarEndereço=styled.div`
-margin: 50px auto;
 background-color: #FFFFFF;
 border: 2px solid #DDDDDD;
     width: auto;
     display: flex;
+    margin: 10px auto;
+            
+
     border-radius: 10px;
     flex-direction: column;
+    @media(min-width:1020px){
+        animation: Show forwards ease-in-out 500ms;
+
+    @keyframes Show{
+        0%{
+            display: none;
+            opacity: 0;
+                margin: 10px -39px;
+            
+        }
+  
+        100%{
+
+            display: flex;
+            opacity: 1;
+            
+                margin: 10px 140px;
+               
+    }            
+}      
+
+        
+    }
 
     @media(max-width:1020px){
         margin: auto;
@@ -260,5 +285,61 @@ export const FormBlock=styled.div`
     border-radius: 5px;
     border:1px solid #555555;
     margin: 5px 0px 10px 0px;
+    :focus{
+        border: 1px solid #555555;
+        outline: none;
+        box-shadow: none;
+    }
     }
 `;
+
+export const TabelaEndereço=styled.div`
+    background-color: white;
+    margin:50px auto;
+    width: 544px;
+    height: 200px;
+    min-height: auto;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media(max-width:1020px){
+        margin: auto;
+        width: 100%;
+        height: auto;
+    }
+
+        h3{
+        font-size: 20px;
+        font-weight: 900;
+        color: #333333;
+        margin: 20px auto;
+    
+    }
+    
+    
+`
+
+export const Lista=styled.div`
+display: flex;
+flex-direction: column;
+`
+export const CaixaVazia=styled.div`
+    background-color:   #4E008B50;
+    padding: 20px 20px;
+    width: auto;
+    border-radius: 10px;
+    margin: 10px auto;
+    display: flex;
+    h4{
+        font-size:16px;
+        font-weight: 900;
+        color: #333333;
+        margin: 0px auto;
+    }
+   
+
+`;
+export const CaixaEndereço=styled.div`
+
+`

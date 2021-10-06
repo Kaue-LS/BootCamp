@@ -3,13 +3,15 @@ import * as S from './styled'
 import Box from '../../Components/img/Box.jpg'
 import CustomizedSteppers from "../../Components/Stepper/Stepper"
 import { useState } from "react"
-
-
+import { maskCEP } from "../../Components/Mask/Mask"
+import ListaEndereço from "./ListaEnder"
 export default function Address(){
     const [showAdd,setShowAdd]=useState(false)
     const [next,setNext]=useState(false)
-    // const [nomeEnd,setNomeEnd]=useState('')
-    // const [cep,setCep] =useState("")
+    const [lista,setLita]= useState(0)
+    // ====================
+    const [nomeEnd,setNomeEnd]=useState('')
+    const [cep,setCep] =useState("")
 
     return(
         <>
@@ -81,8 +83,12 @@ export default function Address(){
                   </div>
                   <div>
                   <S.Label>Cep <span>*</span></S.Label>
-                  <S.Input className='inputmask' mask='99999-999'/>
-                  </div>
+                  <input
+        value={cep}
+        maxLength="9" className='inputmask'
+        onChange={(e) => setCep(maskCEP(e.target.value))}
+      />                  
+      </div>
                   <div>
                   <S.Label>Estado <span>*</span></S.Label>
                   <S.Input/>
@@ -105,9 +111,20 @@ export default function Address(){
 }
                     </S.AdicionarEndereço>
 ):(
-    <S.EndereçoEntrega>
-
-        </S.EndereçoEntrega>
+    <S.TabelaEndereço>
+        <h3>Lista de Endereços</h3>
+        <S.Lista>
+            {
+                lista===0?(
+                    <S.CaixaVazia>
+                        <h4>Nenhum endereço foi adicionado</h4>
+                        </S.CaixaVazia>
+                ):(
+                    <ListaEndereço />
+                )
+            }
+        </S.Lista>
+        </S.TabelaEndereço>
 )}
         </S.Endereço>
         </>
