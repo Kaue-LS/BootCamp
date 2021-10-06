@@ -10,7 +10,7 @@ export default function Address(){
     const [next,setNext]=useState(false)
     const [lista,setLita]= useState(0)
     // ====================
-    const [nomeEnd,setNomeEnd]=useState('')
+    // const [nomeEnd,setNomeEnd]=useState('')
     const [cep,setCep] =useState("")
 
     return(
