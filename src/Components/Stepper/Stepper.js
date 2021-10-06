@@ -40,24 +40,24 @@ const QontoConnector = styled(StepConnector)(({ theme }) => ({
 const QontoStepIconRoot = styled("div")(({ theme, ownerState }) => ({
   color: theme.palette.mode === "dark" ? theme.palette.grey[700] : "#DDDDDD",
   
-  margin: '19px 0px 0 0',
-  height: 22,
+  margin: '19px auto 0 auto',
+  height:  '20px',
   alignItems: "center",
   ...(ownerState.active && {
-    color: "#4f0381",
-    fontSize:20,
+    color:'#4f0381',
+    borderRadius:'50%',
   }),
   "& .QontoStepIcon-completedIcon": {
     color: "#FFFFFF",
     zIndex: 1,
     
-    fontSize: 24,
     padding:'2px 2px',
   },
   "& .QontoStepIcon-circle": {
-    width: 20,
-    height: 20,
+    width: 22,
+    height: 22,
     borderRadius: "50%",
+    
     border: " 5px solid currentColor"
   }
 }));
@@ -66,9 +66,9 @@ function QontoStepIcon(props) {
   const { active, completed, className } = props;
 
   return (
-    <QontoStepIconRoot ownerState={{ active }} className={className}>
+    <QontoStepIconRoot  ownerState={{ active }} className={className}>
       {completed ? (
-        <Check style={{backgroundColor:'#4f0381',    borderRadius: "50%",}} className="QontoStepIcon-completedIcon" />
+        <Check style={{backgroundColor:'#4f0381',    borderRadius: "50%"}} className="QontoStepIcon-completedIcon" />
       ) : (
         <div className="QontoStepIcon-circle" />
       )}
@@ -92,7 +92,7 @@ QontoStepIcon.propTypes = {
 
 
 
-const steps = [
+const steps  = [
   "Identificação",
   "Endereço",
   "Entrega",
@@ -100,14 +100,31 @@ const steps = [
   "Revisão"
 ];
 
+
 export default function CustomizedSteppers(props) {
   return (
     <S.StepperArea>
     <Stack sx={{ width: '100%' }}  spacing={4}>
       <Stepper  alternativeLabel activeStep={props.props} connector={<QontoConnector />}>
         {steps.map((label) => (
-          <Step  key={label}>
-            <StepLabel  StepIconComponent={QontoStepIcon}>{label}</StepLabel>
+          <Step   key={label}>
+            <StepLabel  StepIconComponent={QontoStepIcon}><span>{label}</span></StepLabel>
+          </Step>
+        ))}
+      </Stepper>
+    
+    </Stack>
+    </S.StepperArea>
+  );
+}
+export function CustomizedSteppersResponsive(props) {
+  return (
+    <S.StepperArea>
+    <Stack sx={{ width: '100%' }}  spacing={4}>
+      <Stepper  alternativeLabel activeStep={props.props} connector={<QontoConnector />}>
+        {steps.map((label) => (
+          <Step   key={label}>
+            <StepLabel  StepIconComponent={QontoStepIcon}><span>{label}</span></StepLabel>
           </Step>
         ))}
       </Stepper>

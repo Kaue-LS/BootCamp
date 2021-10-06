@@ -76,6 +76,9 @@ export const NavBarPagamento=styled.div`
             margin: 0 auto;
         }
         h2{
+            font-size: 18px;
+            text-transform: uppercase;
+            font-weight: 200;
             padding: 0 10px;
         }
     }

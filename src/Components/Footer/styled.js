@@ -38,6 +38,7 @@ import styled from "styled-components";
  color:#ffffff;
  padding: 2rem 4rem;
  display:flex;
+ flex-direction: column;
  @media(max-width:752px){
         display: flex;
         flex-direction: column;
@@ -49,7 +50,6 @@ import styled from "styled-components";
  `;
 
  export const ContainerListItems = styled.div`
-
  padding: 1rem 0rem;
  margin: 10px 0px;
  li{

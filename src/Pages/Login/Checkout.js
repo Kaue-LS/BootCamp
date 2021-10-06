@@ -119,17 +119,19 @@ export default function Login(){
                     <label>Confirmar senha<span>*</span></label>
                     <S.Input type='text' required/>
                     </div>
-                    <div style={{display:'flex',flexDirection: 'row'}}>
+                    <div style={{display:'flex',flexDirection: 'row', alignItems:'center'}}>
                     <S.Radio type='radio' name='pessoas' required/><label>Eu confirmo que li e concordo com os <span>Termos & Condições</span></label>
                     </div>
-                    <div>
-                    <S.Button onClick={()=>VerificarCadastro(false)}>Voltar</S.Button>
-                    </div>
-                    <div>
-                    <Link to='/address'>
+                    
+                    <Link style={{margin:'10px 0 20px 0px'}} to='/address'>
                     <S.Button >Finalizar Cadastro</S.Button>
                     </Link>
-                    </div>
+                    <S.Button style={{width:'100px '}} onClick={()=>VerificarCadastro(false)}>Voltar</S.Button>
+                    
+                  
+                   
+                
+                    
                     </S.FormGroup>
                 ):(
             <S.FormGroup>
