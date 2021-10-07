@@ -197,7 +197,9 @@ export function NavBarSecundaria() {
             <Link to='/'>
             <S.Buttons>Meus pedidos</S.Buttons>
             </Link>
+            <Link to='/address'>
             <S.Buttons>Endereço</S.Buttons>
+            </Link>
             </div>
           </S.UserEnterAtive>
         </S.User>

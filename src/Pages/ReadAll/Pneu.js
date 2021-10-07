@@ -53,7 +53,7 @@ export default function Pneu(){
                   </S.Preço>
              <Link to='/cart'>
 
-            <S.Comprar><i class="im im-shopping-cart"></i>Comprar</S.Comprar>
+            <S.Comprar><i className="im im-shopping-cart"></i>Comprar</S.Comprar>
             </Link>
 
             </S.Pneu>

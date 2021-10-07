@@ -137,10 +137,8 @@ export const AdicionarEndereço=styled.div`
 background-color: #FFFFFF;
 border: 2px solid #DDDDDD;
     width: auto;
+    position: static;
     display: flex;
-    margin: 10px auto;
-            
-
     border-radius: 10px;
     flex-direction: column;
     @media(min-width:1020px){
@@ -159,7 +157,7 @@ border: 2px solid #DDDDDD;
             display: flex;
             opacity: 1;
             
-                margin: 10px 140px;
+                margin: 10px 10vw;
                
     }            
 }      

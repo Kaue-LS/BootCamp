@@ -180,6 +180,7 @@ export const CepTitle=styled.p`
 export const ShowCep=styled.div`
 animation: Show forwards 300ms ease-in-out;
 display: flex;
+flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;

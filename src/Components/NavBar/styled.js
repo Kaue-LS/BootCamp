@@ -324,7 +324,7 @@ export const ShowSearch=styled.div`
             100%{
                 opacity: 1;
                 display: none;
-                margin: 0 auto;  
+                margin: 0vw auto;  
             }
 
         }

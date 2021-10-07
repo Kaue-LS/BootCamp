@@ -4,7 +4,7 @@ import NavButton from "../../Components/NavButton/NavButton";
 import * as S from "./styled";
 import { Link } from "react-router-dom";
 import CustomizedSteppers from "../../Components/Stepper/Stepper";
-import { maskCPF,maskPhone,maskDate } from "../../Components/Mask/Mask";
+import { maskCPF, maskPhone, maskDate } from "../../Components/Mask/Mask";
 
 export default function Login() {
   const [login, setLogin] = useState(false);
@@ -16,11 +16,11 @@ export default function Login() {
 
   //==============================
 
-//   const [pessoafj, setPessoafj] = useState("");
-//   const [primerio, setPrimeiro] = useState("");
-//   const [ultimo, setUltimo] = useState("");
+  const [pessoafj, setPessoafj] = useState("");
+  const [primerio, setPrimeiro] = useState("");
+  const [ultimo, setUltimo] = useState("");
   const [cpf, setCpf] = useState("");
-//   const [sexo, setSexo] = useState("");
+  const [sexo, setSexo] = useState("");
 
   const [data, setData] = useState("");
   const [tel, setTel] = useState("");
@@ -35,7 +35,6 @@ export default function Login() {
       setCadastrar(false);
     }
   };
-  console.log(login);
   const Cadastrar = (props) => {
     if (props === false) {
       setCadastrar(false);
@@ -48,8 +47,6 @@ export default function Login() {
   const VerificarCadastro = (props) => {
     setProximo(props);
   };
-
-
 
   return (
     <>
@@ -108,28 +105,30 @@ export default function Login() {
                     Data de nascimento <span>*</span>
                   </label>
                   <input
-         className='inputmask'
-         value={data}
-        onChange={(e) => setData(maskDate(e.target.value))}
-        required
-      />
+                  value={data}
+                    className="inputmask"
+                    onChange={(props) => setData(maskDate(props.target.value))}
+                    required
+                  />
                 </div>
                 <div>
                   <label>
                     Seu telefone (Celular de preferência) <span>*</span>
                   </label>
                   <input
-        value={tel} className='inputmask'
-        onChange={(e) => setTel(maskPhone(e.target.value))}
-        required
-      />
+                    value={tel}
+                    className="inputmask"
+                    onChange={(e) => setTel(maskPhone(e.target.value))}
+                    required
+                  />
                 </div>
                 <div>
                   <label>Outro telefone (Opcional)</label>
                   <input
-        value={tel2} className='inputmask'
-        onChange={(e) => setTel2(maskPhone(e.target.value))}
-      />
+                    value={tel2}
+                    className="inputmask"
+                    onChange={(e) => setTel2(maskPhone(e.target.value))}
+                  />
                 </div>
                 <div>
                   <label>
@@ -200,7 +199,7 @@ export default function Login() {
                   <S.Radio
                     type="radio"
                     name="pessoas"
-                    onChange={(props) => (props.target.value)}
+                    onChange={(props) => setPessoafj(props.target.value)}
                     value="Pessoa Fisica"
                     required
                   />
@@ -208,7 +207,7 @@ export default function Login() {
                   <S.Radio
                     type="radio"
                     name="pessoas"
-                    onChange={(props) => (props.target.value)}
+                    onChange={(props) => setPessoafj(props.target.value)}
                     value="Pessoa Jurídica"
                     required
                   />
@@ -219,7 +218,7 @@ export default function Login() {
                     Primeiro nome <span>*</span>
                   </label>
                   <S.Input
-                    onChange={(props) => (props.target.value)}
+                    onChange={(props) => setPrimeiro(props.target.value)}
                     type="text"
                     required
                   />
@@ -229,7 +228,7 @@ export default function Login() {
                     Último nome <span>*</span>
                   </label>
                   <S.Input
-                    onChange={(props) =>(props.target.value)}
+                    onChange={(props) => setUltimo(props.target.value)}
                     type="text"
                     required
                   />
@@ -252,7 +251,7 @@ export default function Login() {
                   <S.Radio
                     type="radio"
                     name="sexo"
-                    onChange={(props) => (props.target.value)}
+                    onChange={(props) => setSexo(props.target.value)}
                     value="Masculino"
                     required
                   />
@@ -260,7 +259,7 @@ export default function Login() {
                   <S.Radio
                     type="radio"
                     name="sexo"
-                    onChange={(props) => (props.target.value)}
+                    onChange={(props) => setSexo(props.target.value)}
                     value="Feminino"
                     required
                   />

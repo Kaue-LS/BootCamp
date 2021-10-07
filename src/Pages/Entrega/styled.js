@@ -41,6 +41,12 @@ margin: 50px 50px;
         border-radius: 10px;
         justify-content: center;
         align-items: center;
+        transition: 300ms;
+    :hover{
+        background-color:  #4E008B;
+        color: white;
+        cursor: pointer;
+    }
         @media(max-width:1020px){
       width: auto;
       height: 50%;
@@ -91,6 +97,8 @@ export const DadosCliente=styled.div`
         color: #555555;
     }
    span{
+       color: #555555;
+       font-size: 16px;
        margin: 0 20px;
    }
     }
@@ -133,6 +141,10 @@ export const DadosEntrega=styled.div`
             display: flex;
             flex-direction: row;
             margin: 5px 0;
+            i{
+                font-size: 16px;
+                color: #4E008B;
+            }
         }
 
         p{
@@ -142,6 +154,8 @@ export const DadosEntrega=styled.div`
         color: #555555;
     }
    span{
+       font-size: 16px;
+       color:#555555;
        margin: 0 20px;
    }
     }
@@ -157,6 +171,12 @@ flex-direction: column;
 button{
     margin: 0 auto;
     width: 80%;
+    transition: 300ms;
+    cursor:pointer;
+    :hover{
+        background-color:  #4E008B;
+        color: white;
+    }
 }
 
 h3{
@@ -265,7 +285,21 @@ flex-direction: column;
 `
 
 
-export const CentroMontagem=styled.div``;
+export const CentroMontagem=styled.div`
+    display: flex;
+    flex-direction: column;
+
+    .header{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+        img{
+            width:50px;
+        }
+    }
+`;
 
 export const EndereçoEntrega=styled.div``;
 
@@ -282,7 +316,7 @@ export const resumoArea= styled.div`
     display: flex;
     margin: 50px auto;
     flex-direction:column;
-    width: 544px;
+    width: 45vw;
     height: 50%;
     padding: 20px 0 0 0px;
     border-radius: 10px;

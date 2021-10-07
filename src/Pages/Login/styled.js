@@ -4,9 +4,14 @@ export const LoginCadastro=styled.div`
     background-color: white;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: center;
     padding:10px 20px;
+
+    @media(max-width:1020px){
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
 `;
 
 export const Title=styled.h2`
@@ -35,7 +40,7 @@ export const SubTitle=styled.h4`
 `;
 
 export const FormGroup=styled.div`
-    margin: 10px 30px;
+    margin: 10px 5%;
     display: flex;
     flex-direction: column;
 
@@ -71,10 +76,11 @@ animation: ShowInput forwards ease-in-out 600ms;
       0%{
           display: none;
           opacity: 0;
-              margin: 0 -40px;
+              margin: 0vh -40vw;
           
       }
       100%{
+          margin: 0vw 0vw;
           display: flex;
           opacity: 1;   
 
@@ -91,7 +97,7 @@ export const Login=styled.div`
   background-color: #ffffff;
     border: 1px solid gray;
     border-radius: 5px;
-    width: 602px;
+    width: 45vw;
     height: 200px;
     display: flex;
     flex-direction: column;
@@ -106,7 +112,9 @@ export const Login=styled.div`
         background-color: #DDD;
     }
     
- 
+    @media(max-width:1020px){
+        width: 80vw;
+    }
 `;
 
 
@@ -115,11 +123,11 @@ z-index: 1;
   background-color: #ffffff;
     border: 1px solid gray;
     border-radius: 5px;
-    width: 602px;
+    width: 45vw;
     display: flex;
     flex-direction: column;
     padding: 10px 0;
-    margin: 30px 0;
+    margin: 30px auto;
     p{
        color: #4E008E;
        margin: 10px 30px;
@@ -142,16 +150,19 @@ z-index: 1;
         }
     }
 
-   
+     
 
 }
+@media(max-width:1020px){
+        width: 80vw;
+    }  
     `
 
 
 export const Input=styled.input`
-width: 80%;
 padding: 10px 10px;
 border-radius: 5px;
+width: 80%;
 border:1px solid #BBBBBB;
 animation: ShowInput forwards ease-in-out 600ms;
 
@@ -219,7 +230,7 @@ animation: Show forwards ease-in-out 1000ms;
 export const Cadastrar=styled.div`
   background-color: white;
     border: 1px solid gray;
-    width: 602px;
+    width: 45vw;
     height: 140px;
     display: flex;
     flex-direction: column;
@@ -231,13 +242,14 @@ export const Cadastrar=styled.div`
         background-color: #DDD;
     }
     
-    
+    @media(max-width:1020px){
+        width: 80vw;
+    }
 `;
 export const CadastrarActive=styled.div`
  background-color: white;
     border: 1px solid gray;
-    width: auto;
-    width: 602px;
+    width: 45vw;
     display: flex;
     flex-direction: column;
     padding: 10px 30px;
@@ -249,10 +261,14 @@ span{
     }
     label{
         display: flex;
-        flex-wrap: wrap;
-        font-family: Verdana;
         color:#444444;
-        margin: 0px 40px 0 0;
+        flex-direction: row;
+        flex-wrap: wrap;
+        font-size: 16px;
+        margin: 0px auto 0 0;
+        @media(max-width:500px){
+        font-size: 12px;
+    }
     }
     div{
         display: flex;
@@ -278,6 +294,10 @@ font-size: 16px;
 font-weight: 600;
 line-height: 22px;
 margin:10px 0;
+    }
+
+    @media(max-width:1020px){
+        width: 80vw;
     }
 `
 export const Radio=styled.input`

@@ -104,7 +104,7 @@ import styled from "styled-components";
   display: flex;
  flex-direction: row;
  align-items: center;
- margin: 0 4rem;
+ margin: 0 auto;
 
   img{
      margin: 30px 30px;

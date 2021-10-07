@@ -42,7 +42,7 @@ export default function Address(){
 {   next?(
     <S.Form>
         <S.Header>
-        <i onClick={()=>setShowAdd(false)} class="im im-x-mark-circle-o"></i>
+        <i onClick={()=>setShowAdd(false)} className="im im-x-mark-circle-o"></i>
         <h3>Preenche o formulario:</h3>
         </S.Header>
     <S.FormBlock>
@@ -76,7 +76,7 @@ export default function Address(){
 ):(
                   <S.Form>
                   <S.Header>
-        <i onClick={()=>setShowAdd(false)} class="im im-x-mark-circle-o"></i>
+        <i onClick={()=>setShowAdd(false)} className="im im-x-mark-circle-o"></i>
         <h3>Preenche os dados:</h3>
         </S.Header>
         <S.FormBlock>

@@ -20,12 +20,13 @@ export const CartIcon= styled.img`
 // Div que vai organizar o div dos item e o div do resumo
 export const Itens=styled.div`
     display: flex;
-    background-color: #F7F7F7;
+    background-color: white;
+    border: 5px solid #4f0381;
     flex-direction:column;
-    margin: 10px auto 0 auto;
+    margin: 10px auto auto auto;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    width: 95vw;
+    width: 85vw;
     @media(max-width: 800px) {
         border: none;
         background:none;
@@ -43,8 +44,8 @@ export const Itens=styled.div`
 
 export const CepCuponsResu=styled.div`
 display: flex;
-background-color: #f7f7f7 ;
-border-top:10px solid #4f0381 ;
+border-top: 2px solid  #4f0381 ;
+background-color: #f7f7f7;
 border-bottom: 10px solid  #4f0381 ;
 padding: 10px 10px;
 flex-direction: row;
@@ -263,7 +264,7 @@ export const Continuar=styled.button`
     color:#323232;
     @media(max-width: 1030px) {
         padding: 20px 10px;
-        margin: auto 20px 0 20px;
+        margin: 0px 20px 10px 20px;
     }
 `;
 export const Finalizar=styled.button`
@@ -284,7 +285,7 @@ export const Finalizar=styled.button`
     }
     @media(max-width: 430px) {
         padding: 10px 10px;
-        margin: 0px 20px 20px 20px;
+        margin: 0px 20px 10px 20px;
         font-size: 1rem;
         flex-direction: column;
     }
@@ -307,7 +308,7 @@ export const Finalizar=styled.button`
         }
 
         @media(max-width: 530px) {
-        margin: 0px auto;
+        margin: -10px auto 10px auto;
         color: white;
         width:80%;
         border-radius: 10px;

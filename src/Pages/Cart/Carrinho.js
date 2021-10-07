@@ -5,7 +5,6 @@ import * as S from "./styled";
 import {NavBarSecundaria} from "../../Components/NavBar/NavBar";
 import CepCupom from "./CupomCep/CepCupom";
 import { Link } from "react-router-dom";
-import {AnuncioP} from "../../Components/Anuncios/Anuncio";
 export default function Carrinho() {
  
   return (
@@ -36,7 +35,6 @@ export default function Carrinho() {
        
       <S.CepCupomAnuncio>
       <CepCupom/>
-      <AnuncioP/>
       </S.CepCupomAnuncio>
 
         <S.ResuButtons>
@@ -79,7 +77,7 @@ export default function Carrinho() {
               <S.Continuar>CONTINUAR COMPRANDO</S.Continuar>
               <Link to='/checkout' style={{textDecoration:'none'}} >
               <S.Finalizar>
-                <i className="im im-check-mark"></i>FINALIZAR COMPRA
+                <i className="im im-check-mark"></i>PROSSEGUIR
               </S.Finalizar>
               </Link>
             </S.ContFinal>
