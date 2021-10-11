@@ -3,11 +3,12 @@ import { NavBarPrincipal } from "../../Components/NavBar/NavBar";
 import NavButton from "../../Components/NavButton/NavButton";
 import * as S from "./styled";
 import { Link } from "react-router-dom";
-import { maskCPF,maskPhone,maskDate } from "../../Components/Mask/Mask";
-
+import CustomizedSteppers from "../../Components/Stepper/Stepper";
+import { maskCPF, maskPhone, maskDate } from "../../Components/Mask/Mask";
+import Accordion from '@mui/material/Accordion'
+import AccordionDetails from '@mui/material/AccordionDetails'
+import AccordionSummary from '@mui/material/AccordionSummary'
 export default function Login() {
-  const [login, setLogin] = useState(false);
-  const [cadastrar, setCadastrar] = useState(true);
   const [proximo, setProximo] = useState(false);
 
   const [email, setEmail] = useState("");
@@ -15,53 +16,44 @@ export default function Login() {
 
   //==============================
 
-//   const [pessoafj, setPessoafj] = useState("");
-//   const [primerio, setPrimeiro] = useState("");
-//   const [ultimo, setUltimo] = useState("");
+  const [pessoafj, setPessoafj] = useState("");
+  const [primerio, setPrimeiro] = useState("");
+  const [ultimo, setUltimo] = useState("");
   const [cpf, setCpf] = useState("");
-//   const [sexo, setSexo] = useState("");
+  const [sexo, setSexo] = useState("");
 
   const [data, setData] = useState("");
   const [tel, setTel] = useState("");
   const [tel2, setTel2] = useState("");
   const [senha2, setSenha2] = useState("");
 
-  const Login = (props) => {
-    if (props === false) {
-      setLogin(false);
-    } else {
-      setLogin(true);
-      setCadastrar(false);
-    }
-  };
-  console.log(login);
-  const Cadastrar = (props) => {
-    if (props === false) {
-      setCadastrar(false);
-    } else {
-      setCadastrar(true);
-      setLogin(false);
-    }
-  };
+ 
 
   const VerificarCadastro = (props) => {
     setProximo(props);
   };
 
-
-
   return (
     <>
       <NavBarPrincipal />
       <NavButton></NavButton>
+      <CustomizedSteppers props={0} />
+      {/* ===================================================== */}
       <S.LoginCadastro>
-        {login ? (
           <S.LoginActive>
+          <Accordion style={{border:'1px solid gray'}} >
+            
+            <AccordionSummary  >
+              <div style={{display:'flex', flexDirection:"column"}}>
             <S.Title>Já sou cliente</S.Title>
             <S.SubTitle>
               Você já tem uma Conta? Faça o Login para acessar as configurações
-              da sua conta.
+              da sua conta. Clique aqui!
             </S.SubTitle>
+            
+            </div>
+            </AccordionSummary>
+            <AccordionDetails>
             <S.FormGroup>
               <label> Endereço de e-mail</label>
               <S.Input
@@ -81,24 +73,21 @@ export default function Login() {
                 <S.Button>entrar</S.Button>
               </Link>
             </S.FormGroup>
+            </AccordionDetails>
+            </Accordion>       
+
           </S.LoginActive>
-        ) : (
-          <S.Login id="login" onClick={() => Login(true)}>
-            <S.Title>Já sou cliente</S.Title>
-            <S.SubTitle>
-              Você já tem uma Conta? Faça o Login para acessar as configurações
-              da sua conta.
-            </S.SubTitle>
-          </S.Login>
-        )}
 
         {/* ============================= */}
 
-        {cadastrar ? (
           <S.CadastrarActive>
+            <Accordion style={{border:'1px solid gray'}}>
+              <AccordionSummary style={{height:'6.35rem'}}>
             <S.Title>Crie uma conta</S.Title>
             <S.SubTitle>Seja cliente da PneuStore.</S.SubTitle>
-
+            <S.SubTitle>Clique aqui!</S.SubTitle>
+            </AccordionSummary>
+            <AccordionDetails>
             {proximo ? (
               <S.FormGroup>
                 <div>
@@ -106,28 +95,30 @@ export default function Login() {
                     Data de nascimento <span>*</span>
                   </label>
                   <input
-         className='inputmask'
-         value={data}
-        onChange={(e) => setData(maskDate(e.target.value))}
-        required
-      />
+                  value={data}
+                    className="inputmask"
+                    onChange={(props) => setData(maskDate(props.target.value))}
+                    required
+                  />
                 </div>
                 <div>
                   <label>
                     Seu telefone (Celular de preferência) <span>*</span>
                   </label>
                   <input
-        value={tel} className='inputmask'
-        onChange={(e) => setTel(maskPhone(e.target.value))}
-        required
-      />
+                    value={tel}
+                    className="inputmask"
+                    onChange={(e) => setTel(maskPhone(e.target.value))}
+                    required
+                  />
                 </div>
                 <div>
                   <label>Outro telefone (Opcional)</label>
                   <input
-        value={tel2} className='inputmask'
-        onChange={(e) => setTel2(maskPhone(e.target.value))}
-      />
+                    value={tel2}
+                    className="inputmask"
+                    onChange={(e) => setTel2(maskPhone(e.target.value))}
+                  />
                 </div>
                 <div>
                   <label>
@@ -198,7 +189,7 @@ export default function Login() {
                   <S.Radio
                     type="radio"
                     name="pessoas"
-                    onChange={(props) => (props.target.value)}
+                    onChange={(props) => setPessoafj(props.target.value)}
                     value="Pessoa Fisica"
                     required
                   />
@@ -206,7 +197,7 @@ export default function Login() {
                   <S.Radio
                     type="radio"
                     name="pessoas"
-                    onChange={(props) => (props.target.value)}
+                    onChange={(props) => setPessoafj(props.target.value)}
                     value="Pessoa Jurídica"
                     required
                   />
@@ -217,7 +208,7 @@ export default function Login() {
                     Primeiro nome <span>*</span>
                   </label>
                   <S.Input
-                    onChange={(props) => (props.target.value)}
+                    onChange={(props) => setPrimeiro(props.target.value)}
                     type="text"
                     required
                   />
@@ -227,7 +218,7 @@ export default function Login() {
                     Último nome <span>*</span>
                   </label>
                   <S.Input
-                    onChange={(props) =>(props.target.value)}
+                    onChange={(props) => setUltimo(props.target.value)}
                     type="text"
                     required
                   />
@@ -250,7 +241,7 @@ export default function Login() {
                   <S.Radio
                     type="radio"
                     name="sexo"
-                    onChange={(props) => (props.target.value)}
+                    onChange={(props) => setSexo(props.target.value)}
                     value="Masculino"
                     required
                   />
@@ -258,7 +249,7 @@ export default function Login() {
                   <S.Radio
                     type="radio"
                     name="sexo"
-                    onChange={(props) => (props.target.value)}
+                    onChange={(props) => setSexo(props.target.value)}
                     value="Feminino"
                     required
                   />
@@ -269,13 +260,9 @@ export default function Login() {
                 </S.Button>
               </S.FormGroup>
             )}
+            </AccordionDetails>
+            </Accordion>
           </S.CadastrarActive>
-        ) : (
-          <S.Cadastrar id="cadastrar" onClick={() => Cadastrar(true)}>
-            <S.Title>Crie uma conta</S.Title>
-            <S.SubTitle>Seja cliente da PneuStore.</S.SubTitle>
-          </S.Cadastrar>
-        )}
       </S.LoginCadastro>
     </>
   );

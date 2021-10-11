@@ -1,37 +1,11 @@
-import styled from "styled-components";
-
-// Meu carrinho de compras
-export const Header = styled.div`
-    padding: 10px 10px;
-    background-color: #69dcfb;
-    display: flex;
-    color: #5e0796;
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-`;
-export const CartIcon= styled.img`
-    margin: 0 10px;
-    width: 3.5rem;
-    color:#5e0796;
-`;
-
-// Div que vai organizar o div dos item e o div do resumo
-
-// Area onde esta o pneu, seu nome e preço e entre outras
-
-
-
-
-
-
+import styled from 'styled-components'
 
 
 export const CepCuponsResu=styled.div`
 display: flex;
-border-bottom: 10px solid  #4f0381 ;
 padding: 10px 10px;
+width: 90%;
+margin: 0 auto;
 flex-direction: row;
 
 @media(max-width:930px){
@@ -46,7 +20,7 @@ export const CepCupomAnuncio=styled.div`
     display: flex;
     flex-direction: column;
     width: 45vw;
-    margin: 0 2rem;
+    margin: 1vh auto;
 
     @media(max-width:930px){
         margin: 0 0;
@@ -61,7 +35,7 @@ export const ResuButtons=styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0 0 0 0rem;
+    margin: 0 auto;
 `
 
 export const resumoArea= styled.div`
@@ -300,4 +274,3 @@ export const Finalizar=styled.button`
         border:2px solid red;
     }
     `;
-

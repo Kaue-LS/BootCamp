@@ -3,7 +3,11 @@ import * as S from './styled'
 import Cep from '../../../Components/img/cep.jpg'
 import Cupom from '../../../Components/img/cupon.jpg'
 import { maskCEP } from "../../../Components/Mask/Mask";
-
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
+import Accordion from '@mui/material/Accordion'
+import AccordionDetails from '@mui/material/AccordionDetails'
+import AccordionSummary from '@mui/material/AccordionSummary'
+import MenuMobile from "../../../Components/MenuMobile/MenuMobile";
 export default function CepCupom (){
   const [Cupomtext,setCupom]= useState('')
   const [ceptext,setCep]=useState('') 
@@ -35,45 +39,30 @@ export default function CepCupom (){
   // }
   
 
-    const [ShowCupom, setShowCupom]=useState(false);
-  const [ShowCep, setShowCep]=useState(false);
-      const MostrarCupom=(props)=>{
-        setShowCupom(props)
-      }
-  
-      const MostrarCep=(props)=>{
-        setShowCep(props)
-      }
     return(
         <S.CuponsCep>
-          
-        { ShowCupom?(
-          <S.CupomArea >
+         <S.CupomArea style={{borderRadius:'10px'}}> 
+         <Accordion>
+           <AccordionSummary expandIcon={<ExpandMoreIcon style={{fontSize:'52px'}}></ExpandMoreIcon>}>
           <S.CuponsTitle><img src={Cupom} alt='cupom'/>Cupom de desconto</S.CuponsTitle>
-          <S.IconActive className="im im-angle-down" onClick={()=>MostrarCupom(false)} ></S.IconActive>
-
+      </AccordionSummary>
+      <AccordionDetails>
         <S.ShowCupom>
-          <S.CupomBar value={Cupomtext} onChange={props=>setCupom(props.target.value)} placeholder='INSIRA O CUPOM DE DESCONTO'></S.CupomBar><S.CupomButton>APLICAR</S.CupomButton>
-        </S.ShowCupom>
-        </S.CupomArea>
-        ):(
-          <S.CupomArea onClick={()=>MostrarCupom(true)} >
-
-          <S.CuponsTitle><img src={Cupom} alt='cupom' />Cupom de desconto</S.CuponsTitle>
-          <i className="im im-angle-up"></i>
-          </S.CupomArea>
-        )
-        }
+          <S.CupomBar value={Cupomtext} onChange={props=>setCupom(props.target.value)} placeholder='INSIRA O CUPOM DE DESCONTO'></S.CupomBar>
+          <S.CupomButton>APLICAR</S.CupomButton>
+          </S.ShowCupom>
+        </AccordionDetails>
+        </Accordion>
+      </S.CupomArea>
 
 
         
-
-        {
-          ShowCep?(
-            <S.CepArea  >
-
+      <S.CepArea >
+      <Accordion style={{boxShadow:'none'}}>
+        <AccordionSummary  expandIcon={<ExpandMoreIcon style={{fontSize:'52px'}} ></ExpandMoreIcon>}>
         <S.CepTitle><img src={Cep} alt='cep'/>Informe seu CEP</S.CepTitle>
-        <S.IconActive  className="im im-angle-down"onClick={()=>MostrarCep(false)}></S.IconActive>
+        </AccordionSummary>
+        <AccordionDetails>
         <S.ShowCep>
         <input
         value={ceptext}
@@ -83,15 +72,9 @@ export default function CepCupom (){
                 <S.CepButton>CALCULAR ENTREGA</S.CepButton>
           <a rel="noreferrer" href='https://buscacepinter.correios.com.br/app/endereco/index.php' target='_blank'>Não sei o meu CEP</a>
         </S.ShowCep>
-        </S.CepArea>
-          ):(
-            <S.CepArea onClick={()=>MostrarCep(true)}>
-            <S.CepTitle><img src={Cep} alt='cep'/>Informe seu CEP</S.CepTitle>
-            <i className="im im-angle-up"></i>
-            </S.CepArea>
-          )
-        }
-       
+       </AccordionDetails>
+      </Accordion>
+      </S.CepArea>
 
       </S.CuponsCep>
     )

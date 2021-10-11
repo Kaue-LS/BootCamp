@@ -6,7 +6,7 @@ import Address from './Pages/Endereço/Endereço';
 import Entrega from './Pages/Entrega/Entrega';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import  ReadAllTires  from './Pages/ReadAll/ReadAllTires';
-
+import MenuMobile from './Components/MenuMobile/MenuMobile';
 function App() {
   return (
     <BrowserRouter>
@@ -19,8 +19,9 @@ function App() {
     <Route path="/delivery"  component={Entrega}></Route>
 
     </Switch>
+   
     <Footer></Footer>
-
+    <MenuMobile></MenuMobile>
     </BrowserRouter>
   );
 }

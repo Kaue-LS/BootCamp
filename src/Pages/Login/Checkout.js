@@ -5,10 +5,10 @@ import * as S from "./styled";
 import { Link } from "react-router-dom";
 import CustomizedSteppers from "../../Components/Stepper/Stepper";
 import { maskCPF, maskPhone, maskDate } from "../../Components/Mask/Mask";
-
+import Accordion from '@mui/material/Accordion'
+import AccordionDetails from '@mui/material/AccordionDetails'
+import AccordionSummary from '@mui/material/AccordionSummary'
 export default function Login() {
-  const [login, setLogin] = useState(false);
-  const [cadastrar, setCadastrar] = useState(true);
   const [proximo, setProximo] = useState(false);
 
   const [email, setEmail] = useState("");
@@ -27,22 +27,7 @@ export default function Login() {
   const [tel2, setTel2] = useState("");
   const [senha2, setSenha2] = useState("");
 
-  const Login = (props) => {
-    if (props === false) {
-      setLogin(false);
-    } else {
-      setLogin(true);
-      setCadastrar(false);
-    }
-  };
-  const Cadastrar = (props) => {
-    if (props === false) {
-      setCadastrar(false);
-    } else {
-      setCadastrar(true);
-      setLogin(false);
-    }
-  };
+ 
 
   const VerificarCadastro = (props) => {
     setProximo(props);
@@ -53,14 +38,22 @@ export default function Login() {
       <NavBarPrincipal />
       <NavButton></NavButton>
       <CustomizedSteppers props={0} />
+      {/* ===================================================== */}
       <S.LoginCadastro>
-        {login ? (
           <S.LoginActive>
+          <Accordion style={{border:'1px solid gray'}} >
+            
+            <AccordionSummary  >
+              <div style={{display:'flex', flexDirection:"column"}}>
             <S.Title>Já sou cliente</S.Title>
             <S.SubTitle>
               Você já tem uma Conta? Faça o Login para acessar as configurações
-              da sua conta.
+              da sua conta. Clique aqui!
             </S.SubTitle>
+            
+            </div>
+            </AccordionSummary>
+            <AccordionDetails>
             <S.FormGroup>
               <label> Endereço de e-mail</label>
               <S.Input
@@ -80,24 +73,21 @@ export default function Login() {
                 <S.Button>entrar</S.Button>
               </Link>
             </S.FormGroup>
+            </AccordionDetails>
+            </Accordion>       
+
           </S.LoginActive>
-        ) : (
-          <S.Login id="login" onClick={() => Login(true)}>
-            <S.Title>Já sou cliente</S.Title>
-            <S.SubTitle>
-              Você já tem uma Conta? Faça o Login para acessar as configurações
-              da sua conta.
-            </S.SubTitle>
-          </S.Login>
-        )}
 
         {/* ============================= */}
 
-        {cadastrar ? (
           <S.CadastrarActive>
+            <Accordion style={{border:'1px solid gray'}}>
+              <AccordionSummary style={{height:'6.35rem'}}>
             <S.Title>Crie uma conta</S.Title>
             <S.SubTitle>Seja cliente da PneuStore.</S.SubTitle>
-
+            <S.SubTitle>Clique aqui!</S.SubTitle>
+            </AccordionSummary>
+            <AccordionDetails>
             {proximo ? (
               <S.FormGroup>
                 <div>
@@ -270,13 +260,9 @@ export default function Login() {
                 </S.Button>
               </S.FormGroup>
             )}
+            </AccordionDetails>
+            </Accordion>
           </S.CadastrarActive>
-        ) : (
-          <S.Cadastrar id="cadastrar" onClick={() => Cadastrar(true)}>
-            <S.Title>Crie uma conta</S.Title>
-            <S.SubTitle>Seja cliente da PneuStore.</S.SubTitle>
-          </S.Cadastrar>
-        )}
       </S.LoginCadastro>
     </>
   );

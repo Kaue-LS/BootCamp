@@ -251,21 +251,11 @@ border: none;
 padding: 10px 10px;
 color: #4e018f;
     cursor: pointer;
- margin: -50px 0 0 0;
 font-size: 1rem;
+margin: 3px 0;
 width: 8rem;
+height: auto;
 transition:400ms;
-animation:Show forwards 300ms ease-in-out;
-@keyframes  Show{
- 0%{
-     opacity: 0;
-    margin: -50px 0px 0 0;
- }
- 100%{
-     opacity: 1;
-     margin: 5px 0 0 0;
- }
- }
  
  :hover{
      background-color: #DDD;

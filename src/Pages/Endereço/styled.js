@@ -148,7 +148,7 @@ border: 2px solid #DDDDDD;
         0%{
             display: none;
             opacity: 0;
-                margin: 10px -39px;
+            margin: 1vh 0;
             
         }
   
@@ -157,7 +157,7 @@ border: 2px solid #DDDDDD;
             display: flex;
             opacity: 1;
             
-                margin: 10px 10vw;
+                margin: 1vh 10vw;
                
     }            
 }      

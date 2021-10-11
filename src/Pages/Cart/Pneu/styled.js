@@ -5,6 +5,8 @@ export const ItemArea= styled.div`
     background-color: white;
     margin: 0rem auto;
     width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     flex-direction:row;
     border-bottom: 2px solid #4E008B;
   @media(max-width: 800px) {
@@ -234,5 +236,41 @@ export const IconTrash=styled.div`
 `;
 
 // -------------------------------------------------------------------------------
+export const Vazio=styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+    text-align: center;
 
+    h1{
+        margin:20px auto;
+        color:#333333;
+        font-size: 30px;
+        font-weight: 600;
+    }
+    p{
+        font-size: 18px;
+        font-weight: 600;
+        color:#333333
+    }
+`;
 
+export const Cart=styled.img`
+    width: 194px;
+`;
+export const Itens=styled.div`
+    display: flex;
+    background-color: white;
+    border: 5px solid #4f0381;
+    flex-direction:column;
+    margin: 10px auto auto auto;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 85vw;
+    @media(max-width: 800px) {
+        border: none;
+        background:none;
+    }
+`;

@@ -2,13 +2,40 @@ import ProductOptions from "./ProductOptions";
 import * as S from "./styled";
 import {NavBarPrincipal} from "../../Components/NavBar/NavBar";
 import NavButton from "../../Components/NavButton/NavButton";
-import Pneu from "./Pneu";
+import Pneu from "./Pneu/Pneu";
+// import { useEffect, useState } from "react";
+// import { Api } from "../../Components/Api/Api"
 export default function ReadAllTires() {
+  // const[pneu,setPneu]=useState([])
+  
+  // useEffect(()=>{
+  //   async function fetchApi(){
+  //     let response= await Api.buildApiGetRequest(Api.readAllUrl())
+  //     .catch(
+  //       (e)=>{
+  //         console.error(
+  //           'erro',
+  //           e
+  //         );
+  //       }
+  //     );
+  //     response=await response.json();
+  //     setPneu(response)
+  //   }
+  //   fetchApi()
+  // },[])
+
+  // console.log(pneu)
+
+
+  
   return (
     <>
-      <NavBarPrincipal/>
+    {/* Header */}
+      <NavBarPrincipal props={0}/>
       <NavButton></NavButton>
       <S.ReadAllTires>
+
         {/* Botoes lateral da pagina */}
         <ProductOptions />
         <aside>
@@ -37,7 +64,7 @@ export default function ReadAllTires() {
               </S.Order>
             </S.NavItems>
             {/* ======================= */}
-
+{/* Area dos Pneus */}
             <S.Pneus>
             <Pneu></Pneu>
             </S.Pneus>

@@ -2,16 +2,13 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import * as S from "./styled";
-import Badge from '@mui/material/Badge';
-import IconButton from '@mui/material/IconButton'
-import { ShoppingCart } from "@material-ui/icons";
+import CartIcon from "../CartIcon/CarIcon";
 import { Lock } from "@material-ui/icons";
 
 
 export function NavBarPrincipal() {
   const [showOption, setShowOption] = useState(false);
     const [showSearch,setShowSearch]= useState(false)
-
 
   const Mostrar = (props) => {
     setShowOption(props);
@@ -62,14 +59,16 @@ export function NavBarPrincipal() {
                 
               ></S.IconActive>
             </S.Entrar>
-            <div style={{backgroundColor:'#ffffff',border:'2px solid  #4e018f',display:'flex',flexDirection:'column', height:140}}>
+            <div style={{backgroundColor:'#ffffff',border:'2px solid  #4e018f',display:'flex',flexDirection:'column',justifyContent:'center',alignItems:'center'}}>
               <Link to='/login'>
             <S.Buttons>Login</S.Buttons>
             </Link>
-            <Link to='/'>
+            <Link to='/cart'>
             <S.Buttons>Meus pedidos</S.Buttons>
             </Link>
+            <Link to='/address'>
             <S.Buttons>Endereço</S.Buttons>
+            </Link>
             </div>
           </S.UserEnterAtive>
         </S.User>
@@ -84,15 +83,9 @@ export function NavBarPrincipal() {
           </S.UserEnter>
         </S.User>
       )}
-      <div className='iconcart'>
-      <Link to='/cart'>
-<IconButton  aria-label="cart">
-      <Badge badgeContent={4} color="primary">
-        <ShoppingCart fontSize='large' style={{color:'white'}}/>
-      </Badge>
-    </IconButton>
-    </Link>
-    </div>
+   
+
+        <CartIcon/>
 
 <S.Search>
         {" "}

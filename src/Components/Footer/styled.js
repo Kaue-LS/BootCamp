@@ -118,6 +118,7 @@ import styled from "styled-components";
 
  export const FormasPagamento=styled.div`
     display: flex;
+    border-top:1px solid gray;
     justify-content: center;
     align-items: center;
     padding: 30px;

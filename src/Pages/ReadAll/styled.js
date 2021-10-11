@@ -98,6 +98,7 @@ margin:20px 0;
 
 export const Pneu=styled.div`
 width: 222px;
+background-color: white;
 padding: 20px 20px;
 justify-content: center;
 align-items: center;

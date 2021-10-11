@@ -1,10 +1,14 @@
-import * as S from './styled'
+import * as S from '../styled'
 import { Rating } from '@mui/material';
 import { Link } from 'react-router-dom';
-
+import CartIcon from '../../../Components/CartIcon/CarIcon';
+import { useState } from "react";
 export default function Pneu(){
+  const [add,setAdd]=useState(0)
     return(
 <S.Pneu>
+  {/* Area do Pneu */}
+  {/* Image */}
               <div>
                 <img
                   className="pneu"
@@ -12,6 +16,8 @@ export default function Pneu(){
                   alt=""
                 />
               </div>
+
+              {/* Descrição */}
               <S.Desc>
               <p>Jogo 4 Pneys Firestone Aro 15 F-600 195/55R15 85H </p>
               <div>
@@ -37,6 +43,8 @@ export default function Pneu(){
               </div>
               
               </S.Desc>
+
+              {/* Selos */}
               <S.Selos>
                   
                   <S.ImageSelos src='https://static.pneustore.com.br/medias/sys_master/images/images/hcd/h6d/8862548164638/premium.svg' alt='Premium'/>
@@ -48,10 +56,12 @@ export default function Pneu(){
                   <S.ImageSelos src='https://static.pneustore.com.br/medias/sys_master/images/images/h06/ha3/8862548623390/simetrico.svg' alt='Simetrico'/>
                 
               </S.Selos>
+
+              {/* Preço */}
               <S.Preço>
                   <p><span>R$ 928,63</span> à vista ou 6x de R$ 171,97</p>
                   </S.Preço>
-             <Link to='/cart'>
+             <Link to='/cart' >
 
             <S.Comprar><i className="im im-shopping-cart"></i>Comprar</S.Comprar>
             </Link>

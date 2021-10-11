@@ -8,7 +8,7 @@ export const Entrega=styled.div`
 export const Dados=styled.div`
 display: flex;
 flex-direction: column;
-margin: 50px 50px;
+margin: 50px 0 50px auto;
 @media(max-width:1020px){
     flex-direction: row;
     width: 100%;
@@ -198,9 +198,9 @@ export const Opçoes=styled.div`
 display: flex;
 flex-direction: column;
 background-color: white;
-height: 70%;
 margin: 50px auto;
 border-radius: 10px;
+width: 40vw;
 padding: 10px 10px;
 
 h2{
@@ -306,7 +306,9 @@ export const EndereçoEntrega=styled.div``;
 // ===============================================
 
 
-export const ResuItens=styled.div``;
+export const ResuItens=styled.div`
+margin: 0 auto;
+`;
 export const Item=styled.div`
 `;
 
@@ -316,7 +318,7 @@ export const resumoArea= styled.div`
     display: flex;
     margin: 50px auto;
     flex-direction:column;
-    width: 45vw;
+    width: 40vw;
     height: 50%;
     padding: 20px 0 0 0px;
     border-radius: 10px;

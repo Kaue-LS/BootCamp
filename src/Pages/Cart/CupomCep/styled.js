@@ -3,11 +3,10 @@ import styled from "styled-components";
 
 export const CuponsCep= styled.div`
     width: 30rem;
-    height: 10rem;
     height: auto;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     margin: 0px 20px;
     @media(max-width:500px){
         width: auto;
@@ -23,9 +22,8 @@ export const CupomArea=styled.div`
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    box-shadow: 0px 0px 10px gray;
+    box-shadow: 0px 0px 10px black;
     flex-wrap: wrap;
-    margin: 10px auto 0 auto;
 
     i{
         animation: Around ease-in-out forwards 200ms;
@@ -41,6 +39,7 @@ export const CupomArea=styled.div`
      */
     @media(max-width: 530px) {
         flex-direction: column;
+        margin: 1vh auto;
     }
 
 `;
@@ -56,29 +55,19 @@ export const CuponsTitle=styled.p`
         margin: 0 10px;
         width: 4rem;
     }
+    @media(max-width: 530px) {
+        width: auto;
+        font-size: 1.1rem;
+        margin: 0 8vw;
+    }
     
 `;
 
 export const ShowCupom=styled.div`
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    animation: Show 300ms forwards ease-in-out;
-    @keyframes Show{
-0%{
-    opacity: 0;
- margin: 20px auto 0 0;
-    
-    
-   
-}100%{
-    opacity: 1;
- margin: 8px auto ;
- 
-  
-}
-}
     @media(max-width: 530px) {
         display: flex;
         flex-direction: column;
@@ -109,7 +98,7 @@ export const CupomButton=styled.button`
     border-radius: 5px;
     color: #4f0381 ;
         background-color: #69dcfb;
-
+transition: 300ms;
         :hover{
             background-color: #59bbdc;
         }
@@ -136,32 +125,33 @@ export const IconActive=styled.i`
 `;
 
 export const CepArea=styled.div`
- display: flex;
- box-shadow: 0px 0px 10px gray;
-
- background-color: white;
- border-radius: 10px;
+   background-color: white;
+    display: flex;
+    border-radius: 10px;
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
     align-items: center;
-    margin: 10px auto;
-padding: 0px 16px;
+    justify-content: center;
+    width: 36.5vw;
+    margin: 10px 0;
+    box-shadow: 0px 0px 10px black;
+
     i{
         animation: Around ease-in-out forwards 200ms;
-  
-        margin: 0 2rem;
-    
-        height: auto;
 
+        margin: 0 3rem;
+        @media(max-width: 530px) {
+        margin: 0 auto;
+    }
+    
        
         @media(max-width: 530px) {
         margin: 0 auto;
     }
     }
     @media(max-width: 530px) {
-        flex-direction: column;
-        padding: 0 0px;
+        width: 15rem;
+        font-size: 1.1rem;
+        margin: 1vh 12vw;
     }
 `
 export const CepTitle=styled.p`
@@ -173,8 +163,13 @@ export const CepTitle=styled.p`
     color: gray;
     font-weight: 600;
     img{
-        margin: 0 10px;
+        margin: 0 25px;
         width: 2rem;
+    }
+    @media(max-width: 530px) {
+        width: auto;
+        font-size: 1.1rem;
+        margin: 0 8vw;
     }
 `;
 export const ShowCep=styled.div`
@@ -246,6 +241,7 @@ export const CepButton=styled.button`
     border-radius: 5px;
     color: #4f0381 ;
         background-color: #69dcfb;
+        transition: 300ms;
 
         :hover{
             background-color: #59bbdc;
