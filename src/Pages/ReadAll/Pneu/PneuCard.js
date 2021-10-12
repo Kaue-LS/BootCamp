@@ -1,10 +1,8 @@
 import * as S from '../styled'
 import { Rating } from '@mui/material';
 import { Link } from 'react-router-dom';
-import CartIcon from '../../../Components/CartIcon/CarIcon';
-import { useState } from "react";
-export default function Pneu(){
-  const [add,setAdd]=useState(0)
+export default function Pneu({pneu}){
+  console.log(pneu[0].productID)
     return(
 <S.Pneu>
   {/* Area do Pneu */}
@@ -19,7 +17,7 @@ export default function Pneu(){
 
               {/* Descrição */}
               <S.Desc>
-              <p>Jogo 4 Pneys Firestone Aro 15 F-600 195/55R15 85H </p>
+              <p>{pneu[0].productName} </p>
               <div>
               
                 <S.Marca

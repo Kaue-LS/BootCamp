@@ -2,30 +2,10 @@ import ProductOptions from "./ProductOptions";
 import * as S from "./styled";
 import {NavBarPrincipal} from "../../Components/NavBar/NavBar";
 import NavButton from "../../Components/NavButton/NavButton";
-import Pneu from "./Pneu/Pneu";
-// import { useEffect, useState } from "react";
-// import { Api } from "../../Components/Api/Api"
-export default function ReadAllTires() {
-  // const[pneu,setPneu]=useState([])
-  
-  // useEffect(()=>{
-  //   async function fetchApi(){
-  //     let response= await Api.buildApiGetRequest(Api.readAllUrl())
-  //     .catch(
-  //       (e)=>{
-  //         console.error(
-  //           'erro',
-  //           e
-  //         );
-  //       }
-  //     );
-  //     response=await response.json();
-  //     setPneu(response)
-  //   }
-  //   fetchApi()
-  // },[])
+import PneuList from "./Pneu/PneuList";
 
-  // console.log(pneu)
+export default function ReadAllTires() {
+ 
 
 
   
@@ -66,7 +46,7 @@ export default function ReadAllTires() {
             {/* ======================= */}
 {/* Area dos Pneus */}
             <S.Pneus>
-            <Pneu></Pneu>
+            <PneuList></PneuList>
             </S.Pneus>
           </S.Tires>
         </aside>

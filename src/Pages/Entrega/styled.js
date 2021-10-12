@@ -201,7 +201,7 @@ background-color: white;
 margin: 50px auto;
 border-radius: 10px;
 width: 40vw;
-padding: 10px 10px;
+padding: 10px 15px;
 
 h2{
     margin: 10px auto 20px auto;
@@ -235,8 +235,6 @@ flex-direction: column;
 .body{
     margin: 2px 0;
     border-left:5px solid #4E008B;
-    border-bottom:5px solid #4E008B;
-    border-right:5px solid #4E008B;
 
     padding : 16px 16px ;
         display: flex;
@@ -290,18 +288,104 @@ export const CentroMontagem=styled.div`
     flex-direction: column;
 
     .header{
+        border-top: 1px solid gray;
+        border-bottom: 1px solid gray;
+
+    border-left:5px solid #4E008B;
+
+        font-size: 18px;
+        background-color: #F1F1F1F1;
         display: flex;
         flex-direction: row;
+        padding: 10px 10px;
         align-items: center;
+        color:#333333;
         justify-content: center;
 
         img{
-            width:50px;
+            margin: 0 10px;
+            width:45px;
         }
+    }
+    .body{
+        border-bottom: 1px solid gray ;
+        div{
+            margin: 10px 10px;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+        h3{
+            margin: 15px 0 0 0;
+            color:#333333;
+            font-size:17px;
+            font-weight: 700;
+        }
+        h4{
+            margin: 0 auto;
+            color:#333333;
+            font-size: 16px;
+        }
+        p{
+            color:#333333;
+            font-size: 14px;
+            width: 300px;
+        }
+        input{
+            margin: 10px auto 10px 22vw;
+            height: 25px;
+            width: 25px;
+        }
+    }
     }
 `;
 
-export const EndereçoEntrega=styled.div``;
+export const EndereçoEntrega=styled.div`
+margin: 10px 0;
+    .head{
+        border-top: 1px solid gray;
+        border-bottom: 1px solid gray;
+        border-left:5px solid #4E008B ;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 10px 10px;
+        background-color: #F1F1F1F1;
+        img{
+            margin: 0px 10px;
+            width: 45px;
+        }
+
+        h3{
+            font-size: 18px;
+            font-weight: 700;
+            color:#333333
+        }
+    }
+    .body{
+        display: flex;
+        flex-direction: column;
+
+        div{
+            justify-content: space-between;
+            display: flex;
+            flex-direction: row;
+
+            h3{
+            font-size: 18px;
+            font-weight: 700;
+            color:#333333
+        }
+        input{}
+        p{
+            font-size: 18px;
+            font-weight: 700;
+            color:#333333
+        }
+        }
+    }
+
+
+`;
 
 // ===============================================
 

@@ -20,8 +20,8 @@ function App() {
 
     </Switch>
    
-    <Footer></Footer>
     <MenuMobile></MenuMobile>
+    <Footer></Footer>
     </BrowserRouter>
   );
 }

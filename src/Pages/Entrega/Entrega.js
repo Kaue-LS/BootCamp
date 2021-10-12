@@ -5,7 +5,9 @@ import { useState } from 'react'
 import BoxBlack from '../../Components/img/Box-Black.jpg'
 import Van from '../../Components/img/Van.jpg'
 import Montagem from '../../Components/img/Montagem.jpg'
+import Casa from '../../Components/img/casa.jpg'
 import Resumo from './Resumo'
+
 export default function Entrega(){
 
     const[showOptions,setShowOptions]=useState(false)
@@ -87,11 +89,37 @@ export default function Entrega(){
                  </S.MontagemMovel>
                  <S.CentroMontagem>
                 <div className='header '>
-                    <h3><img src={Montagem} alt=''/>Entregar e montar em um Centro de Montagem</h3>
+                <img src={Montagem} alt=''/>
+                    <h3>Entregar e montar em um Centro de Montagem</h3>
+                </div>
+                <div className='body'>
+                    <div>
+                    <h3>De 3 a 6 dias úteis</h3>
+                    <input type='radio'/>
+                    </div>
+                    <div>
+                    <p>Confira a disponibilidade dos serviços em cada centro de montagem</p>
+                    <h4>A partir de R$ 29,90</h4>
+                    </div>
                 </div>
                  </S.CentroMontagem>
                  <S.EndereçoEntrega>
-                     </S.EndereçoEntrega>
+                 <div className='head'>
+                        <img src={Casa} alt=''/>
+                        <h3>Entregar no meu endereço</h3>
+                    </div>
+                <div className='body'>
+                    <div>
+                        <h3>Normal</h3>
+                        <input type='radio'/>
+                    </div>
+                    <div>
+                        <h3>De 2 a 5 dias úteis</h3>
+                        <p>R$29,90</p>
+                        
+                    </div>
+                </div>
+                </S.EndereçoEntrega>
                      </S.Opçoes>
             ):(
 

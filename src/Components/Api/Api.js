@@ -1,5 +1,5 @@
 export const Api={
-    baseUrl: 'https://pneustoreg3.azurewebsites.net/',
+    baseUrl: 'https://pneustoreg3.azurewebsites.net/Produto',
     
     
     readAllUrl :() =>Api.baseUrl + '/',
