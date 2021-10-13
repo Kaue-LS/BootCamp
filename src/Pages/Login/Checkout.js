@@ -4,7 +4,7 @@ import NavButton from "../../Components/NavButton/NavButton";
 import * as S from "./styled";
 import { Link } from "react-router-dom";
 import CustomizedSteppers from "../../Components/Stepper/Stepper";
-import { maskCPF, maskPhone, maskDate } from "../../Components/Mask/Mask";
+// import { maskCPF, maskPhone, maskDate } from "../../Components/Mask/Mask";
 import Accordion from '@mui/material/Accordion'
 import AccordionDetails from '@mui/material/AccordionDetails'
 import AccordionSummary from '@mui/material/AccordionSummary'
@@ -16,16 +16,16 @@ export default function Login() {
 
   //==============================
 
-  const [pessoafj, setPessoafj] = useState("");
-  const [primerio, setPrimeiro] = useState("");
-  const [ultimo, setUltimo] = useState("");
-  const [cpf, setCpf] = useState("");
-  const [sexo, setSexo] = useState("");
+  // const [pessoafj, setPessoafj] = useState("");
+  // const [primerio, setPrimeiro] = useState("");
+  // const [ultimo, setUltimo] = useState("");
+  // const [cpf, setCpf] = useState("");
+  // const [sexo, setSexo] = useState("");
 
-  const [data, setData] = useState("");
-  const [tel, setTel] = useState("");
-  const [tel2, setTel2] = useState("");
-  const [senha2, setSenha2] = useState("");
+  // const [data, setData] = useState("");
+  // const [tel, setTel] = useState("");
+  // const [tel2, setTel2] = useState("");
+  // const [senha2, setSenha2] = useState("");
 
  
 
@@ -95,9 +95,9 @@ export default function Login() {
                     Data de nascimento <span>*</span>
                   </label>
                   <input
-                  value={data}
+                  // value={data}
                     className="inputmask"
-                    onChange={(props) => setData(maskDate(props.target.value))}
+                    // onChange={(props) => setData(maskDate(props.target.value))}
                     required
                   />
                 </div>
@@ -106,18 +106,18 @@ export default function Login() {
                     Seu telefone (Celular de preferência) <span>*</span>
                   </label>
                   <input
-                    value={tel}
+                    // value={tel}
                     className="inputmask"
-                    onChange={(e) => setTel(maskPhone(e.target.value))}
+                    // onChange={(e) => setTel(maskPhone(e.target.value))}
                     required
                   />
                 </div>
                 <div>
                   <label>Outro telefone (Opcional)</label>
                   <input
-                    value={tel2}
+                    // value={tel2}
                     className="inputmask"
-                    onChange={(e) => setTel2(maskPhone(e.target.value))}
+                    // onChange={(e) => setTel2(maskPhone(e.target.value))}
                   />
                 </div>
                 <div>
@@ -147,8 +147,8 @@ export default function Login() {
                     Confirmar senha<span>*</span>
                   </label>
                   <S.Input
-                    value={senha2}
-                    onChange={(props) => setSenha2(props.target.value)}
+                    // value={senha2}
+                    // onChange={(props) => setSenha2(props.target.value)}
                     type="text"
                     required
                   />
@@ -189,7 +189,7 @@ export default function Login() {
                   <S.Radio
                     type="radio"
                     name="pessoas"
-                    onChange={(props) => setPessoafj(props.target.value)}
+                    // onChange={(props) => setPessoafj(props.target.value)}
                     value="Pessoa Fisica"
                     required
                   />
@@ -197,7 +197,7 @@ export default function Login() {
                   <S.Radio
                     type="radio"
                     name="pessoas"
-                    onChange={(props) => setPessoafj(props.target.value)}
+                    // onChange={(props) => setPessoafj(props.target.value)}
                     value="Pessoa Jurídica"
                     required
                   />
@@ -208,7 +208,7 @@ export default function Login() {
                     Primeiro nome <span>*</span>
                   </label>
                   <S.Input
-                    onChange={(props) => setPrimeiro(props.target.value)}
+                    // onChange={(props) => setPrimeiro(props.target.value)}
                     type="text"
                     required
                   />
@@ -218,7 +218,7 @@ export default function Login() {
                     Último nome <span>*</span>
                   </label>
                   <S.Input
-                    onChange={(props) => setUltimo(props.target.value)}
+                    // onChange={(props) => setUltimo(props.target.value)}
                     type="text"
                     required
                   />
@@ -229,9 +229,9 @@ export default function Login() {
                   </label>
                   <div>
                     <input
-                      value={cpf}
+                      // value={cpf}
                       className="inputmask"
-                      onChange={(e) => setCpf(maskCPF(e.target.value))}
+                      // onChange={(e) => setCpf(maskCPF(e.target.value))}
                       required
                     />
                   </div>
@@ -241,7 +241,7 @@ export default function Login() {
                   <S.Radio
                     type="radio"
                     name="sexo"
-                    onChange={(props) => setSexo(props.target.value)}
+                    // onChange={(props) => setSexo(props.target.value)}
                     value="Masculino"
                     required
                   />
@@ -249,7 +249,7 @@ export default function Login() {
                   <S.Radio
                     type="radio"
                     name="sexo"
-                    onChange={(props) => setSexo(props.target.value)}
+                    // onChange={(props) => setSexo(props.target.value)}
                     value="Feminino"
                     required
                   />
