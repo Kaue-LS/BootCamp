@@ -11,7 +11,7 @@ import Resumo from './Resumo'
 export default function Entrega(){
 
     const[showOptions,setShowOptions]=useState(false)
-    const[option1,setOption1]= useState(false)
+    // const[option1,setOption1]= useState(false)
     return(
         <>
          <NavBarTerciaria></NavBarTerciaria>
@@ -56,13 +56,13 @@ export default function Entrega(){
             <h3><img src={BoxBlack} alt=''/>Opções de entrega</h3>
             <button onClick={()=>setShowOptions(true)}>Selecionar opção</button>
         </S.OpçoesEntrega>
-        {
+        {/* {
             option1?(
                     null
             ):(
                 null
             )
-        }
+        } */}
           
         </S.Dados>
         
@@ -83,7 +83,10 @@ export default function Entrega(){
                     </div>
                     <div>
                     <p>Agende sua entrega com a PneuStore Móvel</p>
+                    <div style={{display:'flex',flexDirection:'column'}}>
                     <span>Confira as opções</span>
+                    <span>Saiba Mais</span>
+                    </div>
                     </div>
                 </div>
                  </S.MontagemMovel>
@@ -99,7 +102,10 @@ export default function Entrega(){
                     </div>
                     <div>
                     <p>Confira a disponibilidade dos serviços em cada centro de montagem</p>
+                    <div style={{display:'flex',flexDirection:'column'}}>
                     <h4>A partir de R$ 29,90</h4>
+                    <span>Saiba mais</span>
+                    </div>
                     </div>
                 </div>
                  </S.CentroMontagem>
@@ -115,8 +121,10 @@ export default function Entrega(){
                     </div>
                     <div>
                         <h3>De 2 a 5 dias úteis</h3>
+                        <div style={{display:'flex',flexDirection:'column'}}>
                         <p>R$29,90</p>
-                        
+                        <span>Saiba mais</span>
+                            </div>                        
                     </div>
                 </div>
                 </S.EndereçoEntrega>

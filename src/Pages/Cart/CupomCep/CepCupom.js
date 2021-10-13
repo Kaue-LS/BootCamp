@@ -7,7 +7,6 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
 import Accordion from '@mui/material/Accordion'
 import AccordionDetails from '@mui/material/AccordionDetails'
 import AccordionSummary from '@mui/material/AccordionSummary'
-import MenuMobile from "../../../Components/MenuMobile/MenuMobile";
 export default function CepCupom (){
   const [Cupomtext,setCupom]= useState('')
   const [ceptext,setCep]=useState('') 

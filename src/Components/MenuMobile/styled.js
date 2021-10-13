@@ -1,28 +1,13 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    display:none;
-    @media(max-width: 1020px){
     display:flex;
-    z-index: 9999;
     height: 4.5rem;
-    margin: -6.6vh auto;
     width: 100%;
+    position: fixed;
+    margin: -70vh auto;
     flex-direction: row;
     background-color: #463f4e;
-    justify-content: center ;
-    align-items: center;
-    }     
-    @media(max-width: 600px){
-        margin: -12vh auto;
-
-
-    }
-    @media(max-width: 600px){
-        margin: -12vh auto;
-
-
-    }
 
 `;
 

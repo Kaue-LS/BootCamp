@@ -6,9 +6,10 @@ import Address from './Pages/Endereço/Endereço';
 import Entrega from './Pages/Entrega/Entrega';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import  ReadAllTires  from './Pages/ReadAll/ReadAllTires';
-import MenuMobile from './Components/MenuMobile/MenuMobile';
+// import MenuMobile from './Components/MenuMobile/MenuMobile';
 function App() {
   return (
+    <>
     <BrowserRouter>
     <Switch>
     <Route path="/" exact component={ReadAllTires}></Route>
@@ -19,10 +20,9 @@ function App() {
     <Route path="/delivery"  component={Entrega}></Route>
 
     </Switch>
-   
-    <MenuMobile></MenuMobile>
-    <Footer></Footer>
     </BrowserRouter>
+    <Footer></Footer>
+    </>
   );
 }
 

@@ -3,10 +3,17 @@ import styled from "styled-components";
 export const ReadAllTires=styled.div`
     display: flex;
     padding:5vh 8vw;
+    background-color: #ffffff;
+    @media(max-width:1020px){
+        padding: 5vh 1vw;
+    }
 `;
 // Area dos botoes com opções a esquerda
 export const ProductOptions=styled.div`
-    width: 230px;
+    width: auto;
+    @media(max-width:1020px){
+        display: none;
+    }
 `;
 
 export const Options= styled.div`
@@ -37,6 +44,7 @@ export const Options= styled.div`
 // Area dos pneus
 export const Tires=styled.div`
     margin: 0 3vw;
+    width: 65.1vw;
 `
 export const Type=styled.h1``;
 
@@ -44,24 +52,34 @@ export const NavItems=styled.div`
     display: flex;
     flex-direction: row;
     font-size: 14px;
-    justify-content:center ;
     align-items: center;
-    margin: 5vh 0vw 0 0;
+    width: auto;
+    margin: 5vh auto 0 auto;
 
     div{
         display: flex;
+        width: auto;
         justify-content: center;
         align-items: center;
 
         p{
+            text-align: right;
             width: 180px;
-            margin: 0vh 5vw 0 0;
+            margin: 0vh 3vw 0 auto;
+
+            @media(max-width:1300px){
+                width: auto;
+                
+            }
+            @media(max-width:1020px){
+                display: none;
+            }
         }
 
     }
     p{
         width: 100px;
-        margin: 0vh 1vw 0 0;
+        margin: 0vh 0vw 0 auto;
 
     }
    
@@ -80,6 +98,7 @@ export const Order=styled.select`
     font-size: 13px;
     border-radius: 3px;
     height: 37px;
+    margin:  0 20px 0 0;
     border: 1px solid #BBBBBB;
     padding: 8px 40px 8px 16px;
 
@@ -94,20 +113,36 @@ display: flex;
 flex-direction: row;
 flex-wrap: wrap;
 margin:20px 0;
+@media(max-width:1020px){
+    width: 95vw;
+}
 `
 
 export const Pneu=styled.div`
-width: 222px;
+width: 220px;
+margin: 3px auto;
 background-color: white;
-padding: 20px 20px;
+padding: 0px 20px;
 justify-content: center;
 align-items: center;
 text-transform: uppercase;
+@media(max-width:1020px){
+    width: 463px;
+    justify-content: center;
+    align-items: center;
+    margin:  0 0;
+    border:1px solid gray;
+}
 div{
 
 .pneu{
     width: 182px;
     height: 182px;
+    @media(max-width:1020px){
+        height: 300px;
+        width: 300px;
+    }
+    
 }
 }
 p{
@@ -118,7 +153,7 @@ p{
 }
 transition: 300ms;
 :hover{
-    box-shadow: 0px 0px 5px 2px gray;
+    box-shadow: 0px 0px 5px  gray;
 }
 `
 export const Desc=styled.div`

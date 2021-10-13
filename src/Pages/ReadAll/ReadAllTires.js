@@ -32,6 +32,7 @@ export default function ReadAllTires() {
                   itens
                 </p>
               </div>
+              <div>
               <p>Ordenar por:</p>
 
               <S.Order>
@@ -42,6 +43,7 @@ export default function ReadAllTires() {
                 <option>Preço(menores primeiro)</option>
                 <option>Preço(maiores primeiros)</option>
               </S.Order>
+              </div>
             </S.NavItems>
             {/* ======================= */}
 {/* Area dos Pneus */}

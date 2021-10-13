@@ -2,6 +2,7 @@ import styled from "styled-components";
 
  export const Footer = styled.div`
   background-color: #252031;
+  z-index: -1;
   font-family: Verdana, Geneva, Tahoma, sans-serif,sans-serif;
   @media(max-width:752px){
         display: flex;

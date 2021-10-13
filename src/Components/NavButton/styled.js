@@ -1,13 +1,19 @@
 import styled from "styled-components";
 
 export const NavButton=styled.div`
+    display: flex;
     background-color: #3A006A;
+    color: #ffffff ;
     height: 40px;
     text-align: center;
+    padding: 0px 15px;
+    justify-content: space-evenly;
+    align-items: center;
     @media(max-width:1020px){
         display: none;
     }
-`
+`;
+
 export const Buttons=styled.div`
     display: flex;
     align-items: center;
@@ -46,3 +52,4 @@ export const Button=styled.a`
         font-size: 12px;
     }
 `;
+

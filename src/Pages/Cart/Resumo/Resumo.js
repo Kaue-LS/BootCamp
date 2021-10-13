@@ -1,10 +1,10 @@
 import * as S from './styled'
 import { Link } from 'react-router-dom'
 import CepCupom from '../CupomCep/CepCupom'
-import { useState } from 'react'
+// import { useState } from 'react'
 export default function Resumo(props){
     console.log(props.props)
-  const [quant,setQuant]=useState(props.props)
+  // const [quant,setQuant]=useState(props.props)
     return(
         <>
         { props.props>0?(

@@ -169,7 +169,7 @@ background-color: white;
 display: flex;
 flex-direction: column;
 button{
-    margin: 0 auto;
+    margin: 10px auto 20px auto;
     width: 80%;
     transition: 300ms;
     cursor:pointer;
@@ -375,7 +375,11 @@ margin: 10px 0;
             font-weight: 700;
             color:#333333
         }
-        input{}
+        input{
+            margin: 10px 5px 10px auto ;
+            height: 25px;
+            width: 25px;
+        }
         p{
             font-size: 18px;
             font-weight: 700;

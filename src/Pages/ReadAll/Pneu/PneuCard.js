@@ -1,30 +1,48 @@
 import * as S from '../styled'
 import { Rating } from '@mui/material';
-import { Api } from '../../../Components/Api/Api';
-import { useHistory } from 'react-router';
+// import { ApiPost } from '../../../Components/Api/Api';
+// import { useHistory } from 'react-router';
+import axios from 'axios';
 export default function Pneu({pneu}){
-
- 
-  const history=useHistory()
-  const submitHandler = async event => {
-
-    event.preventDefault();
-
-    const request = await Api.buildApiPutRequest(Api.PostCart(), pneu)
-    .catch(e => {
-      console.error('Erro ao tentar adicionar o item ao banco: ', e);
-    })
-    const result= await request.json()
-
-
-    history.push(`/cart`,result);
-
+  const nome=pneu.productName
+  let preço=pneu.unitPrice
+  const item={
+    nome:nome,
+    preço:preço,
+    id:pneu.productID
   }
+  // const history=useHistory()
+  const submitHandler = async (event) => {
+  
+   console.log({item})
+    event.preventDefault();
+     await axios.post('https://pneustoreg3.azurewebsites.net',item)
+    .then(res=>{
+      console.log(res);
+
+    })
+    
+    .catch(err=>{
+      console.error(err)
+    })
+    
+    
+   
+    }
+    
+
+    
+
+  //   const request = await Api.buildApiPutRequest(Api.PostCart(), pneu)
+  //   .catch(e => {
+  //     console.error('Erro ao tentar adicionar o item ao banco: ', e);
+  //   })
 
     return(
 <S.Pneu>
   {/* Area do Pneu */}
   {/* Image */}
+  <form>
               <div>
                 <img
                   className="pneu"
@@ -35,7 +53,12 @@ export default function Pneu({pneu}){
 
               {/* Descrição */}
               <S.Desc>
-              <p>{pneu.productName} </p>
+               { nome.length>15?( 
+              <p style={{fontSize:'11px'}}>{nome} </p>
+               ):(
+                <p>{nome} </p>
+               )
+               }
               <div>
               
                 <S.Marca
@@ -75,10 +98,11 @@ export default function Pneu({pneu}){
 
               {/* Preço */}
               <S.Preço>
-                  <p><span>{(pneu.unitPrice).toFixed(2)}</span> à vista ou 6x de R$ 171,97</p>
+                  <p><span >R$ {(preço).toFixed(2)}</span> à vista ou 6x de R$ 171,97</p>
                   </S.Preço>
 
-            <S.Comprar  onClick={submitHandler} ><i className="im im-shopping-cart"></i>Comprar</S.Comprar>
+            <S.Comprar onClick={submitHandler}  ><i className="im im-shopping-cart"></i>Comprar</S.Comprar>
+            </form>
             </S.Pneu>
     )
 }

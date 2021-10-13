@@ -37,7 +37,6 @@ export const maskDate = (value) => {
     .replace(/(\d{2})(\d)/, "$1/$2")
     .replace(/(\d{4})(\d)/, "$1");
 };
-
 export const maskOnlyLetters = (value) => {
   return value.replace(/[0-9!@#¨$%^&*)(+=._-]+/g, "");
 };

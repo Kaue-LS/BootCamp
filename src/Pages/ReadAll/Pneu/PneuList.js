@@ -1,34 +1,33 @@
 import Pneu from "./PneuCard";
-import { useEffect, useState } from "react";
-import { Api } from "../../../Components/Api/Api";
+import { ApiGet } from "../../../Components/Api/Api";
+import{ useEffect, useState } from "react";
 export default function PneuList() {
-  const [pneucard, setPneu] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    if (loading) {
-      fetchApi();
+  const [pneucard, setPneu] = useState([])
+  const [loading,setLoading]= useState(true)
+  useEffect(()=>{
+    if(loading){
+      fecthApi()
     }
-  });
-  const fetchApi = async () => {
-    const response = await Api.buildApiGetRequest(Api.readAllUrl());
+  })
+ 
+  const fecthApi=()=>{
+    ApiGet.get('/Produto')
+    .then(res=>{
+      const pneu=res.data
+      setPneu(pneu.results)
+      setLoading(false)
+      console.log(pneucard)
+  })}
 
-    const dados = await response.json();
-
-    setPneu(dados.results);
-    setLoading(false);
-  };
+  
+    
   return (
     <>
       {
-        pneucard.length>0?(
-          (pneucard.map((item,index)=>(
+          pneucard.map((item,index)=>(
             <Pneu pneu={item} key={index}></Pneu>
-          )))
-        ):(
-          'Carregando...'
-        )
-      }
+          )) 
+               }
     </>
   );
 }

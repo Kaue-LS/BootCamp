@@ -27,8 +27,8 @@ export default function Carrinho(props) {
       
         {/* Area dos cupons */}
         {/* Area do resumo  e dos botoes*/}
-        <Resumo props={props.length}/>
-   
+        <Resumo props={1}/>
     </>
+    
   );
 }
