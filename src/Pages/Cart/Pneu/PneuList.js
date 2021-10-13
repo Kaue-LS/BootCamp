@@ -1,16 +1,34 @@
-import { useState } from "react"
+import { useState,useEffect } from "react"
 import Pneus from "./Pneus"
+import { Api } from "../../../Components/Api/Api";
 import * as S from './styled'
 export default function PneuList(){
-    const [pneu,setPneu]=useState([0])
+
+    const [pneucard, setPneu] = useState([]);
+    const [loading, setLoading] = useState(true);
+  
+    useEffect(() => {
+      if (loading) {
+        fetchApi();
+      }
+    });
+    const fetchApi = async () => {
+      const response = await Api.buildApiGetRequest(Api.ReadCart());
+  
+      const dados = await response.json();
+  
+      setPneu(dados.results);
+      setLoading(false);
+    };
+
 
     return(
     <>
-    { pneu>=1?(
+    { pneucard.length >0?(
         <>
-        { pneu.map((pneu)=>(
+        { pneucard.map((pneu)=>(
              <S.Itens>
-            <Pneus></Pneus>
+            <Pneus pneu={pneu}></Pneus>
             </S.Itens>
         ))}
         </>

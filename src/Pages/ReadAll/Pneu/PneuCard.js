@@ -1,8 +1,26 @@
 import * as S from '../styled'
 import { Rating } from '@mui/material';
-import { Link } from 'react-router-dom';
+import { Api } from '../../../Components/Api/Api';
+import { useHistory } from 'react-router';
 export default function Pneu({pneu}){
-  console.log(pneu[0].productID)
+
+ 
+  const history=useHistory()
+  const submitHandler = async event => {
+
+    event.preventDefault();
+
+    const request = await Api.buildApiPutRequest(Api.PostCart(), pneu)
+    .catch(e => {
+      console.error('Erro ao tentar adicionar o item ao banco: ', e);
+    })
+    const result= await request.json()
+
+
+    history.push(`/cart`,result);
+
+  }
+
     return(
 <S.Pneu>
   {/* Area do Pneu */}
@@ -17,7 +35,7 @@ export default function Pneu({pneu}){
 
               {/* Descrição */}
               <S.Desc>
-              <p>{pneu[0].productName} </p>
+              <p>{pneu.productName} </p>
               <div>
               
                 <S.Marca
@@ -57,13 +75,10 @@ export default function Pneu({pneu}){
 
               {/* Preço */}
               <S.Preço>
-                  <p><span>R$ 928,63</span> à vista ou 6x de R$ 171,97</p>
+                  <p><span>{(pneu.unitPrice).toFixed(2)}</span> à vista ou 6x de R$ 171,97</p>
                   </S.Preço>
-             <Link to='/cart' >
 
-            <S.Comprar><i className="im im-shopping-cart"></i>Comprar</S.Comprar>
-            </Link>
-
+            <S.Comprar  onClick={submitHandler} ><i className="im im-shopping-cart"></i>Comprar</S.Comprar>
             </S.Pneu>
     )
 }

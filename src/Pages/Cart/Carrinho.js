@@ -4,8 +4,8 @@ import CartICon from '../../Components/img/cart.jpg'
 import * as S from "./styled";
 import {NavBarSecundaria} from "../../Components/NavBar/NavBar";
 import  Resumo  from "./Resumo/Resumo";
-export default function Carrinho() {
- 
+export default function Carrinho(props) {
+ console.log(props)
   return (
     <>
    
@@ -27,7 +27,7 @@ export default function Carrinho() {
       
         {/* Area dos cupons */}
         {/* Area do resumo  e dos botoes*/}
-        <Resumo props={0}/>
+        <Resumo props={props.length}/>
    
     </>
   );
