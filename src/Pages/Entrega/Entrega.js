@@ -46,11 +46,11 @@ export default function Entrega(){
                 </div>
                 <div>
                 <span>Brazil 04571-010</span>
-
                 </div>
+                <button>Alterar endereço</button>
+
             </div>
         </S.DadosEntrega>
-        <button>Alterar endereço</button>
 
         <S.OpçoesEntrega>
             <h3><img src={BoxBlack} alt=''/>Opções de entrega</h3>

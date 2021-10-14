@@ -3,6 +3,7 @@ import styled from 'styled-components'
 export const Entrega=styled.div`
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 
 `
 export const Dados=styled.div`
@@ -10,14 +11,13 @@ display: flex;
 flex-direction: column;
 margin: 50px 0 50px auto;
 @media(max-width:1020px){
-    flex-direction: row;
-    width: 100%;
+    width: 50%;
     justify-content: center;
     align-items: center;
       margin: 50px auto;
       
   }
-  @media(max-width:720px){
+  @media(max-width:820px){
     flex-direction: column;
     width: 90%;
     justify-content: center;
@@ -31,7 +31,7 @@ margin: 50px 0 50px auto;
         border: 1px solid #A7A7A7;
         text-transform: uppercase;
         padding: 10px 15px 10px 15px;
-        width: 544px;
+        width: 40vw;
         font-size: 20px;
         background-color: #FFFFFF;
         color: #4E008B;
@@ -48,8 +48,6 @@ margin: 50px 0 50px auto;
         cursor: pointer;
     }
         @media(max-width:1020px){
-      width: auto;
-      height: 50%;
       margin: 20px auto 8px auto;
   }
   }
@@ -58,16 +56,17 @@ margin: 50px 0 50px auto;
 export const DadosCliente=styled.div`
 
     background-color: #FFFFFF;
-    width: 544px;
+    width:45vw;
     display: flex;
     border-radius: 10px;
     flex-direction: column;
     padding: 20px 24px 0 24px;
     @media(max-width:1020px){
       width:100%;
+      justify-content: center;
+      align-items: center;
       padding: 10px 20px 0 20px;
       margin: 0 20px;
-      height: 50%;
   }
   @media(max-width:720px){
       width:100%;
@@ -109,7 +108,7 @@ export const DadosCliente=styled.div`
 export const DadosEntrega=styled.div`
 
     background-color: #FFFFFF;
-    width: 544px;
+    width: 45vw;
     margin: 10px 0;
     display: flex;
 
@@ -117,10 +116,11 @@ export const DadosEntrega=styled.div`
     flex-direction: column;
     padding: 20px 24px 0 24px;
     @media(max-width:1020px){
-      width:100%;
+        align-items: center;
+        justify-content: center;
       padding: 10px 20px 0 20px;
-      margin: 0 20px;
-      height: 50%;
+      margin: 10px 20px;
+      width: 100%;
   }
   @media(max-width:720px){
       width:100%;
@@ -167,6 +167,8 @@ export const DadosEntrega=styled.div`
 export const OpçoesEntrega=styled.div`
 background-color: white;
 display: flex;
+border-radius: 10px;
+width: 45vw;
 flex-direction: column;
 button{
     margin: 10px auto 20px auto;
@@ -191,6 +193,13 @@ h3{
             width: 50px;
         }
 }
+@media(max-width:1020px){
+        align-items: center;
+        justify-content: center;
+      padding: 10px 20px 0 20px;
+      margin: 10px 20px;
+      width: 100%;
+      }
 `;
 
 
@@ -200,7 +209,7 @@ flex-direction: column;
 background-color: white;
 margin: 50px auto;
 border-radius: 10px;
-width: 40vw;
+width: 45vw;
 padding: 10px 15px;
 
 h2{
@@ -209,7 +218,9 @@ h2{
         font-weight: 900;
         color: #333333;
 }
-
+@media(max-width:1020px){
+      width: 100%;
+      }
 `;
 export const MontagemMovel=styled.div`
 display: flex;

@@ -165,9 +165,10 @@ border-left:5px solid #4E008B;
         width: 300px;
     }
     input{
-        margin: 10px auto 10px 22vw;
-        height: 25px;
-        width: 25px;
+        
+        margin: 10px 0 10px auto;
+        height: 5px;
+        width: 5px;
     }
 }
 }
@@ -205,6 +206,7 @@ margin: 10px 0;
         flex-direction: row;
 
         h3{
+            margin: 10px 0;
         font-size: 18px;
         font-weight: 700;
         color:#333333
