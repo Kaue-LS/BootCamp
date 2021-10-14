@@ -6,6 +6,7 @@ import axios from 'axios';
 export default function Pneu({pneu}){
   const nome=pneu.productName
   let preço=pneu.unitPrice
+
   const item={
     nome:nome,
     preço:preço,
@@ -16,7 +17,7 @@ export default function Pneu({pneu}){
   
    console.log({item})
     event.preventDefault();
-     await axios.post('https://pneustoreg3.azurewebsites.net',item)
+     await axios.post('https://pneustoreg3.azurewebsites.net/Cart',item)
     .then(res=>{
       console.log(res);
 
