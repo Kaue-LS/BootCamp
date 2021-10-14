@@ -56,6 +56,10 @@ export const NavItems=styled.div`
     width: auto;
     margin: 5vh auto 0 auto;
 
+    @media(max-width:1020px){
+        justify-content: space-between;
+    }
+
     div{
         display: flex;
         width: auto;
@@ -106,6 +110,21 @@ export const Order=styled.select`
         padding: 10px 10px;
     }
 `
+
+
+export const Refinar=styled.button`
+display: none;
+    @media(max-width:1020px){
+        display: block;
+        padding: 10px 10px;
+        font-size: 16px;
+        font-weight: 700;
+        color:#4E008E;
+
+    }
+`
+
+
 
 // ------------------------
 export const Pneus=styled.div`

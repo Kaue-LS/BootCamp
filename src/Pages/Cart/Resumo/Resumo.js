@@ -1,13 +1,13 @@
 import * as S from './styled'
-// import { Link } from 'react-router-dom'
-// import CepCupom from '../CupomCep/CepCupom'
+import { Link } from 'react-router-dom'
+import CepCupom from '../CupomCep/CepCupom'
 // import { useState } from 'react'
-export default function Resumo(){
-    // console.log(props.props)
+export default function Resumo(props){
+    console.log(props.props)
   // const [quant,setQuant]=useState(props.props)
     return(
         <>
-        {/* { props.props>0?(
+        { props.props>0?(
         <S.CepCuponsResu>
        
         <S.CepCupomAnuncio>
@@ -35,6 +35,7 @@ export default function Resumo(){
                 </S.Title2Subtotal>
               </S.Resumo>
   
+              {/* Area onde mostra o total */}
               <S.Title3total>
                 <S.Title3>Total</S.Title3>
                 <S.TotalsubTotal>
@@ -47,6 +48,7 @@ export default function Resumo(){
               </S.Title3total>
             </S.resumoArea>
   
+            {/* Colocando os botoes abaixo do resumo */}
             <S.ButtonsArea>
               <S.ContFinal>
                 <S.Continuar>CONTINUAR COMPRANDO</S.Continuar>
@@ -71,7 +73,6 @@ export default function Resumo(){
                      </S.CepCuponsResu>
              )
 }
- */}
              </>
     )
 }

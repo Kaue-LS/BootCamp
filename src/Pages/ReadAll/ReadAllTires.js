@@ -44,6 +44,8 @@ export default function ReadAllTires() {
                 <option>Preço(maiores primeiros)</option>
               </S.Order>
               </div>
+
+              <S.Refinar>Refinar</S.Refinar>
             </S.NavItems>
             {/* ======================= */}
 {/* Area dos Pneus */}
