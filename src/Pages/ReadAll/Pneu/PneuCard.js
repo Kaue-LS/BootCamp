@@ -1,6 +1,6 @@
 import * as S from '../styled'
 import { Rating } from '@mui/material';
-import { ApiPost } from '../../../Components/Api/Api';
+import { ApiGet } from '../../../Components/Api/Api';
 // import { useHistory } from 'react-router';
 export default function Pneu({pneu}){
   const nome=pneu.productName
@@ -16,7 +16,7 @@ export default function Pneu({pneu}){
   
    console.log(item)
     event.preventDefault();
-     await ApiPost.post('/Cart',item)
+     await ApiGet.post('/Cart',item)
     .then(res=>{
       console.log(res);
 
@@ -33,10 +33,7 @@ export default function Pneu({pneu}){
 
     
 
-  //   const request = await Api.buildApiPutRequest(Api.PostCart(), pneu)
-  //   .catch(e => {
-  //     console.error('Erro ao tentar adicionar o item ao banco: ', e);
-  //   })
+ 
 
     return(
 <S.Pneu>

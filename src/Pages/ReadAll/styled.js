@@ -112,9 +112,14 @@ export const Pneus=styled.div`
 display: flex;
 flex-direction: row;
 flex-wrap: wrap;
-margin:20px 0;
+margin:20px auto;
 @media(max-width:1020px){
-    width: 95vw;
+    width: 100vw;
+    
+}
+@media(max-width:650px){
+    flex-direction: column;
+
 }
 `
 
@@ -127,11 +132,14 @@ justify-content: center;
 align-items: center;
 text-transform: uppercase;
 @media(max-width:1020px){
-    width: 463px;
+    width: 440px;
     justify-content: center;
     align-items: center;
-    margin:  0 0;
+    margin:  5px auto;
     border:1px solid gray;
+}
+@media(max-width:650px){
+    width:80vw ;
 }
 div{
 
@@ -141,6 +149,13 @@ div{
     @media(max-width:1020px){
         height: 300px;
         width: 300px;
+        margin: 0 3vw;
+
+    }
+    @media(max-width:650px){
+        margin: 0 3vw;
+        height: 50vw;
+        width: 50vw;
     }
     
 }
@@ -150,6 +165,9 @@ p{
     color:#333333;
     font-weight: 700;
     width: 190px;
+    @media(max-width:1020px){
+        font-size: 22px;
+    }
 }
 transition: 300ms;
 :hover{
@@ -161,23 +179,39 @@ display:flex;
 flex-direction: column;
 div{
     margin: 10px 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    
     span{
+        margin: 0 auto;
         display: flex;
+        font-size: 2.5vw;
         align-items: center;
        
     }
 
 }
+@media(max-width:1020px){
+    justify-content: center;
+    align-items: center;
+}
 
 `
 export const Marca=styled.img`
 width: 5rem;
+margin: 0 20px;
 `
 export const Selos=styled.div`
 color:black;
-margin: 10px 0;
+margin: 10px 0 ;
 display: flex;
 flex-direction: row;
+@media(max-width:1020px){
+    justify-content: center;
+    align-items: center;
+}
 
 `
 export const ImageSelos=styled.img`
@@ -185,6 +219,9 @@ margin: 0 5px;
 background-color: #DEDEDE;
 padding: 3px 3px;
 width: 30px;
+@media(max-width:1020px){
+    width: 50px;
+}
 `;
 export const Preço=styled.div`
 margin: 10px 0;
@@ -198,6 +235,22 @@ p{
         font-size: 20px;
         font-weight: 900;
     }
+
+    @media(max-width:1020px){
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+
+    p{
+        font-size: 18px;
+
+        span{
+        font-size: 30px;
+    }
+    }
+
+    
+}
 `;
 export const Comprar=styled.button`
     background-color: #DDD218;
@@ -216,4 +269,11 @@ export const Comprar=styled.button`
     align-items: center;
     flex-direction: row;
     border-radius: 10px;
+
+    @media(max-width:1020px){
+    display: flex;
+    margin: 10px auto;
+    justify-content: center;
+    padding: 20px 20px;
+    }
 `

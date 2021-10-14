@@ -23,10 +23,13 @@ export default function PneuList() {
     
   return (
     <>
-      {
-          pneucard.map((item,index)=>(
-            <Pneu pneu={item} key={index}></Pneu>
-          )) 
+      {loading?(
+         "Carregando"
+       
+          ):(
+            pneucard.map((item,index)=>(
+              <Pneu pneu={item} key={index}></Pneu>    
+          )))
                }
     </>
   );

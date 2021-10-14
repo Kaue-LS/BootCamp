@@ -28,11 +28,5 @@ import axios from 'axios'
 // }
 
 export const ApiGet=axios.create({
-  baseURL:'https://localhost:44334'
-})
-export const ApiPost=axios.create({
-  baseURL:'https://localhost:44334',
-
-  
-
+  baseURL:'https://pneustoreg3.azurewebsites.net'
 })

@@ -1,11 +1,10 @@
 // import {  useState } from "react";
-import PneuList from './Pneu/PneuList';
+import PneuList from './Pneu/CartList';
 import CartICon from '../../Components/img/cart.jpg'
 import * as S from "./styled";
 import {NavBarSecundaria} from "../../Components/NavBar/NavBar";
 import  Resumo  from "./Resumo/Resumo";
-export default function Carrinho(props) {
- console.log(props)
+export default function Carrinho() {
   return (
     <>
    
@@ -27,7 +26,7 @@ export default function Carrinho(props) {
       
         {/* Area dos cupons */}
         {/* Area do resumo  e dos botoes*/}
-        <Resumo props={1}/>
+        <Resumo/>
     </>
     
   );
