@@ -4,7 +4,6 @@ export default function Footer() {
   return (
     <div>
       <S.Footer>
-        <S.ContainerTop>
           <S.ContainerMenu>
             <S.ContainerTitleMenu>
               <h3>INSTITUCIONAL</h3>
@@ -82,7 +81,6 @@ export default function Footer() {
               </S.ContainerListItems>
             </S.ContainerTitleMenu>
           </S.ContainerMenu>
-        </S.ContainerTop>
         <S.ContainerMed>
           <S.ImageArea>
             <S.ContainerTitleMenu2>

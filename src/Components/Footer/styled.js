@@ -15,6 +15,7 @@ import styled from "styled-components";
 
  export const ContainerTop = styled.div`
      display: flex;
+     background-color: violet;
      @media(max-width:752px){
         display: flex;
         flex-direction: column;
@@ -25,7 +26,9 @@ import styled from "styled-components";
 
  export const ContainerMenu = styled.div`
     display:flex;
-    flex-wrap:wrap;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
  @media(max-width:752px){
         display: flex;
         flex-direction: column;
@@ -37,7 +40,7 @@ import styled from "styled-components";
 
  export const ContainerTitleMenu = styled.div`
  color:#ffffff;
- padding: 2rem 4rem;
+ padding: 2rem 3rem;
  display:flex;
  flex-direction: column;
  @media(max-width:752px){
@@ -56,6 +59,7 @@ import styled from "styled-components";
  display: flex;
  flex-direction: column;
  p{
+     width: 15vw;
     list-style: none;
      color: #ffffff;
      margin: 10px 0 0 0;
