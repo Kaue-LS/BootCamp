@@ -57,7 +57,7 @@ export default function CepCupom (){
 
         
       <S.CepArea >
-      <Accordion style={{boxShadow:'none'}}>
+      <Accordion >
         <AccordionSummary  expandIcon={<ExpandMoreIcon style={{fontSize:'52px'}} ></ExpandMoreIcon>}>
         <S.CepTitle><img src={Cep} alt='cep'/>Informe seu CEP</S.CepTitle>
         </AccordionSummary>

@@ -7,7 +7,7 @@ export const CuponsCep= styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0px 20px;
+    margin: 0px 0;
     @media(max-width:500px){
         width: auto;
     }
@@ -22,11 +22,9 @@ export const CupomArea=styled.div`
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    box-shadow: 0px 0px 10px black;
     flex-wrap: wrap;
 
     i{
-        animation: Around ease-in-out forwards 200ms;
 
         margin: 0 3rem;
         @media(max-width: 530px) {
@@ -123,6 +121,9 @@ export const IconActive=styled.i`
         }
     
 `;
+// ===============================================
+
+
 
 export const CepArea=styled.div`
    background-color: white;
@@ -131,12 +132,9 @@ export const CepArea=styled.div`
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    width: 36.5vw;
     margin: 10px 0;
-    box-shadow: 0px 0px 10px black;
 
     i{
-        animation: Around ease-in-out forwards 200ms;
 
         margin: 0 3rem;
         @media(max-width: 530px) {
@@ -177,7 +175,6 @@ animation: Show forwards 300ms ease-in-out;
 display: flex;
 flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
     align-items: center;
 
     .inputmask{

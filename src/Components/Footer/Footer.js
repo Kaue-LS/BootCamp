@@ -6,7 +6,6 @@ export default function Footer() {
         <div>
             <S.Footer>
                 
-                <S.ContainerTop>
                 <S.Accordion>
                     <SimpleAccordion></SimpleAccordion>
                 </S.Accordion>
@@ -14,41 +13,40 @@ export default function Footer() {
                         <S.ContainerTitleMenu>
                             <h3>INSTITUCIONAL</h3>
                             <S.ContainerListItems>
-                                <ul><li>Garantia</li></ul>
-                                <ul><li>Política de Privacidade</li></ul>
-                                <ul><li>Regras do site e promoções</li></ul>
-                                <ul><li>Trabalhe Conosco</li></ul>
-                                <ul><li>Marcas</li></ul>
+                                <ul><p>Garantia</p></ul>
+                                <ul><p>Política de Privacidade</p></ul>
+                                <ul><p>Regras do site e promoções</p></ul>
+                                <ul><p>Trabalhe Conosco</p></ul>
+                                <ul><p>Marcas</p></ul>
                             </S.ContainerListItems>
                         </S.ContainerTitleMenu>
                         <S.ContainerTitleMenu>
                             <h3>AJUDA</h3>
                             <S.ContainerListItems>
-                                <ul><li>Perguntas frequentes</li></ul>
-                                <ul><li>Entrega</li></ul>
-                                <ul><li>Troca e Desistência</li></ul>
-                                <ul><li>Meus pedidos</li></ul>
-                                <ul><li>Informações Técnicas do Pneus</li></ul>
+                                <ul><p>Perguntas frequentes</p></ul>
+                                <ul><p>Entrega</p></ul>
+                                <ul><p>Troca e Desistência</p></ul>
+                                <ul><p>Meus pedidos</p></ul>
+                                <ul><p>Informações Técnicas do Pneus</p></ul>
                             </S.ContainerListItems>
                         </S.ContainerTitleMenu>
                         <S.ContainerTitleMenu>
                             <h3>SERVIÇO</h3>
                             <S.ContainerListItems>
-                                <ul><li>Entregas e Montagem Móvel</li></ul>
-                                <ul><li>Seja um parceiro de serviços</li></ul>
+                                <ul><p>Entregas e Montagem Móvel</p></ul>
+                                <ul><p>Seja um parceiro de serviços</p></ul>
                             </S.ContainerListItems>
                         </S.ContainerTitleMenu>
                         <S.ContainerTitleMenu>
                             <h3>CENTRAL DE RELACIONAMENTO</h3>
                             <S.ContainerListItems>
-                                <ul><li><strong>0800-602-2013</strong></li></ul>
-                                <ul><li>(Ligações de telefone fixo - Chamada Gratuita)</li></ul>
-                                <ul><li><strong>(47) 3046-2559</strong></li></ul>
-                                <ul><li>(Ligações de qualquer origem - Cobrança de Acordo com Operadora)</li></ul>
+                                <ul><p><strong>0800-602-2013</strong></p></ul>
+                                <ul><p>(Ligações de telefone fixo - Chamada Gratuita)</p></ul>
+                                <ul><p><strong>(47) 3046-2559</strong></p></ul>
+                                <ul><p>(Ligações de qualquer origem - Cobrança de Acordo com Operadora)</p></ul>
                             </S.ContainerListItems>
                         </S.ContainerTitleMenu>
                     </S.ContainerMenu>
-                </S.ContainerTop>
                 <S.ContainerMed>
                 
                 <S.ImageArea>
@@ -89,7 +87,12 @@ export default function Footer() {
 
                 <S.Copyrigth>
                     <p>© 2019 PneuStore. CPX Distribuidora S/A. Rodovia SC 486 - Antonio Heil, 800 - Bairro Itaipava - CEP 88316001 - Itajaí/SC. CNPJ: 10.158.356/0001-01.</p>
+                    <span>© 2019 PNEUSTORE - Todos os direitos reservados</span>
+                    <div>
+                    <h3><i className="im im-phone"></i>Fale com o televendas</h3>
+                    </div>
                 </S.Copyrigth>
+                
                 {/* Footer Responsivo */}
             </S.Footer>
         </div>
