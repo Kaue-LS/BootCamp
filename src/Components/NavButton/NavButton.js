@@ -13,8 +13,12 @@ export default function NavButton(){
          <BasicMenu3></BasicMenu3>
          <S.Buttons>
              <li>Televendas</li>
+             <S.Tel>
              <li><i className="im im-phone"></i><a href="tel:+554730462551">(47) 3046-2551</a></li>
-             <li><i className="im im-whatsapp"></i><a href="https://api.whatsapp.com/send?phone=5562996972262" target='_blank' rel='noreferrer'>(62) 99697-2262</a></li>
+             </S.Tel>
+             <S.Whatsapp>
+             <li ><i className="im im-whatsapp"></i><a href="https://api.whatsapp.com/send?phone=5562996972262" target='_blank' rel='noreferrer'>(62) 99697-2262</a></li>
+             </S.Whatsapp>
          </S.Buttons>
      </S.NavButton>
  )   

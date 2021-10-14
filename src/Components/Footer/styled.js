@@ -2,7 +2,6 @@ import styled from "styled-components";
 
  export const Footer = styled.div`
   background-color: #252031;
-  z-index: -1;
   font-family: Verdana, Geneva, Tahoma, sans-serif,sans-serif;
   @media(max-width:752px){
         display: flex;
@@ -15,22 +14,19 @@ import styled from "styled-components";
 
  export const ContainerTop = styled.div`
      display: flex;
-     background-color: violet;
      @media(max-width:752px){
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        width: auto;
     }
  `;
 
  export const ContainerMenu = styled.div`
     display:flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
  @media(max-width:752px){
-        display: flex;
+        display: none;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -40,7 +36,7 @@ import styled from "styled-components";
 
  export const ContainerTitleMenu = styled.div`
  color:#ffffff;
- padding: 2rem 3rem;
+ padding: 2rem 4rem;
  display:flex;
  flex-direction: column;
  @media(max-width:752px){
@@ -56,16 +52,13 @@ import styled from "styled-components";
  export const ContainerListItems = styled.div`
  padding: 1rem 0rem;
  margin: 10px 0px;
- display: flex;
- flex-direction: column;
- p{
-     width: 15vw;
+ li{
     list-style: none;
      color: #ffffff;
      margin: 10px 0 0 0;
      text-align: left;
-     font-size: 13px;
      word-spacing: 0px;
+     font-weight: 12px;
  }
  `;
 
@@ -111,7 +104,7 @@ import styled from "styled-components";
   display: flex;
  flex-direction: row;
  align-items: center;
- margin: 0 auto;
+ margin: 0 4rem;
 
   img{
      margin: 30px 30px;
@@ -125,31 +118,25 @@ import styled from "styled-components";
 
  export const FormasPagamento=styled.div`
     display: flex;
-    flex-wrap: wrap;
-    border-top:1px solid gray;
     justify-content: center;
     align-items: center;
     padding: 30px;
-    width: 90%;
-    height: auto;
+    width: 70%;
+    height: 6rem;
     margin: 0 auto;
     margin-top: 10px;
     color: white;
-    @media(max-width:1190px){
-        border-top: 0px solid;
-    }
     @media(max-width:752px){
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 90%;
+        width: 95%;
         img{
             width: 90%;
         }
     }
     p{
-        width: 20vw;
          margin: 0 20px;
     }
     .pgto {
@@ -172,3 +159,13 @@ import styled from "styled-components";
     
  `;
 
+ export const Accordion = styled.div`
+    display: none;
+    @media(max-width:752px){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+    padding: 12px;
+    }
+ `;

@@ -38,6 +38,8 @@ export const Buttons=styled.div`
         }
         
     }
+        
+    
 `;
 export const Button=styled.a`
     color: #ffffff;
@@ -53,3 +55,13 @@ export const Button=styled.a`
     }
 `;
 
+export const Tel=styled.div`
+:hover{
+            color:#68DCFA;
+        }
+`
+export const Whatsapp =styled.div`
+:hover{
+            color:#68DCFA;
+        }
+`

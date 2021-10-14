@@ -1,8 +1,7 @@
 import * as S from '../styled'
 import { Rating } from '@mui/material';
-// import { ApiPost } from '../../../Components/Api/Api';
+import { ApiPost } from '../../../Components/Api/Api';
 // import { useHistory } from 'react-router';
-import axios from 'axios';
 export default function Pneu({pneu}){
   const nome=pneu.productName
   let preço=pneu.unitPrice
@@ -15,9 +14,9 @@ export default function Pneu({pneu}){
   // const history=useHistory()
   const submitHandler = async (event) => {
   
-   console.log({item})
+   console.log(item)
     event.preventDefault();
-     await axios.post('https://pneustoreg3.azurewebsites.net/Cart',item)
+     await ApiPost.post('/Cart',item)
     .then(res=>{
       console.log(res);
 
