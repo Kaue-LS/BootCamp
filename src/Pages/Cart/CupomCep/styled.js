@@ -93,6 +93,7 @@ export const CupomButton=styled.button`
     font-size: 1.1rem;
     border: none;
     font-weight: 700;
+    cursor: pointer;
     border-radius: 5px;
     color: #4f0381 ;
         background-color: #69dcfb;
@@ -233,6 +234,7 @@ export const CepButton=styled.button`
     margin: 10px 10px;
     font-size: 1rem;
     width:auto;
+    cursor: pointer;
     border: none;
     font-weight: 700;
     border-radius: 5px;

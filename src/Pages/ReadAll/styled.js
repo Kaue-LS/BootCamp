@@ -184,10 +184,18 @@ p{
     color:#333333;
     font-weight: 700;
     width: 190px;
+  
     @media(max-width:1020px){
         font-size: 22px;
     }
 }
+.name2{
+        font-size:12px;
+        @media(max-width:1020px){
+        font-size: 18px;
+        width: 80%;
+    }
+    }
 transition: 300ms;
 :hover{
     box-shadow: 0px 0px 5px  gray;
@@ -195,20 +203,27 @@ transition: 300ms;
 `
 export const Desc=styled.div`
 display:flex;
-flex-direction: column;
+flex-direction: row;
+flex-wrap: wrap;
+@media(max-width:1020px){
+    flex-direction: column;
+    }
 div{
     margin: 10px 0 0 0;
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+    @media(max-width:520px){
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    }
     
     span{
-        margin: 0 auto;
+        font-size: 1rem;
         display: flex;
-        font-size: 2.5vw;
         align-items: center;
-       
+        @media(max-width:1020px){
+            font-size: 2rem;
+    }
     }
 
 }
@@ -220,7 +235,11 @@ div{
 `
 export const Marca=styled.img`
 width: 5rem;
-margin: 0 20px;
+margin: 0 5px 0 0;
+@media(max-width:1020px){
+    width: 6.5rem;
+    margin: 0 2vw;
+}
 `
 export const Selos=styled.div`
 color:black;
@@ -229,7 +248,7 @@ display: flex;
 flex-direction: row;
 @media(max-width:1020px){
     justify-content: center;
-    align-items: center;
+    margin: 10px auto;
 }
 
 `
@@ -240,6 +259,7 @@ padding: 3px 3px;
 width: 30px;
 @media(max-width:1020px){
     width: 50px;
+    margin: 0 3vw;
 }
 `;
 export const Preço=styled.div`

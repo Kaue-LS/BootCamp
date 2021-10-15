@@ -11,7 +11,7 @@ display: flex;
 flex-direction: column;
 margin: 50px 0 50px auto;
 @media(max-width:1020px){
-    width: 50%;
+    width: 80%;
     justify-content: center;
     align-items: center;
       margin: 50px auto;
@@ -342,7 +342,7 @@ export const CentroMontagem=styled.div`
             width: 300px;
         }
         input{
-            margin: 10px auto 10px 22vw;
+            margin: 10px 0 10px auto;
             height: 25px;
             width: 25px;
         }
@@ -421,13 +421,13 @@ export const resumoArea= styled.div`
     height: 50%;
     padding: 20px 0 0 0px;
     border-radius: 10px;
-    @media(max-width: 930px) {
+    @media(max-width: 1020px) {
         width: 80vw;
         margin: 20px auto;
         position: initial;
     }
     @media(max-width: 430px) {
-        width: 80vw;
+        width: 100vw;
         height: 21rem;
         margin: 20px auto;
         position: initial;
@@ -567,4 +567,15 @@ export const SubPreçoTotal=styled.p`
         font-size: 1.1rem;
         width: auto;
     }
+`;
+
+export const ShowBanner=styled.div`
+
+`;
+export const ShowBannerResponsive=styled.div`
+display: none;
+@media(max-width:1020px){
+    display: block;
+}
+
 `;

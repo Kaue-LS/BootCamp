@@ -1,22 +1,24 @@
 import * as S from '../styled'
 import { Rating } from '@mui/material';
-import { ApiGet } from '../../../Components/Api/Api';
+import axios from 'axios';
+// import { ApiGet } from '../../../Components/Api/Api';
 // import { useHistory } from 'react-router';
 export default function Pneu({pneu}){
   const nome=pneu.productName
   let preço=pneu.unitPrice
 
   const item={
-    nome:nome,
-    preço:preço,
-    id:pneu.productID
+    itemId:'UsuarioTeste',
+    CartId:'1',
+    quantity:0,
+    productId:pneu.productID    
   }
   // const history=useHistory()
   const submitHandler = async (event) => {
   
    console.log(item)
     event.preventDefault();
-     await ApiGet.post('/Cart',item)
+     await axios.post('https://pneustoreg3.azurewebsites.net/Cart',item)
     .then(res=>{
       console.log(res);
 
@@ -51,7 +53,7 @@ export default function Pneu({pneu}){
               {/* Descrição */}
               <S.Desc>
                { nome.length>15?( 
-              <p style={{fontSize:'11px'}}>{nome} </p>
+              <p className='name2'>{nome} </p>
                ):(
                 <p>{nome} </p>
                )

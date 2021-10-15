@@ -1,35 +1,38 @@
 import Pneus from "./Pneus"
-// import { ApiGet } from "../../../Components/Api/Api";
+import { ApiGet } from "../../../Components/Api/Api";
 import * as S from './styled'
-// import { useState,useEffect } from "react";
+import { useState,useEffect } from "react";
 export default function PneuList(){
 
-    const pneucard=1;
-    // const [loading, setLoading] = useState(true);
-//  const [pneu,setPneu]= useState([])
- 
-//  useEffect(()=>{
-//     if(loading){
-//       fecthApi()
-//     }
-//   })
+    const [loading, setLoading] = useState(true);
+ const [pneu,setPneu]= useState([])
 
-//     const fecthApi=()=>{
-//         ApiGet.get('/Cart')
-//         .then(res=>{
-//           const pneu=res.data
-//           setPneu(pneu.results)
-//           setLoading(false)
-//           console.log(pneu)
-//       })}  
+ let IDpneu=
+ 
+ useEffect(()=>{
+    if(loading){
+      fecthApi()
+    }
+  })
+
+    const fecthApi=()=>{
+        ApiGet.get('/Cart')
+        .then(res=>{
+          const pneu=res.data.results
+          setPneu(pneu)
+          setLoading(false)
+      })}  
+      console.log(pneu)
  
 
     return(
     <>
-    { pneucard>0?(
+    { pneu.length>0?(
         <>
              <S.Itens>
-            <Pneus></Pneus>
+               {pneu.map((item,index)=>(
+            <Pneus pneu={item} key={index}></Pneus>
+               ))}
             </S.Itens>
         </>
     ):(

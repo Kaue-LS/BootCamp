@@ -1,6 +1,7 @@
 import * as S from './styled'
 import { useState } from 'react'
-export default function Pneus(){
+export default function Pneus(pneu){
+  console.log(pneu)
   const [quant,setQuant] =useState(1)
   const [preço,setPreço] =useState(450.00)
   

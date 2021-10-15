@@ -4,6 +4,7 @@ import CartICon from '../../Components/img/cart.jpg'
 import * as S from "./styled";
 import {NavBarSecundaria} from "../../Components/NavBar/NavBar";
 import  Resumo  from "./Resumo/Resumo";
+import Entrega from './MetodosEntrega/OpçõesEntrega';
 export default function Carrinho(props) {
  console.log(props)
   return (
@@ -22,11 +23,14 @@ export default function Carrinho(props) {
 
 
         {/* Parte onde os pneus vao aparecer, eles estao no arquivo Pneu */}
-          <PneuList></PneuList>       
+          <PneuList></PneuList>      
 
-      
-        {/* Area dos cupons */}
-        {/* Area do resumo  e dos botoes*/}
+
+    {/* Metodos de entrega */}
+    <Entrega></Entrega>
+
+
+{/* Area do resumo */}
         <Resumo props={1}/>
     </>
     

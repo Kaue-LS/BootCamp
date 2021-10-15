@@ -7,15 +7,45 @@ import Van from '../../Components/img/Van.jpg'
 import Montagem from '../../Components/img/Montagem.jpg'
 import Casa from '../../Components/img/casa.jpg'
 import Resumo from './Resumo'
+import { Banner1,Banner2,Banner3 } from './Banner/Banner1'
 
 export default function Entrega(){
 
     const[showOptions,setShowOptions]=useState(false)
-    // const[option1,setOption1]= useState(false)
+    const[option,setOption]= useState(0)
+    
+
+
+   
+    
+ 
     return(
         <>
          <NavBarTerciaria></NavBarTerciaria>
         <CustomizedSteppers props={2}/>
+        <S.ShowBanner>
+      {
+          option===1?(
+              <Banner1></Banner1>
+          ):(
+              null
+          )
+        }
+         { option===2?(
+            <Banner2></Banner2>
+        ):(
+            null
+        )
+         }
+        {
+        option===3?(
+            <Banner3></Banner3>
+        ):(
+            null
+        )
+         
+      }
+        </S.ShowBanner>
         <S.Entrega>
         <S.Dados>
         <S.DadosCliente>
@@ -47,7 +77,7 @@ export default function Entrega(){
                 <div>
                 <span>Brazil 04571-010</span>
                 </div>
-                <button>Alterar endereço</button>
+                                <button>Alterar endereço</button>
 
             </div>
         </S.DadosEntrega>
@@ -56,17 +86,9 @@ export default function Entrega(){
             <h3><img src={BoxBlack} alt=''/>Opções de entrega</h3>
             <button onClick={()=>setShowOptions(true)}>Selecionar opção</button>
         </S.OpçoesEntrega>
-        {/* {
-            option1?(
-                    null
-            ):(
-                null
-            )
-        } */}
-          
         </S.Dados>
         
-        {   showOptions?(
+        {   showOptions || option>0?(
                 <S.Opçoes>
                     <div style={{display:'flex',flexDirection:'row',justifyContent:'space-between'}}>
                     <h2>Selecione a opção de entrega</h2>
@@ -79,13 +101,13 @@ export default function Entrega(){
                 <div className='body'>
                     <div>
                     <h3><img src={Van} alt=''/>Montagem Móvel</h3>
-                    <input type='radio'/>
+                    <input onClick={()=>setOption(1)} name='Entrega' type='radio'/>
                     </div>
                     <div>
                     <p>Agende sua entrega com a PneuStore Móvel</p>
                     <div style={{display:'flex',flexDirection:'column'}}>
                     <span>Confira as opções</span>
-                    <span>Saiba Mais</span>
+                    <span className='Saiba Mais'>Saiba Mais</span>
                     </div>
                     </div>
                 </div>
@@ -98,7 +120,7 @@ export default function Entrega(){
                 <div className='body'>
                     <div>
                     <h3>De 3 a 6 dias úteis</h3>
-                    <input type='radio'/>
+                    <input onClick={()=>setOption(2)} name='Entrega' type='radio'/>
                     </div>
                     <div>
                     <p>Confira a disponibilidade dos serviços em cada centro de montagem</p>
@@ -117,7 +139,7 @@ export default function Entrega(){
                 <div className='body'>
                     <div>
                         <h3>Normal</h3>
-                        <input type='radio'/>
+                        <input onClick={()=>setOption(3)} name='Entrega' type='radio'/>
                     </div>
                     <div>
                         <h3>De 2 a 5 dias úteis</h3>
