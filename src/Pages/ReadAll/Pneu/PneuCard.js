@@ -10,7 +10,8 @@ export default function Pneu({pneu}){
   const item={
     itemId:'UsuarioTeste',
     CartId:'1',
-    quantity:0,
+    quantity:1,
+    dateCreated:'2021-10-15T01:33:12.030Z',
     productId:pneu.productID    
   }
   // const history=useHistory()

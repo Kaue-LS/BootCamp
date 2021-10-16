@@ -8,7 +8,7 @@ export default function CartIcon(props){
         <S.IconCart>
         <Link to='/cart'>
   <IconButton  aria-label="cart">
-        <Badge badgeContent={props.props} color="primary" >
+        <Badge badgeContent={props.quant} color="primary" >
           <ShoppingCartOutlined fontSize='large' style={{color:'white'}}/>
         </Badge>
       </IconButton>

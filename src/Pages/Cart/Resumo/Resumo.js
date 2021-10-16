@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import CepCupom from '../CupomCep/CepCupom'
 // import { useState } from 'react'
 export default function Resumo(props){
-    console.log(props.props)
+    // console.log(props.props)
   // const [quant,setQuant]=useState(props.props)
     return(
         <>

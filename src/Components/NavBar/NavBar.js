@@ -1,15 +1,34 @@
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import * as S from "./styled";
 import CartIcon from "../CartIcon/CarIcon";
 import { Lock } from "@material-ui/icons";
-
+import { ApiGet } from "../Api/Api";
 
 export function NavBarPrincipal() {
   const [showOption, setShowOption] = useState(false);
     const [showSearch,setShowSearch]= useState(false)
+    const [loading,setLoading]=useState(true)
+    const[infopneu,setInfopneu]=useState([])
 
+  useEffect(()=>{
+    if(loading){
+      ObterInfoPneu()
+    }
+  })
+
+  const ObterInfoPneu=()=>{
+    ApiGet.get('/Cart')
+    .then(res=>{
+      const response=res.data;
+      setInfopneu(response.results)
+      setLoading(false)
+    })
+    .catch(err=>{
+      console.log(err)
+    })
+  }
   const Mostrar = (props) => {
     setShowOption(props);
   };
@@ -85,7 +104,7 @@ export function NavBarPrincipal() {
       )}
    
 
-        <CartIcon/>
+        <CartIcon quant={infopneu.length}/>
 
 <S.Search>
         {" "}

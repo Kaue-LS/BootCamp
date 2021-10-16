@@ -1,5 +1,7 @@
 import axios from 'axios'
 
 export const ApiGet=axios.create({
-  baseURL:'https://pneustoreg3.azurewebsites.net'
+  baseURL:' https://pneustoreg3.azurewebsites.net'
 })
+// https://pneustoreg3.azurewebsites.net
+// https://localhost:44334

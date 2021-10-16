@@ -35,7 +35,7 @@ export const Items=styled.div`
 // Imagem do pneu
 export const Pneu= styled.img`
     width: 14rem;
-    max-width: 9rem;
+    max-width: auto;
     margin: 0 30px;
     padding: 1.6rem 0rem;
  
@@ -57,7 +57,7 @@ export const InfoArea=styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 2px solid darkgray;
+    width: 100%;
   
     @media(max-width:1120px){
         margin: 0 auto;
@@ -66,7 +66,9 @@ export const InfoArea=styled.div`
 `;
 export const Info =styled.p`
     font-size: 1.5rem;
-    width: 80%;
+    border-bottom: 2px solid darkgray;
+    width: 100%;
+    padding: 10px 10px;
     
     @media(max-width:1230px){
         width: auto;
@@ -78,7 +80,8 @@ export const CodeBrand=styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px auto 0 auto;
+    padding: 20px 0px;
+    margin: 20px auto;
     @media(max-width:1200px){
         margin: 10px auto;
     }
@@ -87,7 +90,7 @@ export const CodeBrand=styled.div`
 `;
 export const Brand= styled.img`
     width: 10rem;
-    margin:0 auto;
+    margin:0 5vw;
     @media(max-width:800px){
         width: 8rem;
         margin: 10px auto;
@@ -95,7 +98,7 @@ export const Brand= styled.img`
 `
 export const Code=styled.p`
     font-size: 1.5rem;
-    margin:0 auto;
+    margin:0 4vw;
     color: gray;
     @media(max-width:800px){
         font-size:1.3rem;

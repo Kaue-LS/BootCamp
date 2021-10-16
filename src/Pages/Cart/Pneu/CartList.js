@@ -7,8 +7,7 @@ export default function PneuList(){
     const [loading, setLoading] = useState(true);
  const [pneu,setPneu]= useState([])
 
- let IDpneu=
- 
+//  let IDpneu=
  useEffect(()=>{
     if(loading){
       fecthApi()
@@ -18,11 +17,11 @@ export default function PneuList(){
     const fecthApi=()=>{
         ApiGet.get('/Cart')
         .then(res=>{
-          const pneu=res.data.results
-          setPneu(pneu)
+          const response=res.data
+          setPneu(response.results)
           setLoading(false)
       })}  
-      console.log(pneu)
+      // console.log(pneu)
  
 
     return(
@@ -31,7 +30,7 @@ export default function PneuList(){
         <>
              <S.Itens>
                {pneu.map((item,index)=>(
-            <Pneus pneu={item} key={index}></Pneus>
+            <Pneus pneu={item.productId} key={index}></Pneus>
                ))}
             </S.Itens>
         </>
