@@ -16,16 +16,11 @@ export default function Login() {
 
   //==============================
 
-  // const [pessoafj, setPessoafj] = useState("");
-  // const [primerio, setPrimeiro] = useState("");
-  // const [ultimo, setUltimo] = useState("");
   const [cpf, setCpf] = useState("");
-  // const [sexo, setSexo] = useState("");
 
   const [data, setData] = useState("");
   const [tel, setTel] = useState("");
   const [tel2, setTel2] = useState("");
-  const [senha2, setSenha2] = useState("");
 
  
 
@@ -138,7 +133,7 @@ export default function Login() {
                   <S.Input
                     value={senha}
                     onChange={(props) => setSenha(props.target.value)}
-                    type="text"
+                    type="password"
                     required
                   />
                 </div>
@@ -147,9 +142,7 @@ export default function Login() {
                     Confirmar senha<span>*</span>
                   </label>
                   <S.Input
-                    value={senha2}
-                    onChange={(props) => setSenha2(props.target.value)}
-                    type="text"
+                    type="password"
                     required
                   />
                 </div>
