@@ -173,8 +173,8 @@ flex-direction: column;
 button{
     margin: 10px auto 20px auto;
     width: 80%;
+    cursor: pointer;
     transition: 300ms;
-    cursor:pointer;
     :hover{
         background-color:  #4E008B;
         color: white;
@@ -288,6 +288,12 @@ flex-direction: column;
             font-weight: 700;
             color:#333333;
         }
+        .SaibaMais{
+            font-size:18px;
+            text-decoration:underline;
+        color:#4f0381;
+        font-weight: 700;
+        }   
     }
 
 
@@ -346,6 +352,12 @@ export const CentroMontagem=styled.div`
             height: 25px;
             width: 25px;
         }
+        .SaibaMais{
+            font-size:18px;
+            text-decoration:underline;
+        color:#4f0381;
+        font-weight: 700;
+        }   
     }
     }
 `;
@@ -397,6 +409,12 @@ margin: 10px 0;
             color:#333333
         }
         }
+        .SaibaMais{
+            font-size:18px;
+            text-decoration:underline;
+        color:#4f0381;
+        font-weight: 700;
+        }   
     }
 
 
@@ -579,3 +597,106 @@ display: none;
 }
 
 `;
+
+// Banner
+
+
+
+export const Container = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 40vh;
+    position: fixed;
+    z-index: 5;
+    margin-top: 3rem;
+`;
+
+export const Banner = styled.div`
+    display: flex;
+    align-items: column;
+    flex-direction: column;
+    width: 80vw;
+    height: 65vh;
+    background-color: #4e018f;
+    margin-top: 4rem;
+    margin-bottom:3rem;
+    @media(max-width: 720px){
+        display: flex;
+        width: 90vw;
+        height: 90vh;
+        margin-top: 1rem;
+        margin-bottom: 4rem;
+    } 
+`;
+
+export const Fechar = styled.button`
+    background-color:  #4f0381;
+    color:#ffffff;
+    margin: 20px auto;
+    font-size: 18px;
+    border-radius: 10px;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: 400ms;
+    :hover{
+        background-color: #4f2381 ;
+    }
+    @media(max-width:720px){
+        margin: 20px auto;
+        padding: 10px 20px;
+    }
+`;
+
+export const Text = styled.span`
+    padding: 4rem;
+    text-align: justify;
+    font-size: 20px;
+    z-index: 5;
+    color: #ffffff;
+      text-shadow: 
+               -1px -1px 0px #000, 
+               -1px 1px 0px #000,                    
+                1px -1px 0px #000,                  
+                1px 0px 0px #000;
+                @media(max-width: 720px){
+        display: flex;
+        width: 90vw;
+        padding: 2rem;
+
+    }
+
+`;
+
+export const Image = styled.img`
+    width: 100%;
+    height: 100%;
+    @media(max-width: 720px){
+        margin: 0 auto;
+        width: 100%;
+        height: 100%;
+    }
+`;
+
+
+export const Proximo=styled.button`
+    color: white;
+    width: 80%;
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    margin: 0 auto;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    background-color: #8aab04;
+    padding:10px 10px ;
+    transition: 400ms;
+    :hover{
+        background-color: #8ccb04;  
+    }
+`

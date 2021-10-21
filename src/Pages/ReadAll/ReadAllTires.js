@@ -3,6 +3,7 @@ import * as S from "./styled";
 import {NavBarPrincipal} from "../../Components/NavBar/NavBar";
 import NavButton from "../../Components/NavButton/NavButton";
 import PneuList from "./Pneu/PneuList";
+import MenuMobile from '../../Components/MenuMobile/MenuMobile'
 
 export default function ReadAllTires() {
  
@@ -18,6 +19,7 @@ export default function ReadAllTires() {
 
         {/* Botoes lateral da pagina */}
         <ProductOptions />
+        
         <aside>
           <S.Tires>
             <S.Type>Firestone</S.Type>
@@ -55,6 +57,8 @@ export default function ReadAllTires() {
           </S.Tires>
         </aside>
       </S.ReadAllTires>
+      <MenuMobile></MenuMobile>
+
     </>
   );
 }

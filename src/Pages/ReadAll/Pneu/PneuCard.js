@@ -1,37 +1,35 @@
 import * as S from '../styled'
 import { Rating } from '@mui/material';
-import axios from 'axios';
-// import { ApiGet } from '../../../Components/Api/Api';
-// import { useHistory } from 'react-router';
+import { useHistory } from 'react-router';
+import {Api} from '../../../Api/Api'
 export default function Pneu({pneu}){
   const nome=pneu.productName
   let preço=pneu.unitPrice
 
-  const item={
-    itemId:'UsuarioTeste',
-    CartId:'1',
-    quantity:1,
-    dateCreated:'2021-10-15T01:33:12.030Z',
-    productId:pneu.productID    
-  }
-  // const history=useHistory()
-  const submitHandler = async (event) => {
   
-   console.log(item)
-    event.preventDefault();
-     await axios.post('https://pneustoreg3.azurewebsites.net/Cart',item)
-    .then(res=>{
-      console.log(res);
-
-    })
-    
-    .catch(err=>{
-      console.error(err)
-    })
+  const history=useHistory()
+  
     
     
    
+  const submitHandler = async event => {
+    const item={
+      CartId:'1',
+      quantity:1,
+      productId:pneu.productID    
     }
+    event.preventDefault();
+
+     const request = Api.buildApiPostRequest(Api.SelectedTires(), item)
+    .then(res=>console.log(res))
+    .catch(e => {
+      console.error('Erro ao tentar adicionar o item ao banco: ', e);
+    })
+    console.log(request)
+    history.push(`/cart`);
+  
+
+  }
     
 
     

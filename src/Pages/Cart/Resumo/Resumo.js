@@ -1,6 +1,7 @@
 import * as S from './styled'
 import { Link } from 'react-router-dom'
 import CepCupom from '../CupomCep/CepCupom'
+import bagIcon from '../../../Components/img/bagIcon.jpg'
 // import { useState } from 'react'
 export default function Resumo(props){
     // console.log(props.props)
@@ -26,7 +27,7 @@ export default function Resumo(props){
                   </S.TitleItem>
                   <S.IconBag
                     alt="bag-icon"
-                    src="https://cdn.iconscout.com/icon/premium/png-256-thumb/shopping-bag-check-2992557-2486732.png"
+                    src={bagIcon}
                   />
                 </S.TitleIconArea>
                 <S.Title2Subtotal>

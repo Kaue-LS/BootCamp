@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import * as S from "./styled";
 import CartIcon from "../CartIcon/CarIcon";
 import { Lock } from "@material-ui/icons";
-import { ApiGet } from "../Api/Api";
+import { Axios} from "../../Api/Api";
 
 export function NavBarPrincipal() {
   const [showOption, setShowOption] = useState(false);
@@ -19,10 +19,10 @@ export function NavBarPrincipal() {
   })
 
   const ObterInfoPneu=()=>{
-    ApiGet.get('/Cart')
+    Axios.get('/CartItems')
     .then(res=>{
       const response=res.data;
-      setInfopneu(response.results)
+      setInfopneu(response)
       setLoading(false)
     })
     .catch(err=>{
@@ -206,7 +206,7 @@ export function NavBarSecundaria() {
               <Link to='/login'>
             <S.Buttons>Login</S.Buttons>
             </Link>
-            <Link to='/'>
+            <Link to='/cart'>
             <S.Buttons>Meus pedidos</S.Buttons>
             </Link>
             <Link to='/address'>

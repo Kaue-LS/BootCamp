@@ -59,6 +59,22 @@ export const InfoArea=styled.div`
     align-items: center;
     width: 100%;
   
+    i{  
+        display: flex;
+        border-radius: 20px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 50px;
+        height: 50px;
+        margin: 1vh 2vw;
+        transition: 400ms linear;
+        :hover{
+            color: white;
+        background-color:  #4E008B;
+
+        }
+    }
     @media(max-width:1120px){
         margin: 0 auto;
         width: 80%;

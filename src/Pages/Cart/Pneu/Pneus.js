@@ -1,29 +1,19 @@
-import * as S from "./styled";
-import { useEffect, useState } from "react";
-import { ApiGet } from "../../../Components/Api/Api";
-export default function Pneus(pneu) {
-  let id =pneu.pneu
-  const [quant, setQuant] = useState(1);
-  const [pneuinfo, setPneu] = useState([]);
-  // const [preco, setPreco] = useState(pneuinfo.unitPrice);
-  const [loading, setLoading] = useState(true);
-  useEffect(() => {
-    if (loading) {
-      ObterPneu();
-    }
-  });
-  // console.log(preco)
-  const ObterPneu = async() => {
-    await ApiGet.get(`/Produto/${id}`)
-    .then((res) => {
-      const info = res.data;
-      setPneu(info.results);
-      setLoading(false);
-    });
-  };
+import { useState } from 'react'
+import * as S from './styled'
+import { Api } from '../../../Api/Api'
+import { useHistory } from 'react-router'
+export default function Pneus({pneu}){
+    const [quant,setQuant]=useState(0)
 
-  console.log(pneuinfo)
+  const history=useHistory()
+  const ID=pneu.productID
+  const RemovePneu= async()=>{
+    await Api.buildApiDeleteRequest(Api.DeleteProduct(ID))
+    history.go(0)
+  }  
 
+    
+  
   const Plus = (props) => {
     if (quant < 6) {
       setQuant(quant + props);
@@ -40,60 +30,52 @@ export default function Pneus(pneu) {
   const VerificarPreço = (props) => {
     return props.replace(".", ",");
   };
-  return (
-    <>
-      {/* Pneu escolhido */}
-      <S.ItemArea>
-        {/* Imagem */}
+    return(
+        <>
         <S.Pneu
-          alt="pneu"
-          src="https://static.pneustore.com.br/medias/sys_master/images/images/h83/h14/8859585609758/pneu-firestone-aro-16-destination-a-t-225-70r16-102-99s-1.jpg"
-        />
+        alt="pneu"
+        src={pneu.imagePath}
+      />
 
-        {/* Descrição do penu */}
-        <S.Description>
-          <S.itemInfo>
-            <S.InfoArea>
-              <S.Info>
-                {pneuinfo.description}
-              </S.Info>
-              <i className="im im-trash-can"></i>
-            </S.InfoArea>
+      <S.Description>
+        <S.itemInfo>
+          <S.InfoArea>
+            <S.Info>
+              {pneu.productName}
+            </S.Info>
+            <i onClick={()=>RemovePneu()} className="im im-trash-can"></i>
+          </S.InfoArea>
 
-            <S.QuantPreço>
-              <S.QuantArea>
-                <S.Label>Quantidade</S.Label>
-                <S.Quant>
-                  <S.IconLess onClick={() => Less(1)}>-</S.IconLess>
-                  <span>{quant}</span>
-                  <S.IconPlus onClick={() => Plus(1)}>+</S.IconPlus>
-                </S.Quant>
-              </S.QuantArea>
-              <S.PreçoArea>
-                <S.Label>Preço Total:</S.Label>
-                <S.Preço
-                  onChange={(props) => VerificarPreço(props.target.value)}
-                >
-                  {(pneuinfo.unitPrice)}
-                </S.Preço>
-              </S.PreçoArea>
-            </S.QuantPreço>
+          <S.QuantPreço>
+            <S.QuantArea>
+              <S.Label>Quantidade</S.Label>
+              <S.Quant>
+                <S.IconLess onClick={() => Less(1)}>-</S.IconLess>
+                <span>{quant}</span>
+                <S.IconPlus onClick={() => Plus(1)}>+</S.IconPlus>
+              </S.Quant>
+            </S.QuantArea>
+            <S.PreçoArea>
+              <S.Label>Preço Total:</S.Label>
+              <S.Preço
+                onChange={(props) => VerificarPreço(props.target.value)}
+              >
+                {pneu.unitPrice}
+              </S.Preço>
+            </S.PreçoArea>
+          </S.QuantPreço>
 
-            <S.CodeBrand>
-              <S.Brand
-                src="https://cdn.worldvectorlogo.com/logos/firestone-logo.svg"
-                alt="FIRESTONE"
-              />
-              <S.Code>ID:10100132</S.Code>
-            </S.CodeBrand>
-          </S.itemInfo>
+          <S.CodeBrand>
+            <S.Brand
+              src="https://cdn.worldvectorlogo.com/logos/firestone-logo.svg"
+              alt="FIRESTONE"
+            />
+            <S.Code>ID:10100132</S.Code>
+          </S.CodeBrand>
+        </S.itemInfo>
 
-          {/* Area da quantidade e preco */}
-        </S.Description>
-      </S.ItemArea>
-      {/* Pneu escolhido */}
-
-   
-    </>
-  );
+        {/* Area da quantidade e preco */}
+      </S.Description>
+      </>
+    )
 }

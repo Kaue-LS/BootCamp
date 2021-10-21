@@ -44,7 +44,13 @@ export const FormGroup=styled.div`
     display: flex;
     flex-direction: column;
 
-
+    .error{
+        display: flex;
+        border-top: 1px solid red;
+        margin: 0 auto 20px auto;
+        font-size:1vw;
+    color:red;
+}
 
     .inputmask{
         width: 80%;
@@ -131,6 +137,7 @@ font-size: 16px;
 font-weight: 600;
 line-height: 22px;
  transition: 300ms;
+ cursor: pointer;
     :hover{
         background-color: #4E208E;
 
@@ -196,9 +203,9 @@ margin:10px 0;
 export const Radio=styled.input`
     height: 22px;
     width: 22px;
+    cursor: pointer;
     background-color: #4E008E;
     color: #4E008E;
-
 
 
 `;

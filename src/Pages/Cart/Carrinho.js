@@ -3,10 +3,11 @@ import PneuList from './Pneu/CartList';
 import CartICon from '../../Components/img/cart.jpg'
 import * as S from "./styled";
 import {NavBarSecundaria} from "../../Components/NavBar/NavBar";
-import  Resumo  from "./Resumo/Resumo";
+import MenuMobile from '../../Components/MenuMobile/MenuMobile'
+import Resumo from './Resumo/Resumo'
 import Entrega from './MetodosEntrega/OpçõesEntrega';
+
 export default function Carrinho(props) {
- console.log(props)
   return (
     <>
    
@@ -32,6 +33,7 @@ export default function Carrinho(props) {
 
 {/* Area do resumo */}
         <Resumo props={1}/>
+        <MenuMobile></MenuMobile>
     </>
     
   );

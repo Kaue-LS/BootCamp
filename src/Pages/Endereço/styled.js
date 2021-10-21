@@ -97,18 +97,24 @@ export const EndereçoEntrega=styled.div`
   }
 
     h3{
+        display: flex;
+        align-items: center;
         font-size: 20px;
         font-weight: 900;
         color: #333333;
         margin: 0px 0px 0px 0;
+        img{
+            width: 50px;
+        }
     }
 
     button{
         margin: 16px 0 16px 0;
         border: 1px solid #A7A7A7;
         text-transform: uppercase;
-        padding: 10px 15px 0 15px;
+        padding: 10px 15px 10px 15px;
         width: 496px;
+        cursor: pointer;
         font-size: 20px;
         background-color: #FFFFFF;
         color: #4E008B;
@@ -118,6 +124,17 @@ export const EndereçoEntrega=styled.div`
         border-radius: 10px;
         justify-content: center;
         align-items: center;
+        transition: 400ms linear ;
+        :hover{
+            padding: 10px 15px 10px 15px;
+            background-color:#4E008B ;
+                color: white;
+            img{
+                transition: 400ms;
+                display: none;
+               
+            }
+        }
         @media(max-width:1020px){
       width: auto;
       height: 50%;
@@ -204,6 +221,12 @@ width: 100%;
         color: #4E008B;
         font-weight: 600;
         text-align: center;
+        cursor: pointer;
+        transition: 300ms;
+    :hover{
+        background-color:  #4E008B;
+        color: white;
+    }
     }
 
       
@@ -230,6 +253,22 @@ export const Input =styled.input`
         outline: none;
         box-shadow: none;
     }
+`;
+export const Select =styled.select`
+    width: auto;
+    padding: 8px 16px;
+    cursor: text;
+    border-radius: 5px;
+    border:1px solid #555555;
+    margin: 5px 0px 10px 0px;
+
+    :focus{
+        border: 1px solid #555555;
+        outline: none;
+        box-shadow: none;
+    }
+
+    
 `;
 export const Checked=styled.input`
     height:30px;      
@@ -263,6 +302,12 @@ export const Header=styled.div`
 i{
     margin: 10px 10px 0 20px;
  color:white;  
+
+ cursor: pointer;
+ transition: 300ms linear;
+ :hover{
+     color:red;
+ }
 }
 
 `;
@@ -275,6 +320,14 @@ export const FormBlock=styled.div`
     div{
         display: flex;
         flex-direction: column;
+        button{
+            cursor: pointer;
+            transition: 300ms;
+    :hover{
+        background-color:  #4E008B;
+        color: white;
+    }
+        }
     }
     .inputmask{
         width: auto;
@@ -295,7 +348,6 @@ export const TabelaEndereço=styled.div`
     background-color: white;
     margin:50px auto;
     width: 544px;
-    height: 200px;
     min-height: auto;
     border-radius: 10px;
     display: flex;
@@ -321,6 +373,24 @@ export const TabelaEndereço=styled.div`
 export const Lista=styled.div`
 display: flex;
 flex-direction: column;
+justify-content: center;
+align-items: center;
+
+button{
+    background-color: #8aab04;
+    padding: 10px 30px;
+    font-size: 24px ;
+    font-weight: 700;
+    color:#ffffff;
+    margin: 10px auto;
+    border-radius: 10px;
+    border:1px solid gray;
+    transition: 400ms;
+    :hover{
+        background-color: #8BBb04;
+        color: white;
+    }
+}
 `
 export const CaixaVazia=styled.div`
     background-color:   #4E008B50;
@@ -339,5 +409,49 @@ export const CaixaVazia=styled.div`
 
 `;
 export const CaixaEndereço=styled.div`
+    display: flex;
+    background-color: #D1D1D1D1;
+    border-radius:10px;
+    width: 30vw;
+    border: 1px solid gray;
+    flex-direction: column;
+    padding: 10px 10px;
+    .im-location{
+        color: #4E008B;
+    }
+    div{
+        h4{
+        font-size:16px;
+        font-weight: 900;
+        color: #333333;
+        margin: 0px auto;
+    }
+    span{
+        color: #333333;
+        margin: 0 10px;
+    }
+        p{
+            width: auto;
+        font-size: 16px;
+        font-weight: 900;
+        color: #555555;
+        }
+        input{
+            height: 25px;
+            width: 25px;
+        }
+    }
+    .im-pencil{
+        margin: 0 0 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        width: 30px;
+        height: 30px;
+        color:#ffffff;
+        background-color: #333333;
+        border-radius: 50%;
 
+}
 `
