@@ -42,7 +42,7 @@ export default function Resumo(){
         <S.TitleItem>
           <S.Title>Resumo do pedido</S.Title>
           <S.SubTitle>
-            <span>1</span> itens no seu carrinho
+            <span>4</span> itens no seu carrinho
           </S.SubTitle>
         </S.TitleItem>
         <S.IconBag
