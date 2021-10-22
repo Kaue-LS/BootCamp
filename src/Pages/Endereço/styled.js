@@ -454,4 +454,7 @@ export const CaixaEndereço=styled.div`
         border-radius: 50%;
 
 }
+@media(max-width:880px){
+    width: 80vw;
+}
 `

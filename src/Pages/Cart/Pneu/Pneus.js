@@ -7,7 +7,7 @@ export default function Pneus(pneu){
 console.log(pneu)
   const history=useHistory()
   const RemovePneu= async()=>{
-    await Api.buildApiDeleteRequest(Api.DeleteProduct())
+    await Api.buildApiDeleteRequest(Api.DeleteProduct(pneu.Cart))
     history.go(0)
   }  
 

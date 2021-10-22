@@ -42,7 +42,7 @@ export default function Carrinho(props) {
 
     { pneu.length>0?(
       pneu.map((item)=>(
-      <PneuList key={item.itemId} cartID={item.productId}></PneuList>
+      <PneuList key={item.itemId} Cart={item.itemId} cartID={item.productId}></PneuList>
       ))
     ):(
       <S.Vazio>

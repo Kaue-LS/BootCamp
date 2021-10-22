@@ -2,16 +2,15 @@ import { Api } from "../../../Api/Api";
 import * as S from "./styled";
 import { useHistory } from "react-router";
 import { useState, useEffect } from "react";
-export default function CartList({cartID}) {
+export default function CartList(pneus) {
  const[loading,setLoading]=useState(true)
  const [pneu,setPneu]=useState([])
-const [id]=useState(cartID)
+const [id]=useState(pneus.cartID)
 
 const [quant,setQuant]=useState(1)
-console.log(pneu)
   const history=useHistory()
   const RemovePneu= async()=>{
-    await Api.buildApiDeleteRequest(Api.DeleteProduct())
+    await Api.buildApiDeleteRequest(Api.DeleteProduct(pneus.Cart))
     history.go(0)
   }  
 
@@ -76,7 +75,7 @@ console.log(pneu)
                       <S.Preço
                         // onChange={(props) => VerificarPreço(props.target.value)}
                       >
-                        {pneu.unitPrice}
+                        {(pneu.unitPrice).toFixed(2)}
                       </S.Preço>
                     </S.PreçoArea>
                   </S.QuantPreço>

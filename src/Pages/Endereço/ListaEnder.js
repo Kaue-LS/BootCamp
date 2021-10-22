@@ -12,7 +12,7 @@ export default function ListaEndereço(dados){
         <S.CaixaEndereço id='selected'>
               <div>
                 <div style={{display:'flex',justifyContent:'space-between'}}>
-                <p><i className="im im-location"></i>Fulano</p>
+                <p><i className="im im-location"></i>Kauê</p>
                 <input type='radio' name='address' onClick={(e)=>Selected(e.target)}></input>
                 </div>
                 <div style={{display:'flex',flexDirection:'column',margin:'10px 0'}}>
