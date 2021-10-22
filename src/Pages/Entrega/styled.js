@@ -439,7 +439,6 @@ export const resumoArea= styled.div`
     margin: 50px auto;
     flex-direction:column;
     width: 40vw;
-    height: 50%;
     padding: 20px 0 0 0px;
     border-radius: 10px;
     @media(max-width: 1020px) {
@@ -450,7 +449,7 @@ export const resumoArea= styled.div`
     @media(max-width: 430px) {
         width: 100vw;
         height: 21rem;
-        margin: 20px auto;
+        margin: 40px auto;
         position: initial;
     }
     
