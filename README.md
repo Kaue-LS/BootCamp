@@ -1,6 +1,6 @@
 #Projeto BootCamp da Blue
 
-##Objetivo é criar uma pagina de pagamento e opção de entrega da PneuStore
+#Objetivo é criar uma pagina de pagamento e opção de entrega da PneuStore
 
 ##Front-End
 -Kaue-LS  https://github.com/Kaue-LS
