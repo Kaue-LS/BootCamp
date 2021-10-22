@@ -167,7 +167,6 @@ export const OpçoesEntrega = styled.div`
     cursor: pointer;
     transition: 300ms;
     :hover {
-      background-color: #4e008b;
       color: white;
     }
   }
@@ -225,8 +224,19 @@ export const BodyForm = styled.div`
 
 export const BodyCard = styled.div`
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
+  div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  button{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 `;
 
 export const Button=styled.button`
@@ -244,9 +254,48 @@ export const Button=styled.button`
         background-color: #8ccb04;  
     }
 `
-export const Text=styled.h3``;
-export const Subtext=styled.p``;
+export const Text=styled.h3`
+  color: #555555;
+  font-size: 16px;
+  margin: 0 auto 15px auto;
+
+`;
+export const Subtext=styled.p`
+  color: gray;
+`;
 
 export const ButtonGoogle=styled.button`
+  background-color: black;
+  color: white;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  font-size: 16px;
+  padding: 10px 10px;
+  font-weight: 700;
+  border-radius: 10px;
+  border: none;
+  img{
+    margin: 0 20px;
+    width: 60px;
+  }
 
+`;
+
+export const OrdemCartao=styled.div`
+  margin: 0 auto;
+  width: 100%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  padding: 10px 10px;
+  text-align: center;
+  background-color: #777777;
+  i{
+    margin: 0 20px;
+  }
 `;

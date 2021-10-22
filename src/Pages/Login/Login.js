@@ -239,7 +239,7 @@ const VerificarLogin=()=>{
   // ===========================================================
   return (
     <>
-      <NavBarPrincipal />
+      <NavBarPrincipal location={'/'}/>
       <NavButton></NavButton>
       {/* ===================================================== */}
       <S.LoginCadastro>

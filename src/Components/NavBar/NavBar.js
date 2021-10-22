@@ -6,7 +6,7 @@ import CartIcon from "../CartIcon/CarIcon";
 import { Lock } from "@material-ui/icons";
 import { Axios} from "../../Api/Api";
 
-export function NavBarPrincipal() {
+export function NavBarPrincipal(props) {
   const [showOption, setShowOption] = useState(false);
     const [showSearch,setShowSearch]= useState(false)
     const [loading,setLoading]=useState(true)
@@ -57,7 +57,9 @@ export function NavBarPrincipal() {
     <>
     <S.NavBar>
         {/* Reponsivo */}
+        <Link style={{textDecoration:'none'}} to={props.location}>
         <S.Back><i className="im im-arrow-left"></i></S.Back>
+        </Link>
       <S.Logo src="https://static.pneustore.com.br/medias/sys_master/root/hd3/hed/9042777407518/LOGO-PNEUSTORE-NEGATIVO.png" />
       <S.SearchBarLoupe>
         <S.SearchBar onChange={(props)=>VerificarSearch(props.target.value)} type="text" placeholder='Pesquise por Marca e Medida (exemplo 205/55R16)' />
@@ -148,7 +150,7 @@ export function NavBarPrincipal() {
     </>
   );
 }
-export function NavBarSecundaria() {
+export function NavBarSecundaria(props) {
   const [showOption, setShowOption] = useState(false);
     const [showSearch,setShowSearch]= useState(false)
 
@@ -181,7 +183,9 @@ export function NavBarSecundaria() {
     <>
     <S.NavBar>
         {/* Reponsivo */}
+        <Link style={{textDecoration: 'none'}} to={props.location}>
         <S.Back><i className="im im-arrow-left"></i></S.Back>
+        </Link>
       <S.Logo src="https://static.pneustore.com.br/medias/sys_master/root/hd3/hed/9042777407518/LOGO-PNEUSTORE-NEGATIVO.png" />
       <S.SearchBarLoupe>
         <S.SearchBar onChange={(props)=>VerificarSearch(props.target.value)} type="text" placeholder='Pesquise por Marca e Medida (exemplo 205/55R16)' />
@@ -270,12 +274,14 @@ export function NavBarSecundaria() {
     </>
   );
 }
-export function NavBarTerciaria() {
+export function NavBarTerciaria(props) {
   
   return (
     <>
       <S.NavBarTerciaria>
+        <Link style={{textDecoration:'none'}} to={props.location}>
       <S.Back><i className="im im-arrow-left"></i></S.Back>
+      </Link>
       <S.Logo src="https://static.pneustore.com.br/medias/sys_master/root/hd3/hed/9042777407518/LOGO-PNEUSTORE-NEGATIVO.png" />
       </S.NavBarTerciaria>
       <S.NavBarPagamento>
@@ -283,6 +289,26 @@ export function NavBarTerciaria() {
       <div>
       <Lock style={{color:'#ffffff'}}/>
       <h2>Pagamento</h2>
+      </div>
+      </S.NavBarPagamento>
+
+    </>
+  );
+}
+export function NavBarQuaternária(props) {
+  
+  return (
+    <>
+      <S.NavBarTerciaria>
+        <Link style={{textDecoration:'none'}} to={props.location}>
+      <S.Back><i className="im im-arrow-left"></i></S.Back>
+      </Link>
+      <S.Logo src="https://static.pneustore.com.br/medias/sys_master/root/hd3/hed/9042777407518/LOGO-PNEUSTORE-NEGATIVO.png" />
+      </S.NavBarTerciaria>
+      <S.NavBarPagamento>
+      <S.Logo src="https://static.pneustore.com.br/medias/sys_master/root/hd3/hed/9042777407518/LOGO-PNEUSTORE-NEGATIVO.png" />
+      <div>
+      <h2>Compra Finalizada</h2>
       </div>
       </S.NavBarPagamento>
 

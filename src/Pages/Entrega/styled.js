@@ -424,9 +424,12 @@ margin: 10px 0;
 
 
 export const ResuItens=styled.div`
-margin: 0 auto;
+margin: 50px auto;
+border-radius: 10px;
 `;
 export const Item=styled.div`
+background-color: white;
+border-radius: 10px;
 `;
 
 
@@ -613,12 +616,18 @@ export const Container = styled.div`
     z-index: 5;
     margin-top: 3rem;
 `;
-
+export const TitleBanner=styled.h3`
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 20px auto 0 auto;
+`;
 export const Banner = styled.div`
     display: flex;
     align-items: column;
     flex-direction: column;
     width: 80vw;
+    border-radius: 10px;
     height: 65vh;
     background-color: #4e018f;
     margin-top: 4rem;

@@ -25,11 +25,10 @@ export default function Payment() {
 
   };
 
-console.log(form)
 
   return (
       <>
-      <NavBarTerciaria></NavBarTerciaria>
+      <NavBarTerciaria location={'/delivery'}></NavBarTerciaria>
       <StepperArea props={3}></StepperArea>
       <S.Pagamento>
     <S.Dados>
@@ -37,10 +36,10 @@ console.log(form)
         <h3>Dados do cliente</h3>
         <div>
             <div>
-            <p>Nome:</p> <span>Fulano Ciclano</span>
+            <p>Nome:</p> <span>Kauê Leite</span>
             </div>
             <div>
-            <p>Email:</p> <span>FulanodeTal@gmail.com</span>
+            <p>Email:</p> <span>Kaue@gmail.com</span>
             </div>
         </div>
     </S.DadosCliente>
@@ -48,7 +47,7 @@ console.log(form)
         <h3> Endereço de entrega</h3>
         <div>
             <div>
-            <p><i className="im im-location"></i>Fulano</p>
+            <p><i className="im im-location"></i>Kaue</p>
             </div>
             <div>
             <span>Av. Engenheiro Luís Carlos Berrini</span>
@@ -69,7 +68,8 @@ console.log(form)
     </S.DadosEntrega>
 
     <S.OpçoesEntrega>
-            <h3><img src={BoxBlack} alt=''/>Opções de entrega</h3>
+            <h3><img src={BoxBlack} alt=''/>Opção de entrega</h3>
+            
         </S.OpçoesEntrega>
     </S.Dados>
     
@@ -78,14 +78,13 @@ console.log(form)
    <S.OpçoesEntrega>
 
             <h3><img src={BoxBlack} alt=''/>Opções de pagamento</h3>
-
+           
         </S.OpçoesEntrega>
 
    <S.BodyCard>
 
-    <Tabs style={{width:'646px', display:'flex', flexWrap:'wrap',}}value={value} onChange={handleChange} aria-label="icon label tabs example">
+    <Tabs style={{width:'auto', display:'flex', flexDirection:'row'}}value={value} onChange={handleChange} aria-label="icon label tabs example">
 
-    
 
       <Tab style={{width:'15.9%', fontSize:'12px'}} onClick={()=>setForm(1)} icon={<svg height="30" viewBox="0 0 27 22"><path d="M27 2.29v17.42c0 .63-.221 1.17-.662 1.618-.44.449-.97.673-1.588.673H2.25a2.147 2.147 0 0 1-1.589-.673 2.228 2.228 0 0 1-.66-1.619V2.29C0 1.66.22 1.12.66.672c.441-.45.97-.673 1.59-.673H24.75c.618 0 1.148.224 1.588.673.44.449.661.988.661 1.618zM25.2 11H1.8v8.71c0 .124.045.23.134.322a.43.43 0 0 0 .316.136h22.5a.43.43 0 0 0 .316-.136.445.445 0 0 0 .133-.322zm0-5.501V2.29a.445.445 0 0 0-.134-.322.428.428 0 0 0-.316-.136H2.25a.43.43 0 0 0-.316.136.444.444 0 0 0-.133.322V5.5zM3.6 16.5h3.6v1.833H3.6zm5.4 0h5.4v1.833H9z"></path></svg>} label="Crédito" />
 
@@ -99,7 +98,6 @@ console.log(form)
 
       <Tab style={{width:'18%', fontSize:'12px'}}  onClick={()=>setForm(6)} icon={<img alt='' src="https://darujme.sk/wp-content/uploads/2020/09/google-pay-gpay-logo.png" width="50"></img>} label="Google Pay" />
 
-      
 
     </Tabs>
 

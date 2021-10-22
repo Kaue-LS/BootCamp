@@ -56,19 +56,18 @@ export default function Entrega(){
         }
     }
 
-
-   
     
  
     return(
         <>
-         <NavBarTerciaria></NavBarTerciaria>
+         <NavBarTerciaria location={'/address'}></NavBarTerciaria>
         <CustomizedSteppers props={2}/>
         <S.ShowBanner>
       {
           option===1?(
             <S.Container>
                 <S.Banner>
+                    <S.TitleBanner>Montagem Móvel:</S.TitleBanner>
                     <S.Text>Se você mora nos estados de São Paulo e Santa Catarina, para sua comodidade a PneuStore oferece também o serviço de montagem PneuStore Móvel, onde você escolhe o pneu, e nós montamos em sua casa. Se você não mora em nenhum desses estados, aguarde, em breve a PneuStore terá novidades...</S.Text>
                     <S.Image src="https://static.pneustore.com.br/medias/sys_master/images/images/hef/ha7/9043275841566/Desk-Van.png"></S.Image>
                     <S.Fechar onClick={()=>AbrirBanner(0)}>Entendi</S.Fechar>
@@ -81,6 +80,7 @@ export default function Entrega(){
          { option===2?(
             <S.Container>
             <S.Banner>
+            <S.TitleBanner>Entregar e montar em um Centro de Montagem:</S.TitleBanner>
             <S.Text>Nesta opção você pode escolher o centro de montagem mais próximo da sua casa, e logo após escolher o local,
 já pode agendar e fazer o pagamento por aqui mesmo. Se preferir, fazemos somente a entrega no local escolhido,
 e o pagamento do SERVIÇO DE MONTAGEM, pode ser realizado diretamente no local do serviço, como você preferir.</S.Text>              
@@ -95,6 +95,7 @@ e o pagamento do SERVIÇO DE MONTAGEM, pode ser realizado diretamente no local d
         option===3?(
             <S.Container>
             <S.Banner>
+            <S.TitleBanner>Entregar no meu endereço:</S.TitleBanner>
             <S.Text>Nesta opção você pode optar por receber os pneus no conforto do seu lar, e escolher onde e quando montar 
 seus pneus, ou se apenas vai aproveitar aquela promoção imperdível, e guardar os pneus para trocar quando
 for necessário. Aproveite, faça seu cadastro aqui na PneuStore, e receba as promoções que só a maior 
@@ -115,10 +116,10 @@ distribuidora de pneus do Brasil pode oferecer.</S.Text>
             <h3>Dados do cliente</h3>
             <div>
                 <div>
-                <p>Nome:</p> <span>Fulano Ciclano</span>
+                <p>Nome:</p> <span>Kaue</span>
                 </div>
                 <div>
-                <p>Email:</p> <span>FulanodeTal@gmail.com</span>
+                <p>Email:</p> <span>Kaue@gmail.com</span>
                 </div>
             </div>
         </S.DadosCliente>
@@ -126,7 +127,7 @@ distribuidora de pneus do Brasil pode oferecer.</S.Text>
             <h3> Endereço de entrega</h3>
             <div>
                 <div>
-                <p><i className="im im-location"></i>Fulano</p>
+                <p><i className="im im-location"></i>Kauê</p>
                 </div>
                 <div>
                 <span>Av. Engenheiro Luís Carlos Berrini</span>

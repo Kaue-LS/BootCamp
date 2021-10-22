@@ -2,13 +2,12 @@ import { useState } from 'react'
 import * as S from './styled'
 import { Api } from '../../../Api/Api'
 import { useHistory } from 'react-router'
-export default function Pneus({pneu}){
+export default function Pneus(pneu){
     const [quant,setQuant]=useState(0)
-
+console.log(pneu)
   const history=useHistory()
-  const ID=pneu.productID
   const RemovePneu= async()=>{
-    await Api.buildApiDeleteRequest(Api.DeleteProduct(ID))
+    await Api.buildApiDeleteRequest(Api.DeleteProduct())
     history.go(0)
   }  
 
@@ -32,6 +31,9 @@ export default function Pneus({pneu}){
   };
     return(
         <>
+        <S.ItemArea>
+        
+      
         <S.Pneu
         alt="pneu"
         src={pneu.imagePath}
@@ -76,6 +78,8 @@ export default function Pneus({pneu}){
 
         {/* Area da quantidade e preco */}
       </S.Description>
+      </S.ItemArea>
+
       </>
     )
 }

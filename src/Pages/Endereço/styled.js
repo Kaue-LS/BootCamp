@@ -393,14 +393,14 @@ button{
 }
 `
 export const CaixaVazia=styled.div`
-    background-color:   #4E008B50;
+    background-color: #D1D1D1D1;
     padding: 20px 20px;
     width: auto;
     border-radius: 10px;
     margin: 10px auto;
     display: flex;
     h4{
-        font-size:16px;
+        font-size:22px;
         font-weight: 900;
         color: #333333;
         margin: 0px auto;

@@ -5,7 +5,6 @@ import TextField from '@mui/material/TextField';
 import GPay from '../../Components/img/GPay.png'
 
 export default function Formulario({form}) {
-    console.log(form)
   return (
     <div>
         { form===1?(
@@ -120,63 +119,9 @@ export default function Formulario({form}) {
 
 
 { form===3?(
+    <>
      <S.Container> 
-    <S.BodyForm>
-    <Box
-      sx={{
-        width: 500,
-        maxWidth: '100%',
-        backgroundColor: '#ffffff',
-        marginTop: '12px',
-      }}
-    >
-      <TextField fullWidth label="Nome" id="Nome" placeholder="Digite seu nome" />
-    </Box>
-    
-    <Box
-      sx={{
-        width: 500,
-        maxWidth: '100%',
-        backgroundColor: '#ffffff',
-        marginTop: '12px',
-      }}
-    >
-      <TextField fullWidth label="CPF do titular do cartão" id="Cpf" placeholder="Digite o CPF do titular" />
-    </Box>
-
-    <Box
-      sx={{
-        width: 500,
-        maxWidth: '100%',
-        backgroundColor: '#ffffff',
-        marginTop: '12px',
-      }}
-    >
-      <TextField fullWidth label="Número do cartão" id="NumberCard" placeholder="1234 5678 9012 3456" type="number" />
-    </Box>
-
-    <Box
-      component="form"
-      sx={{
-        '& > :not(style)': { m: 1, width: '46.8%' },
-      }}
-      noValidate
-      autoComplete="off"
-    >
-      <TextField id="outlined-basic" label="Data de Validade" variant="outlined" />
-      <TextField id="outlined-basic" label="CVC / CVV" variant="outlined" />
-    </Box>
-    <Box
-      sx={{
-        width: 500,
-        maxWidth: '100%',
-        backgroundColor: '#ffffff',
-        marginTop: '12px',
-      }}
-    >
-      <TextField fullWidth label="Nome do cartão" id="NameCard" placeholder="Digite o nome do cartão" />
-    </Box>
-    </S.BodyForm>
+         <S.OrdemCartao><i class="im im-credit-card"></i> 1° Cartão</S.OrdemCartao>
     <S.BodyForm>
     <Box
       sx={{
@@ -234,7 +179,69 @@ export default function Formulario({form}) {
     </Box>
     </S.BodyForm>
     </S.Container>
+    <S.OrdemCartao><i class="im im-credit-card"></i> 2° Cartão</S.OrdemCartao>
+
+    <S.Container>
+    <S.BodyForm>
+
+    <Box
+      sx={{
+        width: 500,
+        maxWidth: '100%',
+        backgroundColor: '#ffffff',
+        marginTop: '2px',
+      }}
+    >
+        {/* ============================= */}
+      <TextField fullWidth label="Nome" id="Nome" placeholder="Digite seu nome" />
+    </Box>
     
+    <Box
+      sx={{
+        width: 500,
+        maxWidth: '100%',
+        backgroundColor: '#ffffff',
+        marginTop: '12px',
+      }}
+    >
+      <TextField fullWidth label="CPF do titular do cartão" id="Cpf" placeholder="Digite o CPF do titular" />
+    </Box>
+
+    <Box
+      sx={{
+        width: 500,
+        maxWidth: '100%',
+        backgroundColor: '#ffffff',
+        marginTop: '12px',
+      }}
+    >
+      <TextField fullWidth label="Número do cartão" id="NumberCard" placeholder="1234 5678 9012 3456" type="number" />
+    </Box>
+
+    <Box
+      component="form"
+      sx={{
+        '& > :not(style)': { m: 1, width: '46.8%' },
+      }}
+      noValidate
+      autoComplete="off"
+    >
+      <TextField id="outlined-basic" label="Data de Validade" variant="outlined" />
+      <TextField id="outlined-basic" label="CVC / CVV" variant="outlined" />
+    </Box>
+    <Box
+      sx={{
+        width: 500,
+        maxWidth: '100%',
+        backgroundColor: '#ffffff',
+        marginTop: '12px',
+      }}
+    >
+      <TextField fullWidth label="Nome do cartão" id="NameCard" placeholder="Digite o nome do cartão" />
+    </Box>
+    </S.BodyForm>
+    </S.Container>
+    </>
         ):(
             null
         )

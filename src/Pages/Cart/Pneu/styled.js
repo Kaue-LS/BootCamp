@@ -4,11 +4,10 @@ export const ItemArea= styled.div`
     display: flex;
     background-color: white;
     margin: 0rem auto;
-    width: 100%;
+    width: 80%;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     flex-direction:row;
-    border-bottom: 2px solid #4E008B;
   @media(max-width: 800px) {
    box-shadow: none;
    border-bottom: 2px solid #4E008B;
@@ -35,8 +34,8 @@ export const Items=styled.div`
 // Imagem do pneu
 export const Pneu= styled.img`
     width: 14rem;
-    max-width: auto;
-    margin: 0 30px;
+    max-width: 10rem;
+    margin: 0 10px;
     padding: 1.6rem 0rem;
  
 `;
@@ -255,26 +254,6 @@ export const IconTrash=styled.div`
 `;
 
 // -------------------------------------------------------------------------------
-export const Vazio=styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 30px 0;
-    text-align: center;
-
-    h1{
-        margin:20px auto;
-        color:#333333;
-        font-size: 30px;
-        font-weight: 600;
-    }
-    p{
-        font-size: 18px;
-        font-weight: 600;
-        color:#333333
-    }
-`;
 
 export const Cart=styled.img`
     width: 194px;
@@ -284,7 +263,7 @@ export const Itens=styled.div`
     background-color: white;
     border: 5px solid #4f0381;
     flex-direction:column;
-    margin: 10px auto auto auto;
+    margin: 0px auto auto auto;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     width: 85vw;

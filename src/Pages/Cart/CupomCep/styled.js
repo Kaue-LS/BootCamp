@@ -7,7 +7,7 @@ export const CuponsCep= styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0px auto;
+    margin: 0px 0;
     @media(max-width:500px){
         width: auto;
     }

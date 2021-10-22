@@ -37,9 +37,11 @@ export default function Address(){
     const AdicionarLista=()=>{
         setLista(lista+1)
     }
+
+    
     return(
         <>
-        <NavBarTerciaria></NavBarTerciaria>
+        <NavBarTerciaria location={'/checkout'}></NavBarTerciaria>
         <CustomizedSteppers props={1}/>
 
         <S.Endereço>
@@ -48,10 +50,10 @@ export default function Address(){
                 <h3>Dados do cliente</h3>
                 <div>
                     <div>
-                    <p>Nome:</p> <span>Fulano Ciclano</span>
+                    <p>Nome:</p> <span>Kauê Leite</span>
                     </div>
                     <div>
-                    <p>Email:</p> <span>FulanodeTal@gmail.com</span>
+                    <p>Email:</p> <span>Kaue@gmail.com</span>
                     </div>
                 </div>
             </S.DadosCliente>
@@ -177,7 +179,6 @@ export default function Address(){
                     <>
                     <ListaEndereço dados={dados} />
                     <Link to='/delivery'>
-                    <button>Próximo</button>
                     </Link>
                     </>
                 )

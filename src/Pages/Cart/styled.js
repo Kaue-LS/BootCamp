@@ -215,7 +215,30 @@ export const SubPreçoTotal=styled.p`
         width: auto;
     }
 `;
+export const Vazio=styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+    text-align: center;
 
+    h1{
+        margin:20px auto;
+        color:#333333;
+        font-size: 30px;
+        font-weight: 600;
+    }
+    p{
+        font-size: 18px;
+        font-weight: 600;
+        color:#333333
+    }
+`;
+
+export const Cart=styled.img`
+    width: 194px;
+`;
 // -----------------------------------------------
 
 // Inserindo os botoes para a compra

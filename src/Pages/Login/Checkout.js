@@ -240,7 +240,7 @@ const VerificarLogin=()=>{
   // ===========================================================
   return (
     <>
-      <NavBarPrincipal />
+      <NavBarPrincipal location={'/cart'} />
       <NavButton></NavButton>
       <CustomizedSteppersResponsive props={0}></CustomizedSteppersResponsive>
       {/* ===================================================== */}

@@ -345,7 +345,11 @@ margin: 10px 0;
 
 // Banner
 
-
+export const Title=styled.h3`
+    color: white;
+    font-size: 1.5rem;
+    margin: 20px auto 0 auto;
+`;
 
 export const Container = styled.div`
     display: flex;
@@ -353,12 +357,7 @@ export const Container = styled.div`
     align-items: center;
     flex-direction: column;
     width: 100%;
-    margin: -110vh auto;
-    @media(max-width:880px){
-        margin: -100vh auto;
-
-    }
-    position: fixed;
+    margin: -200px 0;
     height: 40vh;
     z-index: 999;
 `;
@@ -373,13 +372,34 @@ export const Banner = styled.div`
     background-color: #4e018f;
     margin-top: 4rem;
     margin-bottom:3rem;
-    @media(max-width: 720px){
+    @media(max-width: 880px){
         display: flex;
         width: 90vw;
         height: 90vh;
         margin-top: 1rem;
         margin-bottom: 4rem;
     } 
+`;
+
+
+export const Banner2 = styled.div`
+    display: flex;
+    align-items: column;
+    flex-direction: column;
+    width: 80vw;
+    border-radius: 20px;
+    height: 65vh;
+    background-color: #4e018f;
+    margin-top: 4rem;
+    margin-bottom:3rem;
+    @media(max-width: 800px){
+        display: flex;
+        width: 90vw;
+        height: 90vh;
+        margin-top: 1rem;
+        margin-bottom: 4rem;
+    } 
+   
 `;
 
 export const Fechar = styled.button`
@@ -395,7 +415,7 @@ export const Fechar = styled.button`
     :hover{
         background-color: #4f2381 ;
     }
-    @media(max-width:720px){
+    @media(max-width:880px){
         margin: 20px auto;
         padding: 10px 20px;
     }
@@ -416,14 +436,18 @@ export const Text = styled.span`
         width: 90vw;
 
     }
-
+    span{
+        font-weight: 700;
+        text-shadow: none;
+        color: #FFFFFF;
+    }
 `;
 
 export const Image = styled.img`
     width: 100%;
     margin: 0 auto;
     height: 100%;
-    @media(max-width: 720px){
+    @media(max-width: 880px){
         margin: 0 auto;
         width: 100%;
         height: 100%;

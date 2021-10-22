@@ -48,7 +48,7 @@ export const FormGroup=styled.div`
         display: flex;
         border-top: 1px solid red;
         margin: 0 auto 20px auto;
-        font-size:1vw;
+        font-size:1rem;
     color:red;
 }
 

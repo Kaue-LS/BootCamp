@@ -1,11 +1,14 @@
+import { useState } from 'react'
 import * as S from './styled'
 export default function ListaEndereço(dados){
     console.log(dados)
-
+    const [selected,setSelected]= useState(false)
     const Selected=()=>{
+        setSelected(true)
         document.getElementById('selected').style='background-color:#EDFAB8;'
     }
     return(
+        <>
         <S.CaixaEndereço id='selected'>
               <div>
                 <div style={{display:'flex',justifyContent:'space-between'}}>
@@ -26,5 +29,13 @@ export default function ListaEndereço(dados){
                 <i class="im im-pencil"></i>
                 </div>
         </S.CaixaEndereço>
+        {selected ?(
+        <button>Proximo</button>
+        ):(
+            null
+        )
+}
+        </>
+
     )
 }

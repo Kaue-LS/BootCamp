@@ -1,10 +1,40 @@
+import GerarPneu from './Produto/GeraPneu'
 import * as S from './styled'
-
+import { useState,useEffect } from 'react'
+import { Api } from '../../Api/Api'
 export default function Resumo(){
+  const [itens,setItens]=useState([])
+    const [loading,setLoading]=useState(true)
+
+    useEffect(()=>{
+        if(loading){
+            FetchApi()
+        }
+    })
+    const FetchApi=async()=>{
+        const response = await Api.buildApiRequest(Api.SelectedTires())
+        const res=await response.json()
+        setItens(res)
+        setLoading(false)
+    }
+    console.log(itens)
+   
+    
     return(
         <S.ResuItens>
         <S.Item>
+          {loading?(
+            null
+          ):(
+            <>
+            {itens.map((item,index)=>(
+      <GerarPneu key={index} itemID={item.productId} quant={item.quantity}></GerarPneu>
+            ))
+            }
+            </>
+          )
 
+          }
         </S.Item>
     <S.resumoArea>
     <S.Resumo>
